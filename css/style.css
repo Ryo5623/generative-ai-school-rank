@@ -486,6 +486,60 @@ table {
   padding: 12px 1.2% 12px;
 }
 
+/* btnのエフェクト */
+.btn-official._shiny {
+  display: block;
+  position: relative;
+  padding: 1em 1.5em;
+  background-color: #ffffff;
+  border-radius: 100px;
+  margin: 30px auto;
+  max-width: 500px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 300ms;
+}
+.btn-official._shiny::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #ffffff;
+  transition: 300ms;
+  animation: shinyshiny 4s ease-in-out infinite;
+}
+
+.btn-official._shiny:hover {
+  text-decoration: none;
+  color: #fff;
+  box-shadow: none;
+  -webkit-transform: translateY(3px);
+}
+
+@-webkit-keyframes shinyshiny {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
 .ranking-box .action a {
   border-radius: 100px;
   padding-top: 24px;
