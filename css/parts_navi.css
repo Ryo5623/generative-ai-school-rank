@@ -5,7 +5,7 @@
   display: flex;
   width: 100%;
   padding: 0 0;
-  background: #c1b4a3;
+  background: rgba(0, 0, 0, 0.5);
   white-space: nowrap;
   overflow-x: auto;
   -ms-overflow-style: none;
@@ -25,7 +25,6 @@
   margin: auto;
 }
 
-
 .header__nav__list {
   display: flex;
   margin: 0 auto;
@@ -41,7 +40,7 @@
   display: block;
   margin: 6px 2%;
   padding: 0.4rem 1.2rem;
-  background-color: #83786a;
+  background-color: #a7a7a7;
   border-radius: 0.4rem;
   width: 46%;
   font-size: 0.8rem;
@@ -67,9 +66,9 @@
   justify-content: center;
 }
 
-@media screen and (min-width:992px){
-#body-wrapper{
-  display: flex;
-  flex-direction: column;
-}
+@media screen and (min-width: 992px) {
+  #body-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
