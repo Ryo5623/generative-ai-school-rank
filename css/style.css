@@ -369,7 +369,7 @@ table {
 }
 
 .ranking-box .header a {
-  color: #666666;
+  color: #333333;
   word-break: break-all;
 }
 
@@ -413,7 +413,7 @@ table {
   font-size: 20px;
   line-height: 1.4;
   padding-bottom: 12px;
-  color: #666666;
+  color: #333333;
   /* padding-left: 3.6%; */
   /* padding-right: 3.6%; */
 }
@@ -428,8 +428,8 @@ table {
 }
 
 .ranking-box .recommend .check-list img {
-  width: 32px;
-  height: 24px;
+  width: 28px;
+  height: 10px;
   padding-right: 8px;
 }
 
@@ -437,10 +437,10 @@ table {
   font-weight: 400;
   font-size: 17.2px;
   line-height: 1.32;
-  color: #666666;
+  color: #333333;
   padding-bottom: 12px;
-  padding-left: 34px;
-  background: url(../img/icon-check.png) no-repeat left top;
+  padding-left: 40px;
+  background: url(../images/icon_check_c.png) no-repeat left top;
 }
 
 .ranking-box .recommend .check-list li strong {
@@ -684,7 +684,7 @@ table {
   padding-bottom: 12px;
   font-size: 16px;
   font-weight: bold;
-  color: #666666;
+  color: #333333;
   line-height: 1.4;
 }
 
@@ -731,7 +731,7 @@ table {
   padding-left: 4%;
   font-weight: normal;
   line-height: 1.4;
-  color: #666666;
+  color: #333333;
   font-size: 15.2px;
   flex: 1;
 }
@@ -848,7 +848,7 @@ table {
   padding-top: 12px;
   font-size: 16px;
   font-weight: bold;
-  color: #666666;
+  color: #333333;
   line-height: 1.4;
   padding-left: 6%;
   padding-right: 6%;
@@ -1105,7 +1105,7 @@ footer {
   padding-bottom: 16px;
   font-size: 13.2px;
   font-weight: normal;
-  color: #666666;
+  color: #333333;
   border-bottom: 2px solid #f1f1f1;
 }
 
