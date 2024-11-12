@@ -429,7 +429,7 @@ table {
 
 .ranking-box .recommend .check-list img {
   width: 28px;
-  height: 10px;
+  height: 25px;
   padding-right: 8px;
 }
 
@@ -439,8 +439,7 @@ table {
   line-height: 1.32;
   color: #333333;
   padding-bottom: 12px;
-  padding-left: 40px;
-  background: url(../images/icon_check_c.png) no-repeat left top;
+  padding-left: 10px;
 }
 
 .ranking-box .recommend .check-list li strong {
