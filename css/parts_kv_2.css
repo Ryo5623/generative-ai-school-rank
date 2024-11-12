@@ -1,74 +1,79 @@
-#key-visual__container{
-    position: relative;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#key-visual__container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media screen and (min-width:1024px) {
-#key-visual__container{
-min-height: 720px;
+@media screen and (min-width: 1024px) {
+  #key-visual__container {
+    min-height: 720px;
+  }
 }
+#container__tag {
+  position: absolute;
+  left: 6.9%;
+  top: 4%;
+  text-align: center;
+  color: #fff;
+  font-size: 2.2vw;
+  line-height: 1.32;
+  z-index: 100;
 }
-#container__tag{
-    position: absolute;
-    left: 7.52%;
-    top: 4.0%;
-    text-align: center;
-    color: #fff;
-    font-size: 3.2vw;
-    line-height: 1.32;
-    z-index: 100;
-}
-@media screen and (min-width:1200px) {
-    #container__tag{
+@media screen and (min-width: 1200px) {
+  #container__tag {
     font-size: 16px;
-    top:24px;
+    top: 24px;
     left: 80px;
+  }
 }
+#container__tag strong {
+  color: #fff;
+  font-size: 3.2vw;
 }
-#container__tag strong{
-    color: #fff;
-    font-size: 4.2vw;
-}
-@media screen and (min-width:1200px) {
-    #container__tag strong{
+@media screen and (min-width: 1200px) {
+  #container__tag strong {
     font-size: 36px;
-}
+  }
 }
 
-#container__tag--bg{position: absolute;top: 0;left: 3.2vw;z-index: 10;width: 22vw;}
-@media screen and (min-width:1200px) {
-#container__tag--bg{
+#container__tag--bg {
+  position: absolute;
+  top: 0;
+  left: 3.2vw;
+  z-index: 10;
+  width: 17vw;
+}
+@media screen and (min-width: 1200px) {
+  #container__tag--bg {
     width: 160px;
-    left:52px;
+    left: 52px;
+  }
 }
+
+#key-visual {
+  background: transparent url(../common/img/kv_2/kv_bg.png) no-repeat;
+  background-size: cover;
+  margin: 0 0;
+  background-position: center;
 }
 
-    #key-visual {
-        background: transparent url(../common/img/kv_2/kv_bg.png) no-repeat;
-        background-size: cover;
-        margin: 0 0;
-        background-position: center;
-    }
-
-
-#container__area{
-    text-align: center;
-    color: #fff;
-    font-size: 3.6vw;
-    line-height: 1.32;
-    z-index: 200;
-    width: 100%;
-    position: absolute;
-    top: 22.4vw;
-    letter-spacing: 0.12rem;
-    font-weight: bold;
-    }
-@media screen and (min-width:1024px) {
-    #container__area{
+#container__area {
+  text-align: center;
+  color: #fff;
+  font-size: 3.6vw;
+  line-height: 1.32;
+  z-index: 200;
+  width: 100%;
+  position: absolute;
+  top: 22.4vw;
+  letter-spacing: 0.12rem;
+  font-weight: bold;
+}
+@media screen and (min-width: 1024px) {
+  #container__area {
     font-size: 32px;
     top: 244px;
-}
+  }
 }
