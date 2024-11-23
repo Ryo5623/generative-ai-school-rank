@@ -450,3 +450,8 @@ span.center {
 span.small {
   font-size: 0.85em;
 }
+
+.rank_star {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
