@@ -1275,7 +1275,7 @@ footer .copyright {
 }
 
 .navi_btn {
-  background: transparent url(../img/btn.png) no-repeat 0 0;
+  background: transparent url("../images/btn.svg") no-repeat 0 0;
   display: block;
   width: 35px;
   height: 35px;
