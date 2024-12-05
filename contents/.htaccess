@@ -1,0 +1,2 @@
+# ディレクトリで index.html をデフォルトにする
+DirectoryIndex index.html
