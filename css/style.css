@@ -1685,3 +1685,50 @@ footer .copyright {
   font-weight: bold;
   font-size: 0.88rem;
 }
+
+.col-h3 {
+  padding-left: 15px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 18px;
+  border-left: 6px solid;
+  margin-top: 1.8em;
+}
+
+.col-h2 {
+  letter-spacing: 0.05em;
+  margin-top: 18px;
+  margin-left: 18px;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.col-h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #283f56;
+  margin-top: 10px;
+}
+
+.col-title {
+  letter-spacing: 0.07em;
+  padding: 18px 0px;
+  font-size: 25px;
+  margin-left: 18px;
+}
+
+.col-h4 {
+  margin-top: 15px;
+  font-size: 17px;
+  letter-spacing: 0.05em;
+  margin-left: 15px;
+  font-weight: 700;
+}
+
+.col-ul {
+  margin-left: 30px;
+  list-style: disc;
+}
