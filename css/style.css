@@ -1732,3 +1732,41 @@ footer .copyright {
   margin-left: 30px;
   list-style: disc;
 }
+
+.kuchikomi_list {
+  margin-top: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+}
+.kuchikomi_item {
+  display: inline-block;
+  min-width: 248px;
+  border: 2px solid #eeeeee;
+  background-color: #fafafa;
+  padding: 8px;
+  margin-right: 8px;
+  vertical-align: top;
+  flex: 0 0 80px;
+}
+.kuchikomi_head {
+  white-space: normal;
+}
+.inner {
+  width: 74%;
+}
+.kuchikomi_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.author {
+  font-size: 1.3rem;
+}
+.text {
+  font-size: 1.3rem;
+  margin-top: 8px;
+}
+.text quote {
+  text-align: right;
+  font-size: 1.2rem;
+}
