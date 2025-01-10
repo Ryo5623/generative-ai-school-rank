@@ -1,252 +1,250 @@
 .guideline {
-    margin-bottom: 30px;
-    width: 100%;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
 .guideline h1 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #274056;
-    padding: 8px 12px;
-    text-align: left;
-    margin: auto;
-    width: 100%;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #274056;
-    border-left-style: solid;
-    border-left-width: 8px;
-    border-left-color: #274056;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  padding: 8px 12px;
+  text-align: left;
+  margin: auto;
+  width: 100%;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #533afb;
+  border-left-style: solid;
+  border-left-width: 8px;
+  border-left-color: #533afb;
 }
 .guideline h1 span {
-    font-size: 18px;
-    vertical-align: top;
+  font-size: 18px;
+  vertical-align: top;
 }
 
-
 .guideline .guideline-inner {
-    border: 0px solid #274056;
-    padding: 0px 0% 8px;
-    /* margin-bottom: 24px; */
-    background: #fff;
+  border: 0px solid #274056;
+  padding: 0px 0% 8px;
+  /* margin-bottom: 24px; */
+  background: #fff;
 }
 
 .guideline .guideline-inner .guideline-wrap {
-    display: flex;
-    margin-bottom: 0px;
-    flex-direction: column;
-    padding: 12px 6.0%;
+  display: flex;
+  margin-bottom: 0px;
+  flex-direction: column;
+  padding: 12px 6%;
 }
 
 .guideline .guideline-inner .guideline-text {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 .guideline .guideline-inner .guideline-text h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #274056;
-    margin-top: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #274056;
+  margin-top: 8px;
 }
 .guideline .guideline-inner .guideline-text h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #274056;
-    margin-top: 16px;
-    margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-top: 16px;
+  margin-bottom: 8px;
 }
 
 .guideline .guideline-inner .guideline-text h4 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #274056;
-    margin-bottom: 8px;
-    display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 8px;
+  display: flex;
 }
-.guideline .guideline-inner .guideline-text h4 .text{
-    align-self: center;
+.guideline .guideline-inner .guideline-text h4 .text {
+  align-self: center;
 }
-
 
 .guideline .guideline-inner .guideline-text h4 .icon {
-    background: #274056;
-    color: #fff;
-    font-size: 12px;
-    padding: 8px 8px;
-    margin-right: 12px;
-    /* width: 75px; */
-    text-align: center;
-    display: flex;
-    align-items: center;
-    min-width: 70px;
-    word-break: break-all;
-    justify-content: center;
+  background: #ff8900;
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 8px;
+  margin-right: 12px;
+  /* width: 75px; */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  min-width: 70px;
+  word-break: break-all;
+  justify-content: center;
 }
-.guideline .guideline-inner .guideline-index h4 .icon{
-    min-width: 70px;
+.guideline .guideline-inner .guideline-index h4 .icon {
+  min-width: 70px;
 }
 
 .guideline .guideline-inner .guideline-text h4 a {
-    font-size: 16px;
-    color: #333;
-    text-decoration: solid;
-    text-decoration-color: #333;
-    text-decoration-line: underline;
-    align-self: center;
-    word-break: break-all;
-    flex: 1;
+  font-size: 16px;
+  color: #333;
+  text-decoration: solid;
+  text-decoration-color: #333;
+  text-decoration-line: underline;
+  align-self: center;
+  word-break: break-all;
+  flex: 1;
 }
 
 .guideline .guideline-inner .guideline-wrap img {
-    margin: 8px auto 12px;
-    width: 100%;
-    height: auto;
+  margin: 8px auto 12px;
+  width: 100%;
+  height: auto;
 }
 
 .guideline .guideline-inner .guideline-wrap img.left {
-    margin: 0 24px 0 0;
-    width: 250px;
-    height: 166px;
+  margin: 0 24px 0 0;
+  width: 250px;
+  height: 166px;
 }
 
 .text-marker {
-    font-weight: bold;
-    padding-bottom: 3px;
-    background: linear-gradient(transparent 50%, #fff47d 0%);
+  font-weight: bold;
+  padding-bottom: 3px;
+  background: linear-gradient(transparent 50%, #fff47d 0%);
 }
 
 @media screen and (max-width: 1024px) {
-    .guideline {
-        width: 96%;
-        margin: 0 auto;
-    }
+  .guideline {
+    width: 96%;
+    margin: 0 auto;
+  }
 
+  .guideline .guideline-inner .guideline-text {
+    margin-right: 0px;
+  }
 
-    .guideline .guideline-inner .guideline-text {
-        margin-right: 0px;
-    }
+  .guideline .guideline-inner .guideline-text h4 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
 
-    .guideline .guideline-inner .guideline-text h4 {
-        font-size: 20px;
-        line-height: 1.4;
-        margin-bottom: 5px;
-    }
+  .guideline .guideline-inner .guideline-wrap img.left {
+    margin: 0 24px 0 0;
+    width: 250px;
+    height: 166px;
+  }
 
-    .guideline .guideline-inner .guideline-wrap img.left {
-        margin: 0 24px 0 0;
-        width: 250px;
-        height: 166px;
-    }
+  .guideline .guideline-inner .guideline-wrap {
+    display: block;
+  }
 
-    .guideline .guideline-inner .guideline-wrap {
-        display: block;
-    }
+  .guideline .guideline-inner .guideline-wrap:last-child {
+    margin-bottom: 8px;
+  }
 
-    .guideline .guideline-inner .guideline-wrap:last-child {
-        margin-bottom: 8px;
-    }
-
-    .guideline .guideline-inner .guideline-wrap p {
-        display: block;
-    }
+  .guideline .guideline-inner .guideline-wrap p {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-    .guideline .guideline-inner .guideline-wrap {
-        padding-left: 7.2%;
-        padding-right: 7.2%;
-    }
+  .guideline .guideline-inner .guideline-wrap {
+    padding-left: 7.2%;
+    padding-right: 7.2%;
+  }
 }
 
 @media screen and (max-width: 524px) {
-    .guideline .guideline-inner .guideline-wrap {
-        padding-left: 3.2%;
-        padding-right: 3.2%;
-    }
+  .guideline .guideline-inner .guideline-wrap {
+    padding-left: 3.2%;
+    padding-right: 3.2%;
+  }
 }
 
 .guideline_lasttable {
-    font-size: 20px;
-    font-weight: bold;
-    color: #274056;
-    /* margin-bottom: 12px; */
-    padding: 8px 12px;
-    text-align: left;
-    /* background-color: #274056; */
-    margin: auto;
-    margin-bottom: 12px;
-    width: 100%;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #274056;
-    border-left-style: solid;
-    border-left-width: 8px;
-    border-left-color: #274056;
-    }
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  /* margin-bottom: 12px; */
+  padding: 8px 12px;
+  text-align: left;
+  /* background-color: #274056; */
+  margin: auto;
+  margin-bottom: 12px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #533afb;
+  border-left-style: solid;
+  border-left-width: 8px;
+  border-left-color: #533afb;
+}
 
-    .guideline-anchor{padding-bottom: 36px;}
+.guideline-anchor {
+  padding-bottom: 36px;
+}
 
-
-    .guideline1-1_difference{
-        /*
+.guideline1-1_difference {
+  /*
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         */
-        padding: 12px 0 24px 0;
-    }
-    .guideline1-1_difference::after{
-        content: "";
-        display: block;
-        clear: both;
-    }
-    .guideline1-1_difference .guideline1-1_difference--inner{
-        width: 100%;
-        padding: 0;
-        margin: auto;
-    }
-    .guideline1-1_difference .guideline1-1_difference--inner{
-        width: 100%;
-        padding: 0;
-        margin: auto;
-    }
-    .guideline1-1_difference .guideline1-1_difference--inner.sp{
-        display: block;
-    }
-    .guideline1-1_difference .guideline1-1_difference--inner.pc{
-        display: none;
-    }
-    @media screen and (min-width: 767px) {
-        /*
+  padding: 12px 0 24px 0;
+}
+.guideline1-1_difference::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.guideline1-1_difference .guideline1-1_difference--inner {
+  width: 100%;
+  padding: 0;
+  margin: auto;
+}
+.guideline1-1_difference .guideline1-1_difference--inner {
+  width: 100%;
+  padding: 0;
+  margin: auto;
+}
+.guideline1-1_difference .guideline1-1_difference--inner.sp {
+  display: block;
+}
+.guideline1-1_difference .guideline1-1_difference--inner.pc {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  /*
         .guideline1-1_difference .guideline1-1_difference--inner{
             width: 49%;
         }*/
-        .guideline1-1_difference .guideline1-1_difference--inner.sp{
-            display: none;
-        }
-        .guideline1-1_difference .guideline1-1_difference--inner.pc{
-            display: block;
-        }
-        .guideline1-1_difference .guideline1-1_difference--inner:first-of-type{
-            float: right;
-            width: 48%;
-            margin-left: 2%;
-            margin-top: 15px;
-        }
-    }
-    .guideline1-1_difference h5{
-    color: #274056;
-    font-weight: bold;
-    font-size: 18px;
-    border-left-style: solid;
-    border-left-width: 8px;
-    border-left-color: #274056;
-    padding-left: 12px;
-    }
-    .guideline1-1_difference p{
-    padding: 12px 0;
-    }
-    .guideline1-1_difference .guideline1-1_difference--inner .users{
-    padding: 12px 3.2%;
-    background-color: #e3ded8;
-    border-radius: 12px;
-    }
+  .guideline1-1_difference .guideline1-1_difference--inner.sp {
+    display: none;
+  }
+  .guideline1-1_difference .guideline1-1_difference--inner.pc {
+    display: block;
+  }
+  .guideline1-1_difference .guideline1-1_difference--inner:first-of-type {
+    float: right;
+    width: 48%;
+    margin-left: 2%;
+    margin-top: 15px;
+  }
+}
+.guideline1-1_difference h5 {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  border-left-style: solid;
+  border-left-width: 8px;
+  border-left-color: #ff8900;
+  padding-left: 12px;
+}
+.guideline1-1_difference p {
+  padding: 12px 0;
+}
+.guideline1-1_difference .guideline1-1_difference--inner .users {
+  padding: 12px 3.2%;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+}

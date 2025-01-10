@@ -1770,3 +1770,25 @@ footer .copyright {
   text-align: right;
   font-size: 1.2rem;
 }
+.list {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+/* .p-logo-slider {
+  max-width: 1000px;
+  margin: auto;
+}
+@media screen and (max-width: 767px) {
+  .p-logo-slider ul {
+    padding: 0.125rem 0;
+    gap: 0.125rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-logo-slider ul li {
+    min-width: 4.5rem;
+  }
+} */
