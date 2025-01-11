@@ -1772,7 +1772,6 @@ footer .copyright {
 }
 .list {
   margin-top: 8px;
-  display: flex;
   justify-content: center;
   column-gap: 20px;
 }
