@@ -926,7 +926,7 @@
 }
 .rank .box .title h3 {
   font-size: 2.4rem;
-  padding: 2rem 2rem 2rem 7.5rem;
+  padding: 2rem 2rem 2rem 10.5rem;
 }
 @media only screen and (max-width: 767px) {
   .rank .box .title h3 {
@@ -943,7 +943,7 @@
   }
 }
 .rank .box .title .icon {
-  background-size: 4rem;
+  background-size: 7rem;
   background-repeat: no-repeat;
   background-position: 2rem;
 }
@@ -7806,6 +7806,7 @@ footer .copyright {
 }
 .rank2 .box .title h3 {
   padding-top: 1.2rem;
+  paddin-left: 3rem;
 }
 .rank2 .box .title-sub {
   font-size: 1.3rem;
@@ -8256,6 +8257,7 @@ footer .copyright {
   height: 25px;
   border-radius: 50%;
   text-align: center;
+  justify-items: center;
   font-size: 1.5rem;
   color: #ffffff;
 }
@@ -14228,7 +14230,8 @@ footer .copyright {
 .mode .wrap .type-list {
   margin-top: 1.5rem;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  justify-content: space-between; /* 均等配置 */
 }
 @media only screen and (max-width: 767px) {
   .mode .wrap .type-list {
@@ -14238,7 +14241,7 @@ footer .copyright {
   }
 }
 .mode .wrap .type-list-inner {
-  width: 24%;
+  width: 35%;
 }
 @media only screen and (max-width: 767px) {
   .mode .wrap .type-list-inner {
@@ -14258,7 +14261,7 @@ footer .copyright {
   font-size: 1.8rem;
 }
 .mode .wrap .type-list-inner-ttl-y {
-  background-color: #000064;
+  background-color: #533afc;
   color: #fff;
 }
 .mode .wrap .type-list-inner-ttl-g {
@@ -14835,8 +14838,8 @@ footer .copyright {
   background-color: #e8e8e8;
 }
 .mode .rank-simple .box .box-inner .detail-info .simple-campain-ttl {
-  background-color: #fff847;
-  color: #0d0802;
+  background-color: #ff8900;
+  color: #fff;
 }
 .mode .rank-simple .box .box-inner .detail-info .simple-campain-wrapper {
   background-color: #f7fcff;
