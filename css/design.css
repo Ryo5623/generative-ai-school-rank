@@ -225,7 +225,7 @@
   border-bottom: 1px solid #ddd;
   box-shadow: 0 1px 4px #ddd;
   padding: 0.5rem 0;
-  border-top: 4px solid #050d5c;
+  border-top: 4px solid #533afc;
   margin: 0 0 2rem 0;
 }
 #header .header-inner {
@@ -238,7 +238,9 @@
   }
 }
 #header .logo {
-  width: 130px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 180px;
   margin-right: auto;
 }
 @media only screen and (max-width: 767px) {
@@ -6649,7 +6651,7 @@
   }
 }
 #pages h3 {
-  border-left: 6px solid #050d5c;
+  border-left: 6px solid #533afc;
   font-size: 2rem;
   line-height: 1.4;
   margin: 3rem 0 2rem;
