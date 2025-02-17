@@ -8154,8 +8154,8 @@ footer .copyright {
   background-color: #ffffff;
 }
 .rank2 .box-inner .detail-info .spec-inner-wrapper-content {
-  padding-top: 2.6%;
-  padding-bottom: 2.6%;
+  /* padding-top: 2.6%; */
+  padding-bottom: 7.6%;
   text-align: center;
 }
 .rank2 .box-inner .detail-info .spec-inner-wrapper dt {
@@ -8841,7 +8841,7 @@ footer .copyright {
 }
 .rank-simple .box .box-inner .detail-info-inner .point-inner {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   background-color: #fff;
   padding: 1.5rem;
@@ -14300,9 +14300,9 @@ footer .copyright {
   margin: auto;
 }
 .mode .wrap .type-list-inner-content-wrap .logo {
-  width: 80%;
+  width: 100%;
   margin: auto;
-  position: inherit;
+  justify-items: center;
 }
 @media only screen and (max-width: 767px) {
   .mode .wrap .type-list-inner-content-wrap .logo {
