@@ -317,7 +317,6 @@ table {
   padding-bottom: 0px;
   justify-content: center;
   margin-bottom: 36px;
-  margin-top: 12px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1136,7 +1135,6 @@ footer .copyright {
   padding: 12px 2%;
   text-align: left;
   background-color: #fff;
-  margin-bottom: 36px;
 }
 
 #header .container .logo {
@@ -2011,4 +2009,135 @@ small {
     right: 4px;
     bottom: 4px;
     z-index: 2;
+}
+
+@media screen and (max-width: 767px) {
+    .p-single-content__block h2 {
+        font-size: 1.25rem;
+        margin: 2.5rem 0px 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .p-single-content__block__img {
+        margin: 1.25rem 0px 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    small {
+        font-size: 0.6rem;
+    }
+}
+
+.p-single-content__block__img {
+    margin: 1.75rem 0px 0px;
+}
+
+.p-single-content__block p {
+    margin: 1.5rem 0px 0px;
+}
+
+.p-single-content__block > ul {
+    background: rgb(254, 255, 232);
+    border-width: 2px;
+    border-style: dashed;
+    border-color: rgb(255, 223, 60);
+    border-image: initial;
+    padding: 1rem;
+    margin: 1.25rem 0px 0px;
+}
+
+.p-single-content__block > ul li:first-child {
+    margin: 0px;
+}
+
+@media screen and (max-width: 767px) {
+    .p-single-content__block > ul li {
+        margin: 0.25rem 0px 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .p-single-content__block > ul li::before {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.p-single-content__block > ul li::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    top: 3px;
+    background: url(../dist/icon-single-check.svg) center center / contain no-repeat;
+    margin: 0px 0.25rem 0px 0px;
+}
+
+.p-single-content__block > ul li {
+    position: relative;
+    text-indent: -1.4em;
+    margin: 0.5rem 0px 0px;
+    padding: 0px 0px 0px 1.4em;
+}
+
+.p-single-content__block h2 {
+    position: relative;
+    font-size: 1.75rem;
+    line-height: 1.4;
+    color: rgb(255, 255, 255);
+    background: rgb(6, 81, 136);
+    padding: 0.75rem 1rem;
+    margin: 3.5rem 0px 0px;
+}
+
+.p-single-content__block h2::before {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 0.75rem;
+    bottom: -0.74rem;
+    left: 1.5rem;
+    clip-path: polygon(0px 0px, 50% 100%, 100% 0px);
+    background: rgb(6, 81, 136);
+}
+
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline;/*横に並ぶように*/
+  list-style: none;
+  font-weight: bold;/*太字*/
+}
+
+.breadcrumb li:after {
+  /* >を表示*/
+  content: '>';
+  padding: 0 0.2em;
+  color: #555;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: gray;
+}
+
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
 }
