@@ -1974,7 +1974,7 @@ small {
     color: #f27c27;
 }
 
-.image a {
+/* .image a {
     position: relative;
     display: block;
     top: 0px;
@@ -1983,7 +1983,7 @@ small {
     border-style: solid;
     border-color: rgb(242, 124, 39);
     border-image: initial;
-}
+} */
 
 /* .image a::before {
     content: "";
