@@ -1857,7 +1857,8 @@ footer .copyright {
 
 /* USER VOICE */
 .p-ranking-item-content-main__voice {
-    margin: 1.5rem 30px 2rem;
+    margin-top: 1.5rem;
+    margin-bottom:  30px;
 }
 
 .p-ranking-item-content-main__voice h5::before {
