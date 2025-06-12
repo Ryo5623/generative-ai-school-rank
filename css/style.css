@@ -1856,7 +1856,7 @@ footer .copyright {
 }
 
 /* USER VOICE */
-/* .p-ranking-item-content-main__voice {
+.p-ranking-item-content-main__voice {
     margin: 1.5rem 30px 2rem;
 }
 
@@ -2011,4 +2011,4 @@ small {
     right: 4px;
     bottom: 4px;
     z-index: 2;
-} */
+}
