@@ -1985,7 +1985,7 @@ small {
     border-image: initial;
 }
 
-.image a::before {
+/* .image a::before {
     content: "";
     position: absolute;
     width: 2.25rem;
@@ -2011,4 +2011,4 @@ small {
     right: 4px;
     bottom: 4px;
     z-index: 2;
-}
+} */
