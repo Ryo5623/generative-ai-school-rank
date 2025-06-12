@@ -1857,8 +1857,7 @@ footer .copyright {
 
 /* USER VOICE */
 .p-ranking-item-content-main__voice {
-    margin-top: 1.5rem;
-    margin-bottom:  30px;
+    margin-top: 1.5rem 30px 2rem;
 }
 
 .p-ranking-item-content-main__voice h5::before {
@@ -1973,6 +1972,15 @@ small {
     font-size: 1.25rem;
     font-weight: bold;
     color: #f27c27;
+}
+
+@media screen and (max-width: 767px) {
+    .p-ranking-item-content {
+        border-top: 3px solid #2e78ad;
+        border-radius: 0 0 .25rem .25rem;
+        padding: 1.25rem 1rem 1.5rem;
+        margin: 5rem 0 0;
+    }
 }
 
 .image a {
