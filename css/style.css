@@ -461,7 +461,7 @@ table {
 
 @media screen and (min-width: 576px) {
   .ranking-box .action ul {
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: space-between;
   }
 }
@@ -490,7 +490,7 @@ table {
   position: relative;
   padding: 1em 1.5em;
   border-radius: 100px;
-  margin: 30px auto;
+  margin: 0px auto;
   max-width: 500px;
   color: #fff;
   text-align: center;
@@ -554,7 +554,7 @@ table {
 }
 
 .ranking-box .action .btn-detail {
-  background: #888888;
+  background: #bababa;
 }
 
 .ranking-box .action .btn-official {
