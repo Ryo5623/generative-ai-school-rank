@@ -1152,7 +1152,7 @@ footer .copyright {
   background-position-x: left;
   background-position-y: center;
   background-repeat: no-repeat;
-  padding-left: 28px;
+  /* padding-left: 28px; */
   max-width: 72%;
 }
 
