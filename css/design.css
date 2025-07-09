@@ -14599,7 +14599,7 @@ footer .copyright {
   text-align: center;
 }
 .mode .wrap .box-topranking .name {
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   z-index: 1;
 }
