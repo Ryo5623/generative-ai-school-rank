@@ -385,8 +385,22 @@ table {
   padding-bottom: 12px;
 }
 
+.ranking-box .image_biz {
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 3.2%;
+  padding-right: 3.2%;
+  padding-bottom: 12px;
+}
+
 @media screen and (min-width: 768px) {
   .ranking-box .image {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ranking-box .image_biz {
     width: 40%;
   }
 }
@@ -1505,7 +1519,7 @@ footer .copyright {
 }
 
 .extra_point h1 img {
-  width: 80px;
+  width: 110px;
 }
 
 .extra_point h1 span {
@@ -1983,6 +1997,17 @@ small {
     border-image: initial;
 } 
 
+.image_biz a {
+    position: relative;
+    display: block;
+    top: 0px;
+    transition: 0.15s;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FF776B;
+    border-image: initial;
+} 
+
 .image a::before {
     content: "";
     position: absolute;
@@ -1995,12 +2020,24 @@ small {
     background: rgb(242, 124, 39);
 }
 
-.image a:hover {
+.image_biz a::before {
+    content: "";
+    position: absolute;
+    width: 2.25rem;
+    height: 2.25rem;
+    bottom: -1px;
+    right: -1px;
+    z-index: 1;
+    clip-path: polygon(0px 100%, 100% 100%, 100% 0px);
+    background: #FF776B;
+}
+
+.image_biz a:hover {
     opacity: 0.8;
     top: 3px;
 }
 
-.image a::after {
+.image_biz a::after {
     content: "";
     position: absolute;
     background: url(../images/icon-arrow-orange.svg) no-repeat center / contain;

@@ -1,0 +1,11 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="218.596" height="323.533" viewBox="0 0 218.596 323.533">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="0.926" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3c75e0"/>
+      <stop offset="1" stop-color="#104ec3"/>
+    </linearGradient>
+  </defs>
+  <g id="Arrows">
+    <path id="パス_13367" data-name="パス 13367" d="M0,0V323.534L218.6,161.767Z" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
