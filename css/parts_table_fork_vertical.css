@@ -144,12 +144,13 @@
 }
 
 .container-table table tr td .btn-official {
-  background-image: -webkit-linear-gradient(45deg, #ffc107 0%, #f76a35 100%);
-  border: 2px solid #ff8707;
+  /* background-image: -webkit-linear-gradient(45deg, #ffc107 0%, #f76a35 100%); */
+  background-color: #D4215F;
+  /* border: 2px solid #D4215F; */
 }
 
 .container-table .style_2maru {
-  background: #fdf8e9 !important;
+  background: #FFF4F4 !important;
 }
 
 .container-table .table5__whole {

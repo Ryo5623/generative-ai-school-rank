@@ -572,8 +572,8 @@ table {
 }
 
 .ranking-box .action .btn-official {
-  background-image: -webkit-linear-gradient(45deg, #ffc107 0%, #f76a35 100%);
-  border: 2px solid #ff8707;
+  background-color: #D4215F; 
+  /* border: 2px solid #ff8707; */
 }
 
 .ranking-box .summary {
@@ -1524,7 +1524,7 @@ footer .copyright {
 
 .extra_point h1 span {
   padding: 12px 18px;
-  background-color: #1e90ff;
+  background-color: #3A82CA;
   color: #fff;
   font-weight: bold;
   border-radius: 40px;
@@ -1555,7 +1555,7 @@ footer .copyright {
 .extra_point table tr th {
   text-align: center;
   color: #fff;
-  background-color: #1e90ff;
+  background-color: #3A82CA;
   padding: 8px;
   border-style: solid;
   border-width: 2px;
@@ -1684,8 +1684,8 @@ footer .copyright {
   font-weight: bold;
   width: 100%;
   display: block;
-
-  background-image: -webkit-linear-gradient(45deg, #ffc107 0%, #f76a35 100%);
+  background-color: #D4215F;
+  /* background-image: -webkit-linear-gradient(45deg, #ffc107 0%, #f76a35 100%); */
 }
 
 .sp_rank {
