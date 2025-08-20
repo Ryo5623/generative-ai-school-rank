@@ -2048,6 +2048,17 @@ small {
     z-index: 2;
 }
 
+.image a::after {
+    content: "";
+    position: absolute;
+    background: url(../images/icon-arrow-orange.svg) no-repeat center / contain;
+    width: .75rem;
+    height: .75rem;
+    right: 4px;
+    bottom: 4px;
+    z-index: 2;
+}
+
 .breadcrumb {
   margin: 0;
   padding: 0;
