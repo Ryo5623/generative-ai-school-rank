@@ -14920,4 +14920,53 @@ footer .copyright {
   }
 }
 
+.p-logo-slider {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: .5rem 0;
+  position: relative;
+}
+
+.p-logo-slider ul {
+  display: flex;
+  gap: 0.5rem;
+  animation: logo-slider 20s linear infinite;
+  
+}
+
+.p-logo-slider ul li {
+  background: #fff;
+  border: 2px solid #eaeaea;
+  border-radius: .35rem;
+  min-width: 1rem;
+}
+
+@keyframes logo-slider {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.p-logo-slider-sp {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: .5rem 0;
+  position: relative;
+}
+
+.p-logo-slider-sp ul {
+  display: flex;
+  gap: 0.2rem;
+  animation: logo-slider 15s linear infinite;
+  
+}
+
+.p-logo-slider-sp ul li {
+  background: #fff;
+  border: 2px solid #eaeaea;
+  border-radius: .35rem;
+  min-width: 15rem;
+}
+
 /*# sourceMappingURL=design.css.map */
