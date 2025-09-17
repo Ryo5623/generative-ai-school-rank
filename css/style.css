@@ -1868,8 +1868,8 @@ footer .copyright {
 }
 
 /* USER VOICE */
-.p-ranking-item-content-main__voice {
-    margin-top: 1.5rem 30px 2rem;
+.p-ranking-item-content-main__voice{
+  margin: 1.5rem 25px 2rem;
 }
 
 .p-ranking-item-content-main__voice h5::before {
@@ -1908,37 +1908,36 @@ footer .copyright {
     margin: auto;
 }
 
-.p-ranking-item-content-main__voice__list {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex
-;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 1.75rem;
-    background: -webkit-linear-gradient(315deg, #F3F0FF 0%, #F3F0FF 100%);
-    background: linear-gradient(135deg, #F3F0FF 0%, #F3F0FF 100%);
-    border-radius: 0 0 .5rem .5rem;
-    padding: 1.25rem 1rem 1.5rem;
+.p-ranking-item-content-main__voice__list{
+  display:flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  background: linear-gradient(135deg, #F3F0FF 0%, #F3F0FF 100%);
+  border-radius: 0 0 .5rem .5rem;
+  padding: 1.25rem 1rem 1.5rem;
+  overflow-x: hidden;            
 }
 
-.p-ranking-voice-item {
-    display: grid
-;
-    grid-template-columns: 100px 1fr;
-    gap: .5rem;
+.p-ranking-voice-item{
+  display:grid;
+  grid-template-columns: 84px minmax(0,1fr); /* ←ここが効く！ */
+  gap: .5rem;
+}
+.p-ranking-voice-item__content{ min-width: 0; } /* Grid/Flex子の横溢れ防止 */
+
+
+.p-ranking-voice-item__profile figure{
+  background:#fff;
+  border:1px solid #4F3BF2;
+  border-radius: 9999px;
+  width:80px;
+  margin:auto;
 }
 
-.p-ranking-voice-item__profile figure {
-    background: #fff;
-    border: 1px solid #4F3BF2;
-    border-radius: calc(infinity * 1px);
-    width: 80px;
-    margin: auto;
+/* 長いURLを必ず折り返す */
+.p-ranking-item-content-main__voice a{
+  overflow-wrap:anywhere;
+  word-break: break-word;
 }
 
 .p-ranking-voice-item__profile p {
