@@ -47,6 +47,87 @@
     <script type="text/javascript" src="../images/f(2).txt"></script>
     <script type="text/javascript" src="../images/f(2).txt"></script>
     <script type="text/javascript" src="../images/f(2).txt"></script>
+    <style>
+
+
+    /* ===== Hero / First View ===== */
+    .fv {
+      position: relative;
+      height: var(--fv-height);
+      border: 0.5px solid #E0E0E0;
+      display: grid;
+      grid-template-columns: 240px minmax(0, 12fr) 240px;
+      align-items: stretch;
+      overflow: clip;
+    }
+
+    /* 左右の動画レーン */
+    .fv-side {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .fv-side video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;   /* クリックを拾わない */
+      filter: contrast(1.05) saturate(1.08);
+    }
+    .fv-side.right video { transform: scaleX(-1); } /* 右はミラーで変化を出す */
+    .fv-side::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* ほんのり暗くして中央の情報を読みやすく */
+      z-index: 1;
+    }
+
+    /* 中央のカード（ここに画像 or テキスト） */
+    .fv-center {
+      position: relative;
+      display: grid;
+      place-items: center;
+      z-index: 2;
+    }
+    .fv-card {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      /* padding: clamp(20px, 4.2vw, 56px); */
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      overflow: hidden;
+    }
+
+    /* スマホ：左右動画を隠し、中央のみ全幅で表示 */
+    @media (max-width: 1024px) {
+          :root{
+            --sp-side: clamp(48px, 25vw, 200px); /* 左右動画の太さ */
+            --sp-center-min: 120px;              /* 中央の最小幅（読みやすさの下限）*/
+            --sp-center-max: 180px;              /* 中央の上限幅 ← ここで“細さ”を決める */
+          }
+
+          .fv{
+            grid-template-columns:
+              var(--sp-side)
+              minmax(
+                var(--sp-center-min),
+                min(var(--sp-center-max), calc(100vw - (var(--sp-side) * 0)))
+              )
+              var(--sp-side);
+            height: var(--fv-height);
+            min-height: var(--fv-height);
+          }
+
+          .fv-side{ display:block; }
+          .fv-card{ width:100%; height:100%; margin:0; }
+        }
+
+
+    </style>
   </head>
 
     
@@ -68,7 +149,7 @@
             <img class="banner" src="../images/bytech.webp" alt="バイテック生成AI" />
             <div class="flex">
               <p class="txt">
-                <span class="txt-red">《無料説明会参加》</span>で<span class="txt-marker">割引特典と無料10大特典</span>をプレゼント中!!
+                <span class="txt-red">《無料カウンセリング参加》</span>で<span class="txt-marker">割引特典と無料10大特典</span>をプレゼント中!!
                 <span class="txt-red">今話題</span>の動画生成AIの具体的な活用法が知れる！
               </p>
               <p class="arrow"></p>
@@ -80,7 +161,30 @@
       <!--modal-->
 
       <div class="mainvisual" style="background: #fff">
-        <img src="../images/FV_PC.webp" />
+       <!-- <img src="../images/FV_PC.webp" /> -->
+        <section class="fv">
+          <!-- 左動画：src を差し替えてOK -->
+          <div class="fv-side left" aria-hidden="true">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="../videos/sample-video2.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <!-- 中央カラム（画像を置くなら .fv-card の中身を <img> に置き換えでOK） -->
+          <div class="fv-center">
+            <div class="fv-card">
+              <img src="../images/fv_v1.png" alt="動画生成AIオンラインスクール おすすめ厳選TOP3" style="width:100%; height:100%; object-fit:cover;">
+             
+            </div>
+          </div>
+
+          <!-- 右動画：src を差し替えてOK（右はミラー表示にしています） -->
+          <div class="fv-side right" aria-hidden="true">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="../videos/sample-video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </section>
       </div>
 
       <div class="wrap">
@@ -91,14 +195,9 @@
                   <li><img src="../images/logo-horiemon.webp" alt="ホリエモンAIスクール"></li>
                   <li><img src="../images/logo-shiftai.webp" alt="SHIFT AI"></li>
                   <li><img src="../images/logo-bytech.webp" alt="バイテック生成AI"></li>
-                  <li><img src="../images/logo-hisho.webp" alt="飛翔"></li>
-                  <li><img src="../images/logo-samurai.webp" alt="侍エンジニア"></li>
-                  <li><img src="../images/logo-tech-academy.webp" alt="テックアカデミー"></li>
-                  <li><img src="../images/logo-pro.webp" alt=".Pro"></li>
-                  <li><img src="../images/logo-kikagaku.webp" alt="キカガク"></li>
-                  <li><img src="../images/logo-aidemy.webp" alt="アイデミー"></li>
-                  <li><img src="../images/logo-startai.webp" alt="スタートAI"></li>
-                  <li><img src="../images/logo-lineyahoo.webp" alt="LINEYahooアカデミー"></li>
+                  <li><img src="../images/Ai-creators.png" alt="AIクリエイターズ"></li>
+                  <li><img src="../images/aicrew.png" alt="aicrew"></li>
+                  <li><img src="../images/Nets-lite.png" alt="netsLITE"></li>
                   <li><img src="../images/logo-skillup.webp" alt="スキルアップAI"></li>
                   <li><img src="../images/logo-mikimiki.webp" alt="mikimikiwebスクール"></li>
                   <li><img src="../images/logo-aiconnect.webp" alt="AIコネクト"></li>
@@ -107,14 +206,9 @@
                   <li><img src="../images/logo-horiemon.webp" alt="ホリエモンAIスクール"></li>
                   <li><img src="../images/logo-shiftai.webp" alt="SHIFT AI"></li>
                   <li><img src="../images/logo-bytech.webp" alt="バイテック生成AI"></li>
-                  <li><img src="../images/logo-hisho.webp" alt="飛翔"></li>
-                  <li><img src="../images/logo-samurai.webp" alt="侍エンジニア"></li>
-                  <li><img src="../images/logo-tech-academy.webp" alt="テックアカデミー"></li>
-                  <li><img src="../images/logo-pro.webp" alt=".Pro"></li>
-                  <li><img src="../images/logo-kikagaku.webp" alt="キカガク"></li>
-                  <li><img src="../images/logo-aidemy.webp" alt="アイデミー"></li>
-                  <li><img src="../images/logo-startai.webp" alt="スタートAI"></li>
-                  <li><img src="../images/logo-lineyahoo.webp" alt="LINEYahooアカデミー"></li>
+                  <li><img src="../images/Ai-creators.png" alt="AIクリエイターズ"></li>
+                  <li><img src="../images/aicrew.png" alt="aicrew"></li>
+                  <li><img src="../images/Nets-lite.png" alt="netsLITE"></li>
                   <li><img src="../images/logo-skillup.webp" alt="スキルアップAI"></li>
                   <li><img src="../images/logo-mikimiki.webp" alt="mikimikiwebスクール"></li>
                   <li><img src="../images/logo-aiconnect.webp" alt="AIコネクト"></li>
@@ -123,14 +217,9 @@
                   <li><img src="../images/logo-horiemon.webp" alt="ホリエモンAIスクール"></li>
                   <li><img src="../images/logo-shiftai.webp" alt="SHIFT AI"></li>
                   <li><img src="../images/logo-bytech.webp" alt="バイテック生成AI"></li>
-                  <li><img src="../images/logo-hisho.webp" alt="飛翔"></li>
-                  <li><img src="../images/logo-samurai.webp" alt="侍エンジニア"></li>
-                  <li><img src="../images/logo-tech-academy.webp" alt="テックアカデミー"></li>
-                  <li><img src="../images/logo-pro.webp" alt=".Pro"></li>
-                  <li><img src="../images/logo-kikagaku.webp" alt="キカガク"></li>
-                  <li><img src="../images/logo-aidemy.webp" alt="アイデミー"></li>
-                  <li><img src="../images/logo-startai.webp" alt="スタートAI"></li>
-                  <li><img src="../images/logo-lineyahoo.webp" alt="LINEYahooアカデミー"></li>
+                  <li><img src="../images/Ai-creators.png" alt="AIクリエイターズ"></li>
+                  <li><img src="../images/aicrew.png" alt="aicrew"></li>
+                  <li><img src="../images/Nets-lite.png" alt="netsLITE"></li>
                   <li><img src="../images/logo-skillup.webp" alt="スキルアップAI"></li>
                   <li><img src="../images/logo-mikimiki.webp" alt="mikimikiwebスクール"></li>
                   <li><img src="../images/logo-aiconnect.webp" alt="AIコネクト"></li>
@@ -139,14 +228,9 @@
                   <li><img src="../images/logo-horiemon.webp" alt="ホリエモンAIスクール"></li>
                   <li><img src="../images/logo-shiftai.webp" alt="SHIFT AI"></li>
                   <li><img src="../images/logo-bytech.webp" alt="バイテック生成AI"></li>
-                  <li><img src="../images/logo-hisho.webp" alt="飛翔"></li>
-                  <li><img src="../images/logo-samurai.webp" alt="侍エンジニア"></li>
-                  <li><img src="../images/logo-tech-academy.webp" alt="テックアカデミー"></li>
-                  <li><img src="../images/logo-pro.webp" alt=".Pro"></li>
-                  <li><img src="../images/logo-kikagaku.webp" alt="キカガク"></li>
-                  <li><img src="../images/logo-aidemy.webp" alt="アイデミー"></li>
-                  <li><img src="../images/logo-startai.webp" alt="スタートAI"></li>
-                  <li><img src="../images/logo-lineyahoo.webp" alt="LINEYahooアカデミー"></li>
+                  <li><img src="../images/Ai-creators.png" alt="AIクリエイターズ"></li>
+                  <li><img src="../images/aicrew.png" alt="aicrew"></li>
+                  <li><img src="../images/Nets-lite.png" alt="netsLITE"></li>
                   <li><img src="../images/logo-skillup.webp" alt="スキルアップAI"></li>
                   <li><img src="../images/logo-mikimiki.webp" alt="mikimikiwebスクール"></li>
                   <li><img src="../images/logo-aiconnect.webp" alt="AIコネクト"></li>
@@ -155,14 +239,9 @@
                   <li><img src="../images/logo-horiemon.webp" alt="ホリエモンAIスクール"></li>
                   <li><img src="../images/logo-shiftai.webp" alt="SHIFT AI"></li>
                   <li><img src="../images/logo-bytech.webp" alt="バイテック生成AI"></li>
-                  <li><img src="../images/logo-hisho.webp" alt="飛翔"></li>
-                  <li><img src="../images/logo-samurai.webp" alt="侍エンジニア"></li>
-                  <li><img src="../images/logo-tech-academy.webp" alt="テックアカデミー"></li>
-                  <li><img src="../images/logo-pro.webp" alt=".Pro"></li>
-                  <li><img src="../images/logo-kikagaku.webp" alt="キカガク"></li>
-                  <li><img src="../images/logo-aidemy.webp" alt="アイデミー"></li>
-                  <li><img src="../images/logo-startai.webp" alt="スタートAI"></li>
-                  <li><img src="../images/logo-lineyahoo.webp" alt="LINEYahooアカデミー"></li>
+                  <li><img src="../images/Ai-creators.png" alt="AIクリエイターズ"></li>
+                  <li><img src="../images/aicrew.png" alt="aicrew"></li>
+                  <li><img src="../images/Nets-lite.png" alt="netsLITE"></li>
                   <li><img src="../images/logo-skillup.webp" alt="スキルアップAI"></li>
                   <li><img src="../images/logo-mikimiki.webp" alt="mikimikiwebスクール"></li>
                   <li><img src="../images/logo-aiconnect.webp" alt="AIコネクト"></li>
@@ -171,14 +250,9 @@
                   <li><img src="../images/logo-horiemon.webp" alt="ホリエモンAIスクール"></li>
                   <li><img src="../images/logo-shiftai.webp" alt="SHIFT AI"></li>
                   <li><img src="../images/logo-bytech.webp" alt="バイテック生成AI"></li>
-                  <li><img src="../images/logo-hisho.webp" alt="飛翔"></li>
-                  <li><img src="../images/logo-samurai.webp" alt="侍エンジニア"></li>
-                  <li><img src="../images/logo-tech-academy.webp" alt="テックアカデミー"></li>
-                  <li><img src="../images/logo-pro.webp" alt=".Pro"></li>
-                  <li><img src="../images/logo-kikagaku.webp" alt="キカガク"></li>
-                  <li><img src="../images/logo-aidemy.webp" alt="アイデミー"></li>
-                  <li><img src="../images/logo-startai.webp" alt="スタートAI"></li>
-                  <li><img src="../images/logo-lineyahoo.webp" alt="LINEYahooアカデミー"></li>
+                  <li><img src="../images/Ai-creators.png" alt="AIクリエイターズ"></li>
+                  <li><img src="../images/aicrew.png" alt="aicrew"></li>
+                  <li><img src="../images/Nets-lite.png" alt="netsLITE"></li>
                   <li><img src="../images/logo-skillup.webp" alt="スキルアップAI"></li>
                   <li><img src="../images/logo-mikimiki.webp" alt="mikimikiwebスクール"></li>
                   <li><img src="../images/logo-aiconnect.webp" alt="AIコネクト"></li>
@@ -187,14 +261,9 @@
                   <li><img src="../images/logo-horiemon.webp" alt="ホリエモンAIスクール"></li>
                   <li><img src="../images/logo-shiftai.webp" alt="SHIFT AI"></li>
                   <li><img src="../images/logo-bytech.webp" alt="バイテック生成AI"></li>
-                  <li><img src="../images/logo-hisho.webp" alt="飛翔"></li>
-                  <li><img src="../images/logo-samurai.webp" alt="侍エンジニア"></li>
-                  <li><img src="../images/logo-tech-academy.webp" alt="テックアカデミー"></li>
-                  <li><img src="../images/logo-pro.webp" alt=".Pro"></li>
-                  <li><img src="../images/logo-kikagaku.webp" alt="キカガク"></li>
-                  <li><img src="../images/logo-aidemy.webp" alt="アイデミー"></li>
-                  <li><img src="../images/logo-startai.webp" alt="スタートAI"></li>
-                  <li><img src="../images/logo-lineyahoo.webp" alt="LINEYahooアカデミー"></li>
+                  <li><img src="../images/Ai-creators.png" alt="AIクリエイターズ"></li>
+                  <li><img src="../images/aicrew.png" alt="aicrew"></li>
+                  <li><img src="../images/Nets-lite.png" alt="netsLITE"></li>
                   <li><img src="../images/logo-skillup.webp" alt="スキルアップAI"></li>
                   <li><img src="../images/logo-mikimiki.webp" alt="mikimikiwebスクール"></li>
                   <li><img src="../images/logo-aiconnect.webp" alt="AIコネクト"></li>
@@ -203,14 +272,9 @@
                   <li><img src="../images/logo-horiemon.webp" alt="ホリエモンAIスクール"></li>
                   <li><img src="../images/logo-shiftai.webp" alt="SHIFT AI"></li>
                   <li><img src="../images/logo-bytech.webp" alt="バイテック生成AI"></li>
-                  <li><img src="../images/logo-hisho.webp" alt="飛翔"></li>
-                  <li><img src="../images/logo-samurai.webp" alt="侍エンジニア"></li>
-                  <li><img src="../images/logo-tech-academy.webp" alt="テックアカデミー"></li>
-                  <li><img src="../images/logo-pro.webp" alt=".Pro"></li>
-                  <li><img src="../images/logo-kikagaku.webp" alt="キカガク"></li>
-                  <li><img src="../images/logo-aidemy.webp" alt="アイデミー"></li>
-                  <li><img src="../images/logo-startai.webp" alt="スタートAI"></li>
-                  <li><img src="../images/logo-lineyahoo.webp" alt="LINEYahooアカデミー"></li>
+                  <li><img src="../images/Ai-creators.png" alt="AIクリエイターズ"></li>
+                  <li><img src="../images/aicrew.png" alt="aicrew"></li>
+                  <li><img src="../images/Nets-lite.png" alt="netsLITE"></li>
                   <li><img src="../images/logo-skillup.webp" alt="スキルアップAI"></li>
                   <li><img src="../images/logo-mikimiki.webp" alt="mikimikiwebスクール"></li>
                   <li><img src="../images/logo-aiconnect.webp" alt="AIコネクト"></li>
@@ -219,14 +283,9 @@
                   <li><img src="../images/logo-horiemon.webp" alt="ホリエモンAIスクール"></li>
                   <li><img src="../images/logo-shiftai.webp" alt="SHIFT AI"></li>
                   <li><img src="../images/logo-bytech.webp" alt="バイテック生成AI"></li>
-                  <li><img src="../images/logo-hisho.webp" alt="飛翔"></li>
-                  <li><img src="../images/logo-samurai.webp" alt="侍エンジニア"></li>
-                  <li><img src="../images/logo-tech-academy.webp" alt="テックアカデミー"></li>
-                  <li><img src="../images/logo-pro.webp" alt=".Pro"></li>
-                  <li><img src="../images/logo-kikagaku.webp" alt="キカガク"></li>
-                  <li><img src="../images/logo-aidemy.webp" alt="アイデミー"></li>
-                  <li><img src="../images/logo-startai.webp" alt="スタートAI"></li>
-                  <li><img src="../images/logo-lineyahoo.webp" alt="LINEYahooアカデミー"></li>
+                  <li><img src="../images/Ai-creators.png" alt="AIクリエイターズ"></li>
+                  <li><img src="../images/aicrew.png" alt="aicrew"></li>
+                  <li><img src="../images/Nets-lite.png" alt="netsLITE"></li>
                   <li><img src="../images/logo-skillup.webp" alt="スキルアップAI"></li>
                   <li><img src="../images/logo-mikimiki.webp" alt="mikimikiwebスクール"></li>
                   <li><img src="../images/logo-aiconnect.webp" alt="AIコネクト"></li>
@@ -235,14 +294,9 @@
                   <li><img src="../images/logo-horiemon.webp" alt="ホリエモンAIスクール"></li>
                   <li><img src="../images/logo-shiftai.webp" alt="SHIFT AI"></li>
                   <li><img src="../images/logo-bytech.webp" alt="バイテック生成AI"></li>
-                  <li><img src="../images/logo-hisho.webp" alt="飛翔"></li>
-                  <li><img src="../images/logo-samurai.webp" alt="侍エンジニア"></li>
-                  <li><img src="../images/logo-tech-academy.webp" alt="テックアカデミー"></li>
-                  <li><img src="../images/logo-pro.webp" alt=".Pro"></li>
-                  <li><img src="../images/logo-kikagaku.webp" alt="キカガク"></li>
-                  <li><img src="../images/logo-aidemy.webp" alt="アイデミー"></li>
-                  <li><img src="../images/logo-startai.webp" alt="スタートAI"></li>
-                  <li><img src="../images/logo-lineyahoo.webp" alt="LINEYahooアカデミー"></li>
+                  <li><img src="../images/Ai-creators.png" alt="AIクリエイターズ"></li>
+                  <li><img src="../images/aicrew.png" alt="aicrew"></li>
+                  <li><img src="../images/Nets-lite.png" alt="netsLITE"></li>
                   <li><img src="../images/logo-skillup.webp" alt="スキルアップAI"></li>
                   <li><img src="../images/logo-mikimiki.webp" alt="mikimikiwebスクール"></li>
                   <li><img src="../images/logo-aiconnect.webp" alt="AIコネクト"></li>
@@ -252,7 +306,7 @@
         </div>
 
         <div class="ttl">
-            <img src="../images/rank_title.svg" alt="動画生成AIオンラインスクールTOP3" />
+            <img src="../images/fv_under_v.svg" alt="動画生成AIオンラインスクールTOP3" />
         </div>
 
         <table class="box-topranking">
@@ -263,10 +317,10 @@
                 <a
                   href="https://lp.bytech.jp/"
                   target="_blank"
-                  ><img class="banner" src="../images/bytech.webp" alt="バイテック生成AI" />
-                  <p class="title">バイテック生成AI</p>
+                  ><img class="banner" src="../images/bytech_SP.webp" alt="バイテック生成AI" />
+                  <p style="margin-top: 10px;" class="title">バイテック</p>
                 </a>
-                <div class="button box-topranking-button">
+                <div style="margin-top: 10px;" class="button box-topranking-button">
                   <div class="cv shiny-btn">
                     <a
                       href="https://lp.bytech.jp/"
@@ -279,16 +333,16 @@
               <td class="name">
                 <img class="ico-rank" src="../images/ico-rank02.png" alt="2位" />
                 <a
-                  href="https://horiemon.ai/"
+                  href="https://ai-creators.tech/school/"
                   target="_blank"
                   ><img
                     class="banner"
-                    src="../images/horiemon.webp"
+                    src="../images/ai-creators_sp.webp"
                     alt="AIクリエイターズ"
                   />
-                  <p class="title">AIクリエイターズ</p>
+                  <p style="margin-top: 10px;" class="title">AIクリエイターズ</p>
                 </a>
-                <div class="button box-topranking-button">
+                <div style="margin-top: 10px;" class="button box-topranking-button">
                   <div class="cv shiny-btn">
                     <a
                       href="https://horiemon.ai/"
@@ -301,15 +355,15 @@
               <td class="name">
                 <img class="ico-rank" src="../images/ico-rank03.png" alt="3位" />
                 <a
-                  href="https://longterm.kikagaku.ai/"
+                  href="https://ai-e-learning.aicrew.jp/"
                   target="_blank"
-                  ><img class="banner" src="../images/kikagaku.webp" alt="aicrew" />
-                  <p class="title">aicrew</p>
+                  ><img class="banner" src="../images/aicrew_sp.webp" alt="aicrew" />
+                  <p style="margin-top: 10px;" class="title">aicrew</p>
                 </a>
-                <div class="button box-topranking-button">
+                <div style="margin-top: 10px;"  class="button box-topranking-button">
                   <div class="cv shiny-btn">
                     <a
-                      href="https://longterm.kikagaku.ai/"
+                      href="https://ai-e-learning.aicrew.jp/"
                       target="_blank"
                       >公式ページはこちら</a
                     >
@@ -522,7 +576,7 @@
                     <a
                       href="https://lp.bytech.jp/"
                       target="_blank"
-                      ><img src="../images/bytech.webp" alt="バイテック生成AI"
+                      ><img src="../images/bytech_SP.webp" alt="バイテック生成AI"
                     /></a>
                   </div>
                   <div class="point">
@@ -765,7 +819,7 @@
               <div class="title-inner">
                 <h3 class="icon iconimg-2">
                   <a
-                    href="https://horiemon.ai/"
+                    href="https://ai-creators.tech/school/"
                     target="_blank"
                     ><div>AIクリエイターズ</div></a
                   >
@@ -780,9 +834,9 @@
                 <div class="detail-info-inner">
                   <div class="banner">
                     <a
-                      href="https://horiemon.ai/"
+                      href="https://ai-creators.tech/school/"
                       target="_blank"
-                      ><img src="../images/horiemon.webp" alt="AIクリエイターズ"
+                      ><img src="../images/ai-creators_sp.webp" alt="AIクリエイターズ"
                     /></a>
                   </div>
                   <div class="point">
@@ -997,7 +1051,7 @@
                   <p class="toptxt">\ セミナー参加で<span class="txt-red">12大特典プレゼント！ </span>/</p>
                   <div class="cv shiny-btn">
                     <a
-                      href="https://horiemon.ai/"
+                      href="https://ai-creators.tech/school/"
                       target="_blank"
                       >公式ページはこちら</a
                     >
@@ -1015,7 +1069,7 @@
               <div class="title-inner">
                 <h3 class="icon iconimg-3">
                   <a
-                    href="https://longterm.kikagaku.ai/"
+                    href="https://ai-e-learning.aicrew.jp/"
                     target="_blank"
                     ><div>aicrew</div></a
                   >
@@ -1027,9 +1081,9 @@
                 <div class="detail-info-inner">
                   <div class="banner">
                     <a
-                      href="https://longterm.kikagaku.ai/"
+                      href="https://ai-e-learning.aicrew.jp/"
                       target="_blank"
-                      ><img src="../images/kikagaku.webp" alt="aicrew"
+                      ><img src="../images/aicrew_sp.webp" alt="aicrew"
                     /></a>
                   </div>
                   <div class="point">
@@ -1216,7 +1270,7 @@
                   <p class="toptxt">\ オンライン<span class="txt-red">無料説明会</span>開催中！/</p>
                   <div class="cv shiny-btn">
                     <a
-                      href="https://longterm.kikagaku.ai/"
+                      href="https://ai-e-learning.aicrew.jp/"
                       target="_blank"
                       >公式ページはこちら</a
                     >
@@ -1234,9 +1288,9 @@
               <div class="title-inner">
                 <h3 class="icon iconimg-4">
                   <a
-                    href="https://lp.sejuku.net/aidx_ss/"
+                    href="https://nestslite.jp/course/movie/"
                     target="_blank"
-                    ><div>業務改善AI活用コース by SamuraiEngineer</div></a
+                    ><div>netsLITE</div></a
                   >
                 </h3>
               </div>
@@ -1249,9 +1303,9 @@
                 <div class="detail-info-inner">
                   <div class="banner">
                     <a
-                      href="https://lp.sejuku.net/aidx_ss/"
+                      href="https://nestslite.jp/course/movie/"
                       target="_blank"
-                      ><img src="../images/samurai.webp" alt="侍エンジニア&lt;br&gt;侍エンジニア&lt;!-- 生成AIセミナー --&gt;"
+                      ><img src="../images/nets-lite_SP.webp" alt="netsLITE"
                     /></a>
                   </div>
                   <div class="point">
@@ -1410,7 +1464,7 @@
                 <div class="button button-yss button-bottom">
                   <div class="cv shiny-btn">
                     <a
-                      href="https://lp.sejuku.net/aidx_ss/"
+                      href="https://nestslite.jp/course/movie/"
                       target="_blank"
                       >公式ページはこちら</a
                     >
@@ -1428,7 +1482,7 @@
               <div class="title-inner">
                 <h3 class="icon iconimg-5">
                   <a
-                    href="https://techacademy.jp/course/first-prompt-engineering"
+                    href="https://l.shift-ai.co.jp"
                     target="_blank"
                     ><div>SHIFT AI</div></a
                   >
@@ -1440,9 +1494,9 @@
                 <div class="detail-info-inner">
                   <div class="banner">
                     <a
-                      href="https://techacademy.jp/course/first-prompt-engineering"
+                      href="https://l.shift-ai.co.jp"
                       target="_blank"
-                      ><img src="../images/techacademy.webp" alt="SHIFT AI"
+                      ><img src="../images/shift.webp" alt="SHIFT AI"
                     /></a>
                   </div>
                   <div class="point">
@@ -1552,7 +1606,7 @@
                 <div class="button button-yss" style="padding-bottom: 25px;">
                   <div class="cv shiny-btn">
                     <a
-                      href="https://techacademy.jp/course/first-prompt-engineering"
+                      href="https://l.shift-ai.co.jp"
                       target="_blank"
                       >公式ページはこちら</a
                     >

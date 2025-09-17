@@ -197,7 +197,7 @@
 
 /*YSS  LP用サイドバー*/
 .lp-yss .wrap {
-  width: 800px;
+  width: 1000px;
   display: block;
   margin: auto;
 }
@@ -8816,7 +8816,7 @@ footer .copyright {
 }
 @media only screen and (max-width: 767px) {
   .rank-simple .box .box-inner .detail-info-inner .banner {
-    width: 50%;
+    width: 80%;
   }
 }
 .rank-simple .box .box-inner .detail-info-inner .point {
@@ -13879,7 +13879,7 @@ footer .copyright {
 .mode .mainvisual {
   z-index: 0;
   background-color: transparent !important;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .mode .mainvisual img {
