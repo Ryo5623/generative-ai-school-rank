@@ -1516,3 +1516,36 @@ body .is-layout-grid {
     margin-top: 4px;
     letter-spacing: 0px;
 }
+@media only screen and (max-width: 768px) {
+  .skill ul li {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    margin: 3px 0;
+  }
+  /*.skill ul li > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+  }*/
+}
+.spec .spec-inner {
+  display: grid !important;          /* 既存のレイアウトを強制上書き */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.spec .spec-inner .spec-inner-wrapper {
+  width: 100% !important;            /* 横並びを指定している幅指定を無効化 */
+  margin: 0 !important;
+}
+
+/* タブレット～PCは6列（お好みで4列などに変更可） */
+@media (min-width: 768px) {
+  .spec .spec-inner {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+}
