@@ -1550,3 +1550,22 @@ body .is-layout-grid {
     gap: 16px;
   }
 }
+.choose-purpose {
+    text-align: center;
+    margin: 5px auto 10px;
+    position: sticky;
+    left: 0;
+}
+.choose-purpose a {
+    color: #068be0;
+    text-decoration: none;
+    border: 1px solid #068be0;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+.choose-purpose a { font-size: 1.2rem; }      /* SP */
+@media (min-width: 1024px) {
+  .choose-purpose a { font-size: 1.8rem; }  /* PC */
+}
+
