@@ -2567,3 +2567,26 @@ ease-in-out;
     z-index: 5;
     cursor: pointer;
 }
+
+.bnr_fixed_btm {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  
+  /* 最初は隠す */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* 表示状態 */
+.bnr_fixed_btm.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
