@@ -13879,7 +13879,7 @@ footer .copyright {
 .mode .mainvisual {
   z-index: 0;
   background-color: transparent !important;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: 0 auto;
 }
 .mode .mainvisual img {

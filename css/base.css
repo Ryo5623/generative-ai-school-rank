@@ -86,6 +86,7 @@ video {
 
 body {
   line-height: 1;
+  margin-top: -10px;
 }
 
 article,
@@ -1567,5 +1568,58 @@ body .is-layout-grid {
 .choose-purpose a { font-size: 1.2rem; }      /* SP */
 @media (min-width: 1024px) {
   .choose-purpose a { font-size: 1.8rem; }  /* PC */
+}
+
+@media only screen and (max-width: 768px) {
+    h2.main_ttl {
+        font-size: 3.7vw;
+        line-height: 1.3;
+        padding: 10px 0;
+        background-image: url(../images/main_ttl_sp.webp);
+        background-size: 100% 100%;
+    }
+}
+
+.main_ttl {
+    background-image: url(../images/main_ttl.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1920px 100%;
+    background-color: #462EF5;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    padding: 12px 0;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    h2.main_ttl span {
+        font-size: 3.8vw;
+    }
+}
+
+.main_ttl span {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff112;
+}
+
+.main_ttl small {
+    font-size: 80%;
+}
+
+.mainvisual {
+  background: #fff;
+}
+
+.mainvisual picture,
+.mainvisual img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
