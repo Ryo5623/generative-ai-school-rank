@@ -283,7 +283,7 @@ table {
 }
 
 #key-visual picture {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: block;
 }
@@ -1816,7 +1816,7 @@ footer .copyright {
 } */
 
 .p-logo-slider {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto;
   overflow: hidden;
   background: #F1F1F1;
@@ -1976,7 +1976,6 @@ footer .copyright {
 
 small {
     font-size: .7rem;
-    color: #5c5c5c;
 }
 
 .p-ranking-voice-item__content__eval span {
@@ -2366,3 +2365,53 @@ small {
 @media (min-width: 1024px) {
   .choose-purpose a { font-size: 1.4rem; }  /* PC */
 }
+
+@media only screen and (max-width: 768px) {
+    h2.main_ttl {
+        font-size: 3.7vw;
+        line-height: 1.3;
+        padding: 10px 0;
+        background-image: url(../images/main_ttl_sp.webp);
+        background-size: 100% 100%;
+    }
+}
+
+.main_ttl {
+    background-image: url(../images/main_ttl.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1920px 100%;
+    background-color: #462EF5;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    padding: 12px 0;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    h2.main_ttl span {
+        font-size: 3.8vw;
+    }
+}
+
+.main_ttl span {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff112;
+}
+
+.main_ttl small {
+    font-size: 80%;
+}
+
+.visually-hidden {
+   position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+
+.fv picture{display:block;}
+.fv img{display:block;width:100%;height:auto;}

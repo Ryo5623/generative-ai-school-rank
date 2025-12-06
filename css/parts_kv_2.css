@@ -1,16 +1,16 @@
 #key-visual__container {
   position: relative;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   #key-visual__container {
     min-height: 720px;
   }
-}
+} */
 #container__tag {
   position: absolute;
   left: 5.6%;
