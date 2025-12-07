@@ -2568,25 +2568,25 @@ ease-in-out;
     cursor: pointer;
 }
 
-.bnr_fixed_btm {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  
-  /* 最初は隠す */
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+@media (min-width: 1025px) {
+  .bnr_fixed_side {
+    position: fixed;
+    right: 16px;        /* 位置はお好みで調整 */
+    bottom: 120px;
+    z-index: 9999;
 
-/* 表示状態 */
-.bnr_fixed_btm.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+    display: block;     /* ここから表示制御 */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .bnr_fixed_side.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
 }
