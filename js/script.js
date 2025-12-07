@@ -350,6 +350,32 @@ jQuery (function ($) {
     }
 });
 
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const sideBanner = document.querySelector('.bnr_fixed_side');
+    const fv = document.querySelector('.fv_image'); // ← FVのクラス名に合わせる
+
+    if (!sideBanner) return;
+
+    const EXTRA_OFFSET = 100; // FVを抜けてからさらに少し下がったら出す
+
+    function toggleSideBanner() {
+      const fvHeight = fv ? fv.offsetHeight : 0;
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      if (scrollY > fvHeight + EXTRA_OFFSET) {
+        sideBanner.classList.add('is-visible');
+      } else {
+        sideBanner.classList.remove('is-visible');
+      }
+    }
+
+    toggleSideBanner();
+    window.addEventListener('scroll', toggleSideBanner, { passive: true });
+  });
+
+
+
 /* 表高さ揃えjs */
 // $(window).on('load resize', function() {
 
