@@ -2458,157 +2458,6 @@ small {
 .fv picture{display:block;}
 .fv img{display:block;width:100%;height:auto;}
 
-.fixed_cta {
-    display: none;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    z-index: 50;
-    background: rgba(17, 17, 17, 0.9);
-}
-
-.fixed_cta .inner {
-    width: 1000px;
-    margin: 0 auto;
-    position: relative;
-    padding: 10px 0 10px 124px;
-}
-
-@media only screen and (min-width: 769px) {
-    a, a img {
-        -moz-transition: 0.3s;
-        -webkit-transition: 0.3s;
-        -o-transition: 0.3s;
-        -ms-transition: 0.3s;
-        transition: 0.3s;
-    }
-}
-
-@media only screen and (min-width: 769px) {
-    .sp {
-        display: none !important;
-    }
-}
-
-@media only screen and (min-width: 769px) {
-    .fixed_cta .btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-top: -2px;
-    }
-}
-
-
-.fixed_cta .btn {
-    right: 122px;
-    width: 280px;
-    margin: auto;
-}
-
-.fixed_cta .btn .cta_btn {
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -o-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -webkit-box-shadow: 0 4px 0 #0e8c61;
-    -moz-box-shadow: 0 4px 0 #0e8c61;
-    box-shadow: 0 4px 0 #0e8c61;
-}
-
-
-.fixed_cta .btn .cta_btn span {
-    font-size: 15px;
-    font-size: 1.5rem;
-    line-height: 1.3;
-    padding: 7px 0;
-    height: 53px;
-    color: #fff;
-    text-align: center;
-    display: block;
-    font-weight: bold;
-}
-
-.cta_btn.shiny::after {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: -100px;
-    width: 50px;
-    height: 50px;
-    background-image: linear-gradient(100deg, rgba(255, 255, 255, 0) 10%, white 100%, rgba(255, 255, 255, 0) 0%);
-    animation-name: shiny;
-    animation-duration: 4s;
-    animation-timing-function: 
-ease-in-out;
-    animation-iteration-count: infinite;
-    pointer-events: none;
-    z-index: 10;
-}
-
-.fixed_cta2 {
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-}
-
-.fixed_cta2 .content.bytech {
-    background-image: url(img/exitprotection_bg_samurai.png);
-}
-
-@media only screen and (max-width: 768px) {
-    .fixed_cta2 .content .client_image {
-        width: 60%;
-        top: 38.4%;
-    }
-}
-
-.fixed_cta2 .content .client_image {
-    display: block;
-    width: 255px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    top: 192px;
-}
-
-@media only screen and (max-width: 768px) {
-    .fixed_cta2 .content .btn {
-        bottom: 5vw;
-    }
-}
-
-.fixed_cta2 .content .btn .cta_btn {
-    width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    .fixed_cta2 .content .btn .cta_btn a {
-        padding: 20px 0;
-    }
-}
-
-.fixed_cta2 .content .btn .cta_btn a {
-    font-size: 20px;
-    font-size: 2rem;
-    padding: 15px 0;
-}
-
-.fixed_cta2 .content .close {
-    position: absolute;
-    top: -50px;
-    right: 0;
-    z-index: 5;
-    cursor: pointer;
-}
 
 @media (min-width: 1025px) {
   .bnr_fixed_side {
@@ -2630,5 +2479,198 @@ ease-in-out;
     visibility: visible;
     pointer-events: auto;
     transform: translateX(0);
+  }
+}
+
+/* Footer_CTA */
+/* --- 固定CTAバー全体のスタイル --- */
+.fixed_cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(34, 34, 34, 0.95); /* 参考画像に近い濃いグレーの背景 */
+  z-index: 9999; /* 最前面に表示 */
+  padding: 12px 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* 上部に影をつけて浮き上がり感を出す */
+}
+
+/* --- インナーコンテナ（中央寄せ・横並び設定） --- */
+.fixed_cta .inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* リンク全体をFlexコンテナにして横並びにする */
+.fixed_cta .inner > a {
+  display: flex;
+  justify-content: center; /* 中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+  text-decoration: none;
+  gap: 10px; /* 画像とボタンの間隔 */
+}
+
+/* --- 画像エリア --- */
+.fixed_cta .image img {
+  display: block;
+  max-width: 70%;
+  height: auto;
+  /* 画像サイズ調整（必要に応じて調整してください） */
+  vertical-align: bottom;
+}
+
+/* --- スマホ用画像はPCでは非表示 --- */
+.fixed_cta .sp_image {
+  display: none;
+}
+
+/* --- ボタンエリア --- */
+.fixed_cta .btn {
+  flex-shrink: 0; /* 画面が狭くなってもボタンが潰れないようにする */
+}
+
+/* --- ボタンのデザイン --- */
+.fixed_cta .cta_btn {
+  /* 参考画像の緑色グラデーション */
+  
+  background: linear-gradient(45deg, #ffc107 0%, #f76a35 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 10px 50px; /* 横幅を広めに確保 */
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 4px 0 #863a1e, 0 5px 10px rgba(0,0,0,0.3); /* 下部の立体的な影 */
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden; /* 光るエフェクトがはみ出さないように */
+}
+
+/* ホバー時の挙動（少し沈む） */
+.fixed_cta .cta_btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #863a1e, 0 3px 6px rgba(0,0,0,0.3);
+  opacity: 0.95;
+}
+
+.fixed_cta .cta_btn span {
+  display: block;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* --- shiny（キラッと光る）アニメーション --- */
+.fixed_cta .cta_btn.shiny::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  /* 光の帯 */
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg); /* 斜めに傾ける */
+  animation: shine 4s infinite; /* 4秒ごとに光る */
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  50% { left: 200%; } /* 素早く通り過ぎる */
+  100% { left: 200%; } /* 残りの時間は待機 */
+}
+
+/* --- レスポンシブ調整（画面幅が狭いPCやタブレット向け） --- */
+@media (max-width: 900px) {
+  .fixed_cta .inner > a {
+    gap: 15px;
+  }
+  .fixed_cta .cta_btn {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+  .fixed_cta .image img {
+    width: 350px; /* 画像を少し小さくする */
+  }
+}
+
+/* --- スマホ表示用 (768px以下) --- */
+@media (max-width: 768px) {
+  
+  /* 全体の余白調整 */
+  .fixed_cta {
+    padding: 8px 2px; /* 上下左右の余白を少し詰める */
+  }
+
+  /* リンク全体をFlexコンテナとして折り返しを有効にする */
+  .fixed_cta .inner > a {
+    flex-wrap: wrap; /* 要素を折り返し可能にする */
+    justify-content: space-between; /* 要素を両端に寄せる */
+    gap: 5px 0; /* 上下の行間を10px、左右はspace-betweenで自動調整 */
+  }
+
+  /* --- 1. 上段：No.1画像エリア --- */
+  .fixed_cta .image {
+    width: 100%; /* 横幅いっぱいに広げる */
+    display: flex;
+    justify-content: center;
+    order: 1; /* 1番目に表示 */
+  }
+
+  .fixed_cta .image img {
+    width: 100%; /* 画像を親要素に合わせる */
+    max-width: 450px; /* 大きくなりすぎないように制限 */
+    height: auto;
+  }
+
+  /* --- 2. 下段左：ロゴ画像エリア --- */
+  .fixed_cta .sp_image {
+    display: flex !important; /* PCで消していたのを表示させる */
+    order: 2; /* 2番目に表示 */
+    width: 28%; /* 左側の幅（約3割） */
+    
+    /* 白いボックスのデザイン再現 */
+    background-color: #fff;
+    border: 1px solid #ddd; /* 薄い枠線 */
+    /* 赤い太枠が必要な場合は border: 2px solid #ff0000; に変更 */
+    
+    border-radius: 3px;
+    padding: 5px;
+    box-sizing: border-box;
+    align-items: center; /* 上下中央揃え */
+    justify-content: center; /* 左右中央揃え */
+    height: 54px; /* ボタンと高さを揃えるための固定値 */
+  }
+
+  .fixed_cta .sp_image img {
+    max-width: 100%;
+    max-height: 100%; /* 枠内に収める */
+    width: auto;
+    height: auto;
+  }
+
+  /* --- 3. 下段右：ボタンエリア --- */
+  .fixed_cta .btn {
+    order: 3; /* 3番目に表示 */
+    width: 70%; /* 右側の幅（残り約7割） */
+  }
+
+  .fixed_cta .cta_btn {
+    width: 100%; /* 親要素(btn)いっぱいに広げる */
+    height: 54px; /* ロゴエリアと高さを揃える */
+    padding: 0; /* 上下のパディングを解除してFlexboxで中央寄せ */
+    font-size: 14px; /* 文字サイズをスマホ用に調整 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .fixed_cta .cta_btn span {
+    line-height: 1.3;
+    display: block;
   }
 }
