@@ -25,6 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link rel="stylesheet" href="../css/scroll-hint.css" />
     <link href="../css/swiper-bundle.min.css" rel="stylesheet" />
+    <script src="../js/script.js"></script>
     <!--　Swiper -->
     <script src="../css/swiper-bundle.min.js"></script>
     <!--　Swiper -->
@@ -82,7 +83,7 @@
       <!--modal-->
 
       <div class="mainvisual">
-        <picture>
+        <picture class="fv">
           <!-- PC（769px以上） -->
           <source
             media="(min-width: 1024px)"
@@ -1707,6 +1708,22 @@
     </div>
 
     <!--wrapper-->
+    <div class="fixed_cta" style="display: block;">
+      <div class="inner"> <a href="https://lp.bytech.jp" target="_blank">
+        <div class="image">
+          <picture>
+            <source srcset="../images/cta_top.webp" media="(max-width: 768px)">
+            <img src="../images/cta_top.webp" width="464" height="59" loading="lazy" alt="当サイト圧倒的No.1!!"> </picture>
+        </div>
+        <div class="sp_image sp">
+          <img src="../images/bytech_logo.png" width="120" height="60" loading="lazy" alt="バイテック生成AI">
+        </div>
+        <div class="btn">
+          <div class="cta_btn shiny"><span>バイテック生成AIの<br>
+            公式サイトはこちら</span></div>
+        </div>
+        </a> </div>
+    </div>
 
     <footer>
       <div class="inner">
@@ -1764,23 +1781,6 @@
     </script>
 
     <!--スクロールできます表示-->
-
-    <!--Pmax用skillタブ-->
-
-    <!--YSS YDA GAD GDN LP用比較タブ-->
-    <script type="text/javascript">
-      jQuery(function ($) {
-        $(".tab").click(function () {
-          $(".is-active").removeClass("is-active")
-          $(this).addClass("is-active")
-          $(".is-show").removeClass("is-show")
-          // クリックしたタブからインデックス番号を取得
-          const index = $(this).index()
-          // クリックしたタブと同じインデックス番号をもつコンテンツを表示
-          $(".panel").eq(index).addClass("is-show")
-        })
-      })
-    </script>
 
     <!--ポップアップ　ブラウザバック-->
     <script>
