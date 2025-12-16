@@ -377,8 +377,6 @@ jQuery (function ($) {
 document.addEventListener('DOMContentLoaded', function () {
     // ターゲットとなるCTA要素（下部固定されるバー）
     const fixedCta = document.querySelector('.fixed_cta'); 
-    // ターゲットとなるサイドバナー要素
-    const sideBanner = document.querySelector('.bnr_fixed_side'); 
 
     // 処理対象の要素を配列に格納し、存在しない要素（null）を除外
     const targets = [fixedCta, sideBanner].filter(el => el !== null); 
@@ -389,43 +387,29 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- FV要素の決定ロジックの変更 ---
     // 優先順位を設けて、いずれかの要素を取得する
     // 1. .fv_image が存在するか確認
-    let fvElement = document.querySelector('.fv_image');
+    let fvElement = document.querySelector('.fv');
 
     const EXTRA_OFFSET = 100; // FVを抜けてからさらに少し下がったら出す
 
-    /**
-     * スクロールイベントが発生した際に実行される関数
-     */
-    function toggleBanners() {
-      // FV要素の高さ（要素が存在しない場合は0とする）
-      // fvElementがnullでない場合にoffsetHeightを取得
-      const fvHeight = fvElement ? fvElement.offsetHeight : 0; 
-      
-      // 現在のスクロール量
-      const scrollY = window.scrollY || window.pageYOffset;
+    function toggleSideBanner() {
 
-      // 表示を切り替える条件
-      const shouldBeVisible = (scrollY > fvHeight + EXTRA_OFFSET);
+	const fvHeight = fv ? fv.offsetHeight : 0;
 
-      // 全てのターゲット要素に対してループ処理を実行
-      targets.forEach(target => {
-          // 要素ごとに付与するクラス名を設定
-          let activeClass = '';
-          if (target.classList.contains('fixed_cta')) {
-              activeClass = 'is-active'; // fixed_ctaには 'is-active'
-          } else if (target.classList.contains('bnr_fixed_side')) {
-              activeClass = 'is-visible'; // bnr_fixed_sideには 'is-visible'
-          }
-          
-          if (activeClass) {
-              if (shouldBeVisible) {
-                  target.classList.add(activeClass);
-              } else {
-                  target.classList.remove(activeClass);
-              }
-          }
-      });
-    }
+	const scrollY = window.scrollY || window.pageYOffset;
+
+
+
+	if (scrollY > fvHeight + EXTRA_OFFSET) {
+
+	sideBanner.classList.add('is-visible');
+
+	} else {
+
+	sideBanner.classList.remove('is-visible');
+
+	}
+
+	}
 
     // 初期状態のチェック
     toggleBanners();
