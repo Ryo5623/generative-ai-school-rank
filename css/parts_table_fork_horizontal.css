@@ -86,15 +86,15 @@
 }
 
 .table_horizontal .table--wrap .table__item .rank_number1 {
-    background-color: #DCC017;
+    background-color: #F4D146;
 }
 
 .table_horizontal .table--wrap .table__item .rank_number2 {
-    background-color: #888888;
+    background-color: #A8A8A8;
 }
 
 .table_horizontal .table--wrap .table__item .rank_number3 {
-    background-color: #b55a0f;
+    background-color: #CEA838;
 }
 
 .table_horizontal .table--wrap .table__item .rank_number4 {
@@ -167,20 +167,20 @@
 }
 
 .table_horizontal .table--wrap .table__item .td--head {
-    background-color: #274056;
+    background-color: #533afc;
     color: #fff;
     border-left-color: #f1f1f1;
     }
 
 
 .table_horizontal .table--wrap .table__item .td p {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
 }
 
 
 .table_horizontal .table--wrap .table__item .th .btn {
-    border-radius: 8px;
+    border-radius: 25px;
     padding: 8px 8px;
     color: #fff;
     text-align: center;
@@ -193,7 +193,7 @@
 }
 
 .table_horizontal .table--wrap .table__item .th .btn-official {
-    background: #003971;
+    background: #D4215F;
 }
 
 
@@ -244,7 +244,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 80px;
-    background-color: #fff3e3;
+    background-color: #FFF4F4;
 }
 
 .table_horizontal .table--wrap .table__item .style_maru {
