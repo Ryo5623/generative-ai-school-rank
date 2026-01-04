@@ -129,7 +129,7 @@
   font-size: 11px;
   color: #fff;
   margin-top: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   text-align: center;
   font-weight: bold;
   padding-top: 12px;
@@ -426,8 +426,8 @@
 
 .container-table .table_name {
   font-weight: bold;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-left: 1%;
+  padding-right: 1%;
   word-break: break-word;
 }
 
