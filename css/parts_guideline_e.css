@@ -18,6 +18,22 @@
   border-left-width: 8px;
   border-left-color: #533afb;
 }
+
+.guideline h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding: 8px 12px;
+    text-align: left;
+    margin: auto;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #533afb;
+    border-left-style: solid;
+    border-left-width: 8px;
+    border-left-color: #533afb;
+}
 .guideline h1 span {
   font-size: 18px;
   vertical-align: top;
