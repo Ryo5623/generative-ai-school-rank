@@ -267,7 +267,7 @@
                 </li>
             </ol>
         </div>
-        <!-- 比較表入れる -->
+       <!-- 比較表入れる -->
           <div id="result">
             <!-- SimpleBarはこの要素に適用（内部DOMはJSが生成） -->
             <div class="scroll-contents" data-simplebar data-simplebar-auto-hide="false">
@@ -291,7 +291,9 @@
 
                   <!-- 1: バイテック -->
                   <div class="table__item table3__order_1">
-                    <div class="rank_number rank_number1">1</div>
+                    <div class="rank_number rank_number1" style="padding: 0px 4px;">
+                      <img src="../images/ranking_1.png" width="100%" height=auto alt="ランキング1位">
+                    </div>
                     <div class="th">
                       <ul>
                         <!-- <li><a href="https://lp.bytech.jp" target="_blank" class="rank_name">バイテック</a></li> -->
@@ -362,7 +364,9 @@
 
                   <!-- 2: ホリエモンAI学校 -->
                   <div class="table__item table3__order_2">
-                    <div class="rank_number rank_number2">2</div>
+                    <div class="rank_number rank_number2" style="padding: 0px 4px;">
+                      <img src="../images/ranking_2.png" width="100%" height=auto alt="ランキング2位">
+                    </div>
                     <div class="th">
                       <ul>
                         <li>
@@ -403,7 +407,9 @@
 
                   <!-- 3: Aidemy Premium -->
                   <div class="table__item table3__order_3">
-                    <div class="rank_number rank_number3">3</div>
+                    <div class="rank_number rank_number3" style="padding: 0px 4px;">
+                      <img src="../images/ranking_3.png" width="100%" height=auto alt="ランキング3位">
+                    </div>
                     <div class="th">
                       <ul>
                         <li>
@@ -442,16 +448,16 @@
                     <div class="td td11_width d-flex style_none"><p>22,700円〜</p></div>
                     <div class="td td12_width d-flex style_none"><p>3コース/10レッスン</p></div>
                   </div>
-
                 </div>
               </div>
             </div>
           </div>
         <div id="contents">
+        <!-- ランキングボックス -->
         <div class="ranking-box">
             <div class="header" id="item_b">
               <h2 class="title">
-                <img style="width: 50px;" loading="lazy" src="../images/icon-ranking-6.svg" alt="ランキング6位">
+                <img style="width: 50px;" loading="lazy" src="../images/rank-c_6.svg" alt="生成AIスクール比較ランキング5位">
                 <div>
                   <a
                     href="https://ai.digital-hacks.jp/"
@@ -502,16 +508,7 @@
                             target="_blank"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >公式サイトを見る
-                            <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 20px; height: 20px; opacity: 1;" xml:space="preserve">
-                              <style type="text/css">
-                                .st0{fill:#FFFFFF;}
-                              </style>
-                              <g transform="rotate(-90 256 256)">
-                                <polygon class="st0" points="440.189,92.085 256.019,276.255 71.83,92.085 0,163.915 256.019,419.915 512,163.915 	" style="fill: #FFFFFF;"></polygon>
-                              </g>
-                              </svg>
-                            
+                            >デジハク公式サイトを見る
                             </a>
                         </li>
                       </ul>
@@ -520,6 +517,7 @@
 
                   <div class="extra_point">
                     <h1><img src="../images/point.png" /><span>「ココがポイント」</span></h1>
+
                     <table>
                       <tbody>
                         <tr>
@@ -568,37 +566,37 @@
                             <small>引用：<span><a href="https://ai.digital-hacks.jp/">デジハク公式サイトより</a></span></small>
                           </div>
                         </li>
-                      <li class="p-ranking-voice-item">
-                        <div class="p-ranking-voice-item__profile">
-                          <figure><img src="../images/icon-voice-men-7.svg" alt="男性のアイコン"></figure>
-                          <p style="margin-top: 5px;">30代男性</p>
-                        </div>
-                        <div class="p-ranking-voice-item__content">
-                          <div class="p-ranking-voice-item__content__eval">
-                            <img src="../images/icon-star-4.svg" alt="星">                          <span>4.0</span>
+                                          <li class="p-ranking-voice-item">
+                          <div class="p-ranking-voice-item__profile">
+                            <figure><img src="../images/icon-voice-men-7.svg" alt="男性のアイコン"></figure>
+                            <p style="margin-top: 5px;">30代男性</p>
                           </div>
-                          <p>最初はAIなんて無理だと思っていました。でも一歩踏み出したことで、数字に直結する成果が出ました。デジタルが苦手でも、挑戦してよかったと心から思っています。</p>
-                          <small>引用：<span><a href="https://ai.digital-hacks.jp/">デジハク公式サイトより</a></span></small>
-                        </div>
-                      </li>
-                      <li class="p-ranking-voice-item">
-                        <div class="p-ranking-voice-item__profile">
-                          <figure><img src="../images/icon-voice-woman-5.svg" alt="女性のアイコン"></figure>
-                          <p style="margin-top: 5px;">30代女性</p>
-                        </div>
-                        <div class="p-ranking-voice-item__content">
-                          <div class="p-ranking-voice-item__content__eval">
-                            <img src="../images/icon-star-35.svg" alt="星">                          <span>3.5</span>
+                          <div class="p-ranking-voice-item__content">
+                            <div class="p-ranking-voice-item__content__eval">
+                              <img src="../images/icon-star-4.svg" alt="星">                          <span>4.0</span>
+                            </div>
+                            <p>最初はAIなんて無理だと思っていました。でも一歩踏み出したことで、数字に直結する成果が出ました。デジタルが苦手でも、挑戦してよかったと心から思っています。</p>
+                            <small>引用：<span><a href="https://ai.digital-hacks.jp/">デジハク公式サイトより</a></span></small>
                           </div>
-                          <p>子育てと両立できるか不安でしたが、在宅でできる仕組みを自分で作れたのは大きな自信になりました。環境を理由に諦めなくていいんだ、と実感しました。</p>
-                          <small>引用：<span><a href="https://ai.digital-hacks.jp/">デジハク公式サイトより</a></span></small>
-                        </div>
-                      </li>
+                        </li>
+                                          <li class="p-ranking-voice-item">
+                          <div class="p-ranking-voice-item__profile">
+                            <figure><img src="../images/icon-voice-woman-5.svg" alt="女性のアイコン"></figure>
+                            <p style="margin-top: 5px;">30代女性</p>
+                          </div>
+                          <div class="p-ranking-voice-item__content">
+                            <div class="p-ranking-voice-item__content__eval">
+                              <img src="../images/icon-star-35.svg" alt="星">                          <span>3.5</span>
+                            </div>
+                            <p>子育てと両立できるか不安でしたが、在宅でできる仕組みを自分で作れたのは大きな自信になりました。環境を理由に諦めなくていいんだ、と実感しました。</p>
+                            <small>引用：<span><a href="https://ai.digital-hacks.jp/">デジハク公式サイトより</a></span></small>
+                          </div>
+                        </li>
                       </ul>
                   </div>
 
                   <!-- spec_box_end -->
-                 <div class="summary">
+                <div class="summary">
                     <div class="container">
                       <table class="spec">
                         <tbody>
@@ -606,12 +604,14 @@
                             <th>コース名</th>
                             <td>
                               <div class="spec_star_mongon">
-                                ・生成AI共通基礎</br>
-                                ・AIコンテンツ生成</br>
-                                ・AIビジュアル制作</br>
-                                ・業務効率化・自動化</br>
-                                ・AIアプリ開発</br>
-                                ・AIビジネス実践編</br>
+                                <ul>
+                                  <li>・生成AI共通基礎</li>
+                                  <li>・AIコンテンツ生成</li>
+                                  <li>・AIビジュアル制作</li>
+                                  <li>・業務効率化・自動化</li>
+                                  <li>・AIアプリ開発</li>
+                                  <li>・AIビジネス実践編</li>
+                                </ul>
                               </div>
                             </td>
                           </tr>
@@ -619,15 +619,18 @@
                             <th>チャットサポート</th>
                             <td>
                               <div class="spec_star_mongon">
-                                あり/ 6ヶ月（学習質問・添削サポート）
+                                あり/6ヶ月（学習質問・添削サポート）
                               </div>
                             </td>
                           </tr>
                           <tr>
-                            <th>面談サポート</th>
+                            <th>学習サポート</th>
                             <td>
                               <div class="spec_star_mongon">
-                                あり/ 6ヶ月
+                                <ul>
+                                  <li>・個別指導</li>
+                                  <li>・チャットでの質問可</li>
+                                </ul>
                               </div>
                             </td>
                           </tr>
@@ -644,12 +647,27 @@
                             </td>
                           </tr>
                           <tr>
-                            <th>収益化サポート</th>
+                            <th>目的支援</th>
                             <td>
                               <div class="spec_star_mongon">
-                                あり（ポートフォリオ制作）
+                                <ul>
+                                  <li>・副業支援</li>
+                                  <li>・独立支援</li>
+                                </ul>
                               </div>
                             </td>
+                          </tr>
+                          <tr>
+                            <th>案件斡旋サポート</th>
+                            <td><div class="spec_star_mongon">なし</div></td>
+                          </tr>
+                          <tr>
+                            <th>卒業後のサポート</th>
+                            <td><div class="spec_star_mongon">
+                              <ul>
+                                <li>受講生コミュニティ</li>
+                              </ul>
+                            </div></td>
                           </tr>
                           <tr>
                             <th>費用</th>
@@ -1094,8 +1112,8 @@
                   >法人向けAI研修サービス比較</a
                 >
               </li>
-              <!-- <li><a href="./info.php#about">本サイトについて</a></li>
-					<li><a href="./info.php#inquiry">お客様アンケート</a></li> -->
+              <!-- <li><a href="../info.php#about">本サイトについて</a></li>
+					<li><a href="../info.php#inquiry">お客様アンケート</a></li> -->
             </ul>
           </div>
         </div>
