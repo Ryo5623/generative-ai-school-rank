@@ -419,6 +419,69 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const cta = document.querySelector('.fixed_cta');
+  if (!cta) return;
+
+  const showAfter = 300;     // 何pxスクロールで表示するか
+  const hideBottom = 80;     // 最下部から何px以内で隠すか（調整用）
+
+  // フッター要素（Elementorで付けた .site-footer があれば優先）
+  const footer = document.querySelector('.site-footer') || document.querySelector('footer');
+
+  // ページ最下部判定
+  const isNearBottom = () => {
+    const scrollBottom = window.scrollY + window.innerHeight;
+    const docHeight = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    );
+    return (docHeight - scrollBottom) <= hideBottom;
+  };
+
+  // スクロール量＋最下部で表示制御
+  const updateByScroll = () => {
+    // フッターが見えてる間は強制非表示（IntersectionObserverからセットされる）
+    if (cta.dataset.footerHidden === "1") {
+      cta.classList.remove('is-visible');
+      return;
+    }
+
+    // 最下部付近なら非表示
+    if (isNearBottom()) {
+      cta.classList.remove('is-visible');
+      return;
+    }
+
+    // 通常の表示条件
+    if (window.scrollY > showAfter) cta.classList.add('is-visible');
+    else cta.classList.remove('is-visible');
+  };
+
+  updateByScroll();
+  window.addEventListener('scroll', updateByScroll, { passive: true });
+  window.addEventListener('resize', updateByScroll);
+
+  // フッターが画面に入ったらCTAを強制的に隠す（併用OK）
+  if (footer && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          cta.classList.remove('is-visible');
+          cta.dataset.footerHidden = "1";
+        } else {
+          cta.dataset.footerHidden = "0";
+          updateByScroll(); // フッターから離れたら再判定
+        }
+      });
+    }, { root: null, threshold: 0.01 });
+
+    observer.observe(footer);
+  }
+});
+
+
+
 /* 表高さ揃えjs */
 // $(window).on('load resize', function() {
 

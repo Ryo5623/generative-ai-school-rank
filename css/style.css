@@ -2674,3 +2674,19 @@ small {
     display: block;
   }
 }
+
+/* 固定CTA表示アクション */
+.fixed_cta{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all .3s ease;
+  z-index: 9999;
+}
+
+/* 表示状態 */
+.fixed_cta.is-visible{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
