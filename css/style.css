@@ -2690,3 +2690,19 @@ small {
   visibility: visible;
   transform: translateY(0);
 }
+
+/* 離脱ポップアップ */
+.popup-area {
+    display: none;
+    width: 350px;
+    background: #fff;
+    padding: 15px 15px 8px;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.4);
+}
