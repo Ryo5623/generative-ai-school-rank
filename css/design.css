@@ -977,7 +977,7 @@
   background-image: url(../images/ico_rank09.png);
 }
 .rank .box .banner {
-  margin: 0 0 0 2rem;
+  /* margin: 0 0 0 2rem; */
   width: 24%;
   float: left;
   background: #f2fefe;
@@ -8127,7 +8127,7 @@ footer .copyright {
 }
 .rank2 .box-inner .detail-info .banner {
   float: none;
-  margin: auto;
+  /* margin: auto; */
   background-color: inherit;
   width: 100%;
 }
@@ -8141,7 +8141,7 @@ footer .copyright {
 .rank2 .box-inner .detail-info .spec-inner {
   display: flex;
   justify-content: space-between;
-  gap: 2.3rem;
+  gap: 1.0rem;
   width: 100%;
 }
 @media only screen and (max-width: 767px) {
@@ -8452,7 +8452,7 @@ footer .copyright {
   padding: 1rem !important;
 }
 .rank2 .box .maintext {
-  margin: 0 !important;
+  margin-top: 50px;
 }
 .rank2 .box .maintext p {
   padding: 2rem 0.5rem;
@@ -8803,7 +8803,7 @@ footer .copyright {
 .rank-simple .box .box-inner .detail-info-inner {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 4rem;
   margin-bottom: 1rem;
 }
 @media only screen and (max-width: 767px) {
@@ -8816,7 +8816,7 @@ footer .copyright {
 }
 @media only screen and (max-width: 767px) {
   .rank-simple .box .box-inner .detail-info-inner .banner {
-    width: 80%;
+    width: 100%;
   }
 }
 .rank-simple .box .box-inner .detail-info-inner .point {
@@ -13874,7 +13874,6 @@ footer .copyright {
 .mode {
   background-color: #fff;
   color: #0d0802;
-  margin-top: 10px;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Lucida Grande", "Meiryo", "メイリオ", "ＭＳ Ｐゴシック", sans-serif;
 }
 .mode .mainvisual {
@@ -14976,3 +14975,17 @@ footer .copyright {
    position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;
   clip:rect(0,0,0,0);white-space:nowrap;border:0;
 }
+
+@media (max-width: 768px) {
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ここがポイント：max-contentをやめる */
+  .table-scroll .box-topranking {
+    width: 620px;       /* 5列なら 740〜860px くらいで調整 */
+    table-layout: fixed; /* 列幅を均等にして縮めやすくする */
+  }
+}
+
