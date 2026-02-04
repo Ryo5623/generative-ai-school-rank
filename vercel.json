@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/biz",
+      "destination": "https://biz.generative-ai-schoolrank.com",
+      "permanent": true
+    },
+    {
+      "source": "/biz/:path*",
+      "destination": "https://biz.generative-ai-schoolrank.com/:path*",
+      "permanent": true
+    }
+  ]
+}
