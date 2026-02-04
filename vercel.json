@@ -3,12 +3,12 @@
   "redirects": [
     {
       "source": "/biz",
-      "destination": "https://biz.generative-ai-schoolrank.com",
+      "destination": "https://biz.generative-ai-school-rank.com",
       "permanent": true
     },
     {
       "source": "/biz/:path*",
-      "destination": "https://biz.generative-ai-schoolrank.com/:path*",
+      "destination": "https://biz.generative-ai-school-rank.com/:path*",
       "permanent": true
     }
   ]
