@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+/* =========================================
+   Scoped Top Ranking Table (mode theme)
+   Scope: .bc-topranking-scope
+   Table: .bc-topranking
+========================================= */
+
+.bc-topranking-scope .bc-topranking {
+  margin: 4rem 0 3rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking {
+    padding: 0 0.5rem;
+    margin: 3rem 0 2rem;
+  }
+}
+
+.bc-topranking-scope .bc-topranking th {
+  text-align: center;
+  background-color: #533afc;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.bc-topranking-scope .bc-topranking td {
+  width: 32%;
+  border-right: 3px solid #fff;
+  padding: 1rem;
+  background-color: #f3f6fd;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking td {
+    font-size: 1.1rem;
+  }
+}
+
+.bc-topranking-scope .bc-topranking td .ico-rank {
+  margin: 0 auto 0.3rem;
+  width: 40px;
+}
+
+.bc-topranking-scope .bc-topranking td .banner {
+  margin: 0.5rem auto;
+  width: 70%;
+}
+
+.bc-topranking-scope .bc-topranking td .title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking td .title {
+    font-size: 1.3rem;
+  }
+}
+
+.bc-topranking-scope .bc-topranking td .star {
+  color: #888;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking td .star {
+    font-size: 1.2rem;
+  }
+}
+
+.bc-topranking-scope .bc-topranking td .star img {
+  display: inline-block;
+  margin: 0.3rem 0.5rem 0 0;
+  width: 30%;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking td .star img {
+    width: 60%;
+  }
+}
+
+.bc-topranking-scope .bc-topranking td:last-child {
+  border-right: none;
+}
+
+.bc-topranking-scope .bc-topranking td .eval-inner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bc-topranking-scope .bc-topranking td .eval-inner-img {
+  width: 20%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking td .eval-inner-img {
+    width: 50%;
+  }
+}
+
+.bc-topranking-scope .bc-topranking td .eval-inner-txt {
+  text-align: center;
+}
+
+/* ここ元CSSに「.name { top:0 }」があったので残します */
+.bc-topranking-scope .bc-topranking .name {
+  top: 0;
+  z-index: 1;
+}
+
+/* flex blocks */
+.bc-topranking-scope .bc-topranking-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.bc-topranking-scope .bc-topranking-flex-item {
+  width: 47.5%;
+}
+
+.bc-topranking-scope .bc-topranking-flex-item img {
+  margin: auto;
+}
+
+.bc-topranking-scope .bc-topranking-flex-item-off {
+  color: #c4c7cc;
+}
+
+/* bullet list (cam) */
+.bc-topranking-scope .bc-topranking-cam {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking-cam {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+.bc-topranking-scope .bc-topranking-cam:before {
+  position: absolute;
+  top: 50%;
+  left: -1.5rem;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: #000064;
+  content: "";
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking-cam:before {
+    left: -1rem;
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+
+.bc-topranking-scope .bc-topranking-cam:last-child {
+  margin-bottom: 0;
+}
+
+/* button */
+.bc-topranking-scope .bc-topranking-button {
+  margin: 0;
+}
+
+.bc-topranking-scope .bc-topranking-button .cv {
+  animation-name: mode-btn;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking-button .cv {
+    width: 100%;
+  }
+}
+
+.bc-topranking-scope .bc-topranking-button .link {
+  animation-name: mode-link;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking-button .link {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking-button a {
+    padding: 1rem;
+  }
+}
+
+/* point */
+.bc-topranking-scope .bc-topranking-point {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.bc-topranking-scope .bc-topranking-point-inner {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking-point-inner {
+    flex-direction: column;
+  }
+}
+
+.bc-topranking-scope .bc-topranking-point-inner-check {
+  background: url(../img/lp/check_orange.png) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 2rem;
+  height: 1rem;
+}
+
+.bc-topranking-scope .bc-topranking-point-inner-txt {
+  width: 100%;
+  text-align: left;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-topranking-scope .bc-topranking-point-inner-txt {
+    font-size: 1.1rem;
+  }
+}
+
+/* 3point box */
+.bc-topranking-scope .bc-3point {
+  background: #f7f4f5;
+  border-radius: 6px;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    word-break: break-all;
+    word-wrap: break-word;
+    border: 0;
+}
+
