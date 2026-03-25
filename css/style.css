@@ -2706,3 +2706,53 @@ small {
     border-radius: 8px;
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.4);
 }
+
+/* style.cssに追記 */
+.p-logo-marquee {
+  overflow: hidden;
+  width: 100%;
+  margin: 7px 0;
+}
+
+.p-logo-marquee__inner {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: max-content;
+  animation: marquee 50s linear infinite;
+}
+
+.p-logo-marquee__inner li {
+  flex-shrink: 0;
+  padding: 0 4px; /* 20px → 8px に変更（隙間を狭く） */
+  display: flex;
+  align-items: center;
+}
+
+.p-logo-marquee__inner li img {
+  height: 80px; /* 40px → 60px に変更（サイズを大きく） */
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .p-logo-marquee__inner li img {
+    height: 50px; /* SP時のサイズ */
+  }
+  
+  .p-logo-marquee__inner li {
+    padding: 0 2px; /* SP時の隙間 */
+  }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p-logo-marquee__inner {
+    animation: none;
+  }
+}

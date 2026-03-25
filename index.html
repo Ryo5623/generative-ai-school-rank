@@ -51,12 +51,12 @@
     <link rel="stylesheet" href="./css/parts_bnr_fixed.css" media="print" onload="this.media='all'" />
 
     <!-- Swiper CSS（非同期） -->
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+    <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css" media="print" onload="this.media='all'" /> -->
 
     <link rel="icon" href="./images/favicon.ico">
 
     <!-- JS全部defer -->
-    <script src="./js/swiper-bundle.min.js" defer></script>
+    <!-- <script src="./js/swiper-bundle.min.js" defer></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" defer></script>
     <script src="./js/script.js" defer></script>
     <script src="./js/navi.js" defer></script>
@@ -112,7 +112,45 @@
               />
             </picture>
         </div>
-        <div class="sp-display-none">
+        <!-- ロゴマーキー（PC・SP共通・CSS animationのみ） -->
+        <div class="p-logo-marquee">
+          <ul class="p-logo-marquee__inner">
+            <li><img src="./images/logo-horiemon.webp" alt="ホリエモンAI学校" loading="lazy"></li>
+            <li><img src="./images/logo-shiftai.webp" alt="SHIFT AI" loading="lazy"></li>
+            <li><img src="./images/logo-bytech.webp" alt="バイテック" loading="lazy"></li>
+            <li><img src="./images/logo-hisho.webp" alt="飛翔" loading="lazy"></li>
+            <li><img src="./images/logo-samurai.webp" alt="侍エンジニア" loading="lazy"></li>
+            <li><img src="./images/logo_dezihaku.webp" alt="デジハク" loading="lazy"></li>
+            <li><img src="./images/logo-tech-academy.webp" alt="TechAcademy" loading="lazy"></li>
+            <li><img src="./images/logo-pro.webp" alt=".Pro" loading="lazy"></li>
+            <li><img src="./images/logo-kikagaku.webp" alt="キカガク" loading="lazy"></li>
+            <li><img src="./images/logo-aidemy.webp" alt="アイデミー" loading="lazy"></li>
+            <li><img src="./images/logo-startai.webp" alt="スタートAI" loading="lazy"></li>
+            <li><img src="./images/logo-lineyahoo.webp" alt="LINEYahooアカデミー" loading="lazy"></li>
+            <li><img src="./images/logo-skillup.webp" alt="スキルアップAI" loading="lazy"></li>
+            <li><img src="./images/logo-mikimiki.webp" alt="mikimikiwebスクール" loading="lazy"></li>
+            <li><img src="./images/logo-aiconnect.webp" alt="AIコネクト" loading="lazy"></li>
+            <li><img src="./images/logo-win.webp" alt="ウィンスクール" loading="lazy"></li>
+            <!-- ループ用に2セット目（CSSで必要） -->
+            <li aria-hidden="true"><img src="./images/logo-horiemon.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-shiftai.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-bytech.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-hisho.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-samurai.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo_dezihaku.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-tech-academy.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-pro.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-kikagaku.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-aidemy.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-startai.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-lineyahoo.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-skillup.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-mikimiki.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-aiconnect.webp" alt="" loading="lazy"></li>
+            <li aria-hidden="true"><img src="./images/logo-win.webp" alt="" loading="lazy"></li>
+          </ul>
+        </div>
+        <!-- <div class="sp-display-none">
           <div class="p-logo-slider" style="margin-bottom: 5px; margin-top: 5px;">
           <ul>
               <li><img src="./images/logo-horiemon.webp" alt="ホリエモンAI学校"></li>
@@ -285,7 +323,7 @@
               <li><img src="./images/logo-aiconnect.webp" alt="AIコネクト"></li>
               <li><img src="./images/logo-win.webp" alt="ウィンスクール"></li>
           </ul>
-        </div>
+          </div>
         </div>
         <div class="pc-display-none">
           <div class="p-logo-slider-sp" style="margin-bottom: 0px; margin-top: 0px">
@@ -461,7 +499,7 @@
                 <li><img src="./images/logo-win.webp" alt="ウィンスクール"></li>
             </ul>
           </div>
-        </div>
+        </div> -->
 
         <h2 class="main_ttl"> <span><small>【2026年3月最新版】</small><br>
         年内にAIスキルを習得！今がチャンス！</span>副業・転職・業務活用で年収UPを目指す社会人向け<br>
