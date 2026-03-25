@@ -2712,6 +2712,7 @@ small {
   overflow: hidden;
   width: 100%;
   margin: 7px 0;
+  height: 80px; /* ← 追加（PC時の画像高さ + 余白） */
 }
 
 .p-logo-marquee__inner {
@@ -2737,12 +2738,16 @@ small {
 }
 
 @media (max-width: 768px) {
-  .p-logo-marquee__inner li img {
-    height: 50px; /* SP時のサイズ */
+  .p-logo-marquee {
+    height: 50px; /* ← SP時の高さ */
   }
   
   .p-logo-marquee__inner li {
     padding: 0 2px; /* SP時の隙間 */
+  }
+
+  .p-logo-marquee__inner li img {
+    height: 50px; /* SP時のサイズ */
   }
 }
 

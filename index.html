@@ -32,8 +32,12 @@
     }
     </script>
 
-    <!-- FV画像プリロード（これだけ残す） -->
-    <link rel="preload" as="image" href="/images/FV_A2_sp.webp" media="(max-width:768px)" type="image/webp">
+    <!-- SP用 -->
+    <link rel="preload" as="image" href="./images/FV_A2_sp.webp" media="(max-width:768px)" type="image/webp">
+    <!-- PC用（追加） -->
+    <link rel="preload" as="image" href="./images/FV_A2.webp" media="(min-width:769px)" type="image/webp">
+
+
 
     <!-- クリティカルCSS（FVに必要なものだけ同期） -->
     <link rel="stylesheet" href="./css/style.css" media="all" />
@@ -106,6 +110,7 @@
               <img
                 loading="eager"
                 decoding="async"
+                fetchpriority="high"
                 src="./images/FV_A2.webp"
                 alt="オンラインでAIが学べるChatGPT・生成AIスクール（オンライン）おすすめ比較ランキング"
                 width="1200" height="370"
