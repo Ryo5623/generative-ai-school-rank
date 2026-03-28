@@ -2791,10 +2791,25 @@ small {
 
 .box-topranking {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   table-layout: fixed;
   font-size: 14px;
 }
+
+/* 1位 赤枠 */
+.box-topranking td:first-child {
+  border-left: 3px solid red;
+  border-right: 3px solid red;
+}
+.box-topranking tr:first-child td:first-child {
+  border-top: 3px solid red;
+}
+.box-topranking tr:last-child td:first-child {
+  border-bottom: 3px solid red;
+}
+
+
 
 /* 全セル共通 */
 .box-topranking td,
@@ -2802,7 +2817,7 @@ small {
   border: 1px solid #ddd;
   padding: 10px 8px;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 /* ヘッダー行 */
@@ -2913,12 +2928,13 @@ small {
 /* 星評価 */
 .box-topranking .star {
   display: flex;
-  flex-direction: column;  /* 横→縦に変更 */
+  flex-direction: column;
   align-items: center;
   gap: 4px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   margin-top: 6px;
+  color: red;
 }
 
 .box-topranking .star img {
