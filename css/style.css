@@ -1671,7 +1671,7 @@ footer .copyright {
 
 .first-rank {
   background: white;
-  padding: 20px 7px 0px 7px;
+  padding: 20px 7px 10px 7px;
   margin-bottom: 12px;
 }
 .rank-cta {
@@ -2760,4 +2760,266 @@ small {
   .p-logo-marquee__inner {
     animation: none;
   }
+}
+
+/* ===========================
+   ランキングカード（PC横並び）
+=========================== */
+.ranking-cards {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.ranking-cards .ranking-card-item {
+  flex: 1;
+  text-decoration: none;
+}
+
+.ranking-cards .ranking-card-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 183 / 147;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ===========================
+   box-topranking テーブル
+=========================== */
+
+.box-topranking {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 14px;
+}
+
+/* 全セル共通 */
+.box-topranking td,
+.box-topranking th {
+  border: 1px solid #ddd;
+  padding: 10px 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ヘッダー行 */
+.box-topranking th {
+  background-color: rgb(83, 58, 252);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* スクール名・画像セル */
+.box-topranking td.name {
+  padding: 12px 8px;
+  vertical-align: top;
+}
+
+.box-topranking td.name .ico-rank {
+  width: 40px;
+  margin-bottom: 6px;
+}
+
+.box-topranking td.name .banner {
+  width: 100%;
+  max-width: 134px;
+  height: 134px;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+  margin: 0 auto 6px;
+}
+
+.box-topranking td.name .title {
+  font-weight: 600;
+  font-size: 13px;
+  margin: 4px 0 8px;
+}
+
+/* 評価アイコン+テキストのセット */
+.box-topranking .eval-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.box-topranking .eval-inner img {
+  width: 100%;
+  height: 50px;
+  margin: 3px auto;
+}
+
+.box-topranking .eval-inner-txt {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* マーカーテキスト */
+.box-topranking .txt-marker {
+  background: linear-gradient(transparent 60%, #ffff00 60%);
+  font-weight: 600;
+}
+
+/* スキルリスト */
+.box-topranking td.skill ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 0 2px;
+  list-style: none;
+  margin: 0;
+}
+
+.box-topranking td.skill ul li {
+  background: #fff;
+  width: calc(50% - 1px);
+  border-radius: 100px;
+  text-align: center;
+  border: 1px solid #111;
+  padding: 2px 2px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 1px 0 !important;
+  letter-spacing: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.box-topranking td.skill ul li:nth-child(1),
+.box-topranking td.skill ul li:nth-child(2) {
+  margin-top: 0;
+}
+
+.box-topranking td.skill ul li.short {
+  letter-spacing: -1px;
+}
+
+.box-topranking td.skill ul li span {
+  font-size: inherit;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+
+
+
+/* 星評価 */
+.box-topranking .star {
+  display: flex;
+  flex-direction: column;  /* 横→縦に変更 */
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.box-topranking .star img {
+  height: 18px;
+  width: auto;
+}
+
+/* CTAボタン */
+.box-topranking-button {
+  margin-top: 8px;
+}
+
+.box-topranking-button .cv a,
+.box-topranking-button .link a {
+  display: block;
+  padding: 10px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+
+.box-topranking-button .cv a {
+  background-color: #ff4444;
+  color: #fff;
+}
+
+.box-topranking-button .link a {
+  background-color: #fff;
+  color: #ff4444;
+  border: 2px solid #ff4444;
+}
+
+/* shinyボタンエフェクト */
+.shiny-btn a {
+  position: relative;
+  overflow: hidden;
+}
+
+.shiny-btn a::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: rgba(255,255,255,0.3);
+  transform: skewX(-20deg);
+  animation: shiny 3s infinite;
+}
+
+@keyframes shiny {
+  0%   { left: -75%; }
+  50%  { left: 125%; }
+  100% { left: 125%; }
+}
+
+/* SP対応 */
+@media (max-width: 768px) {
+  .box-topranking {
+    font-size: 12px;
+  }
+
+  .box-topranking td,
+  .box-topranking th {
+    padding: 8px 4px;
+  }
+
+  .box-topranking td.name .banner {
+    max-width: 80px;
+    height: 80px;
+  }
+
+  .box-topranking .eval-inner img {
+    height: 36px;
+  }
+
+  .box-topranking td.skill ul {
+    padding: 5px 0;
+  }
+
+  .box-topranking td.skill ul li {
+    font-size: 1.8vw;
+  }
+
+  .box-topranking-button .cv a,
+  .box-topranking-button .link a {
+    font-size: 11px;
+    padding: 8px 4px;
+  }
+
+/* 1位 赤枠 - 縦型テーブル */
+.container-table td.table3__order_1 {
+  border-left: 3px solid red !important;
+  border-right: 3px solid red !important;
+}
+.container-table tr:first-child td.table3__order_1 {
+  border-top: 3px solid red !important;
+}
+.container-table tr:last-child td.table3__order_1 {
+  border-bottom: 3px solid red !important;
+}
 }

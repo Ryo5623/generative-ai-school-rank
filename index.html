@@ -48,7 +48,7 @@
     <link rel="stylesheet" href="./css/parts_table_fork_horizontal.css" media="all" />
     <link rel="stylesheet" href="./css/parts_guideline_e.css" media="all" />
     <link rel="stylesheet" href="./css/parts_table_fork_guideline.css" media="all" />
-    <link rel="stylesheet" href="./css/parts_bnr_fixed.css" media="all" />
+    <!-- <link rel="stylesheet" href="./css/parts_bnr_fixed.css" media="all" /> -->
 
     <!-- Swiper CSS（非同期） -->
     <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css" media="print" onload="this.media='all'" /> -->
@@ -986,284 +986,287 @@
                 <!-- item_side_b_end -->
               </ul>
               <!-- 比較表入れる -->
-            <div id="result" style="margin-top: 20px;">
-              <!-- SimpleBarはこの要素に適用（内部DOMはJSが生成） -->
-              <div class="scroll-contents" data-simplebar data-simplebar-auto-hide="false">
-                <div class="table_horizontal">
-                  <div class="table--wrap">
-                    <!-- ヘッダー -->
-                    <div class="table__item table__head" style="font-weight: bold;">
-                      <div class="rank_number rank_number0"></div>
-                      <div class="th th--head"></div>
-
-                      <div class="td td--head td1_width d-flex"><h3>総合評価</h3></div>
-                      <div class="td td--head td2_width d-flex"><h3>チャットサポート</h3></div>
-                      <div class="td td--head td3_width d-flex"><h3>学習サポート</h3></div>
-                      <div class="td td--head td4_width d-flex"><h3>目的支援</h3></div>
-                      <div class="td td--head td5_width d-flex"><h3>案件斡旋サポート</h3></div>
-                      <div class="td td--head td6_width d-flex"><h3>卒業後のサポート</h3></div>
-                      <div class="td td--head td10_width d-flex"><h3>受講費(税込)</h3></div>
-                      <div class="td td--head td11_width d-flex"><h3>月額費用(税込)</h3></div>
-                      <div class="td td--head td12_width d-flex"><h3>カリキュラム数</h3></div>
-                    </div>
-
-                    <!-- 1: バイテック -->
-                    <div class="table__item table3__order_1">
-                       <div class="rank_number rank_number1" style="padding: 0px 4px;">
-                        <img src="./images/ranking_1.png" width="100%" height=auto alt="ランキング1位">
-                      </div>
-                      <div class="th">
-                        <ul>
-                          <!-- <li><a href="https://lp.bytech.jp/" target="_blank" class="rank_name">バイテック</a></li> -->
-                          <li>
-                            <a href="https://lp.bytech.jp/" target="_blank">
-                              <img loading="eager" src="./images/bytech_logo.svg" width="100%" height="35px" alt="バイテックロゴ" />
-                            </a>
-                          </li>
-                          <li><a href="./bytech/" class="btn btn-detail">詳細を見る</a></li>
-                          <li style="margin-top: -15px;"><a href="https://lp.bytech.jp//" target="_blank" class="btn btn-official">公式サイトへ</a></li>
-                        </ul>
-                        <a href="https://lp.bytech.jp/" target="_blank" class="rank_thumb">
-                          <img loading="eager" src="./images/bt_thum.webp" alt="バイテック サムネイル" />
-                        </a>
-                      </div>
-
-                      <div class="td td1_width d-flex style_2maru">
-                        <div class="rank_star">
-                          <img style="height:auto;width:120px;" loading="eager" src="./images/star_1.svg" alt="star" />
+            <table class="box-topranking" style="margin-top: 50px;">
+                <tbody>
+                  <tr>
+                    <td class="name" style="background-color: #FFEBEB";>
+                      <img class="ico-rank" src="./images/ico-rank01.png" alt="1位" />
+                      <a
+                        href="https://lp.bytech.jp/"
+                        target="_blank"
+                        ><img class="banner" src="./images/bt_thum.webp" alt="バイテック" />
+                        <p class="title">バイテック</p>
+                      </a>
+                      <div class="button box-topranking-button">
+                        <div class="cv shiny-btn">
+                          <a
+                            href="https://lp.bytech.jp/"
+                            target="_blank"
+                            >公式ページはこちら</a
+                          >
                         </div>
-                        <p style="font-size:1.2em;color:red;font-weight: bold;">5.0</p>
                       </div>
-                      <div class="td td2_width d-flex style_2maru" style="font-size: 10px!;"><p>個別(無制限/1年間)</p></div>
-                      <div class="td td3_width d-flex style_2maru">
-                        <p>
-                          ・個別指導<br>
-                          ・1対1メンタリング<br>
-                          ・レッスン外の質問/相談化<br>
-                          ・オリジナル課題<br>
-                          ・スキル証明課題<br>
-                        </p>
-                      </div>
-                      <div class="td td4_width d-flex style_2maru">
-                        <p>
-                          ・副業支援<br>
-                          ・独立支援<br>
-                          ・転職支援<br>
-                        </p>
-                      </div>
-                      <div class="td td5_width d-flex style_2maru">
-                        <p>
-                          ・AIライティング案件<br>
-                          ・AI画像生成案件<br>
-                          ・AI動画生成案件<br>
-                          ・プロンプト構築案件<br>
-                          ・Difyワークフロー作成案件<br>
-                        </p>
-                      </div>
-                      <div class="td td6_width d-flex style_2maru">
-                        <p>
-                          ・就業支援<br>
-                          ・案件獲得サポート<br>
-                          ・教材の無期限視聴<br>
-                          ・コミュニティ参加(b-Crew)<br>
-                        </p>
-                      </div>
-
-                      <div class="td td10_width d-flex style_2maru">
-                        <p>
-                          <span class="center d-block">
-                            <span class="small">LITEプラン</span><br />178,000円<br />
-                            <span class="small">PROプラン</span><br />298,000円<br />
-                          </span>
-                        </p>
-                      </div>
-                      <div class="td td11_width d-flex style_2maru"><p>7,420円~</p></div>
-                      <div class="td td12_width d-flex style_2maru"><p>10コース/600本~</p></div>
-                    </div>
-
-                    <!-- 2: ホリエモンAI学校 -->
-                    <div class="table__item table3__order_2">
-                       <div class="rank_number rank_number2" style="padding: 0px 4px;">
-                        <img src="./images/ranking_2.png" width="100%" height=auto alt="ランキング2位">
-                      </div>
-                      <div class="th">
-                        <ul>
-                          <li>
-                            <a href="https://horiemon.ai/" target="_blank">
-                              <img loading="eager" src="./images/horiemon_logo.png" width="100%" height="35px" alt="ホリエモンAI学校ロゴ" />
-                            </a>
-                          </li>
-                          <li><a href="./horiemon/" class="btn btn-detail">詳細を見る</a></li>
-                          <li style="margin-top: -15px;"><a href="https://horiemon.ai/" target="_blank" class="btn btn-official">公式サイトへ</a></li>
-                        </ul>
-                        <a href="https://horiemon.ai/" target="_blank" class="rank_thumb">
-                          <img loading="eager" src="./images/horiemon.webp" alt="ホリエモンAI学校" />
-                        </a>
-                      </div>
-
-                      <div class="td td1_width d-flex style_maru">
-                        <div class="rank_star">
-                          <img style="height:auto;width:120px;" loading="eager" src="./images/star_2.svg" alt="star" />
+                    </td>
+                    <td class="name">
+                      <img class="ico-rank" src="./images/ico-rank02.png" alt="2位" />
+                      <a
+                        href="https://horiemon.ai/"
+                        target="_blank"
+                        ><img
+                          class="banner"
+                          src="./images/horiemon.webp"
+                          alt="ホリエモンAI学校"
+                        />
+                        <p class="title">ホリエモンAI学校</p>
+                      </a>
+                      <div class="button box-topranking-button">
+                        <div class="cv shiny-btn">
+                          <a
+                            href="https://horiemon.ai/"
+                            target="_blank"
+                            >公式ページはこちら</a
+                          >
                         </div>
-                        <p style="font-size:1.2em;color:red;font-weight: bold;">4.5</p>
                       </div>
-                      <div class="td td2_width d-flex style_batsu"><p>なし</p></div>
-                      <div class="td td3_width d-flex style_batsu"><p>なし</p></div>
-                      <div class="td td4_width d-flex style_batsu"><p>なし</p></div>
-                      <div class="td td5_width d-flex style_batsu"><p>なし</p></div>
-                      <div class="td td6_width d-flex style_batsu"><p>なし</p></div>
-
-                      <div class="td td10_width d-flex style_none">
-                        <p>
-                          <span class="center d-block">
-                            <span class="small">入会金</span><br />162,800円<br />
-                            <span class="small">月額費用</span><br />16,280円<br />
-                          </span>
-                        </p>
-                      </div>
-                      <div class="td td11_width d-flex style_none"><p>13,570円~</p></div>
-                      <div class="td td12_width d-flex style_none"><p>8コース/200本</p></div>
-                    </div>
-
-                    <!-- 3: Aidemy(アイデミー) -->
-                    <div class="table__item table3__order_3">
-                       <div class="rank_number rank_number3" style="padding: 0px 4px;">
-                        <img src="./images/ranking_3.png" width="100%" height=auto alt="ランキング3位">
-                      </div>
-                      <div class="th">
-                        <ul>
-                          <li>
-                            <a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank">
-                              <img loading="eager" src="./images/logo-aidemy.webp" width="100%" height="100%" alt="Aidemyロゴ" />
-                            </a>
-                          </li>
-                          <li><a href="./aidemy/" class="btn btn-detail">詳細を見る</a></li>
-                          <li style="margin-top: -15px;"><a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank" class="btn btn-official">公式サイトへ</a></li>
-                        </ul>
-                        <a href="https://premium-biz.aidemy.net/courses/genai-adv" class="rank_thumb">
-                          <img loading="eager" src="./images/aidemy.webp" alt="Aidemy(アイデミー)" />
-                        </a>
-                      </div>
-
-                      <div class="td td1_width d-flex style_maru">
-                        <div class="rank_star">
-                          <img style="height:auto;width:120px;" loading="eager" src="./images/star_3.svg" alt="star" />
+                    </td>
+                    <td class="name">
+                      <img class="ico-rank" src="./images/ico-rank03.png" alt="3位" />
+                      <a
+                        href="https://longterm.kikagaku.ai/"
+                        target="_blank"
+                        ><img class="banner" src="..images/kikagaku.webp" alt="キカガク" />
+                        <p class="title">キカガク</p>
+                      </a>
+                      <div class="button box-topranking-button">
+                        <div class="cv shiny-btn">
+                          <a
+                            href="https://longterm.kikagaku.ai/"
+                            target="_blank"
+                            >公式ページはこちら</a
+                          >
                         </div>
-                        <p style="font-size:1.2em;color:red;font-weight: bold;">4.2</p>
                       </div>
-                      <div class="td td2_width d-flex style_maru"><p>個別(Slackでのサポート)</p></div>
-                      <div class="td td3_width d-flex style_maru">
-                        <p>
-                          ・個別指導<br>
-                          ・1対1メンタリング<br>
-                        </p>
-                      </div>
-                      <div class="td td4_width d-flex style_batsu"><p>なし</p></div>
-                      <div class="td td5_width d-flex style_batsu"><p>なし</p></div>
-                      <div class="td td6_width d-flex style_batsu"><p>なし</p></div>
-                      <div class="td td10_width d-flex style_none"><p>
-                          <span class="center d-block">
-                            <span class="small">12週間プラン</span><br />272,800円<br />
-                          </span>
-                        </p></div>
-                      <div class="td td11_width d-flex style_none"><p>22,700円〜</p></div>
-                      <div class="td td12_width d-flex style_none"><p>3コース/10レッスン</p></div>
-                    </div>
-
-                    <!-- 4: ヒューマンアカデミー -->
-                    <div class="table__item table3__order_4">
-                      <div class="rank_number rank_number4">4</div>
-                      <div class="th">
-                        <ul>
-                          <li>
-                            <a href="https://haa.athuman.com/ai/course/generative_ai/haa-guidance/?code=240158" target="_blank">
-                              <img loading="eager" src="./images/human.png" width="100%" height="100%" alt="ヒューマンアカデミーロゴ" />
-                            </a>
-                          </li>
-                          <li><a href="./human-academy/" class="btn btn-detail">詳細を見る</a></li>
-                          <li style="margin-top: -13px;"><a href="https://haa.athuman.com/ai/course/generative_ai/haa-guidance/?code=240158" target="_blank" class="btn btn-official">公式サイトへ</a></li>
-                        </ul>
-                        <a href="https://haa.athuman.com/ai/course/generative_ai/haa-guidance/?code=240158" class="rank_thumb">
-                          <img loading="eager" src="./images/human_thum.webp" alt="ヒューマンアカデミー" />
-                        </a>
-                      </div>
-
-                      <div class="td td1_width d-flex style_maru">
-                        <div class="rank_star">
-                          <img style="height:auto;width:120px;" loading="eager" src="./images/star_4.svg" alt="star" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="3" style="font-size: 16px;">特徴と評価</th>
+                  </tr>
+                  <tr>
+                    <td style="background-color: #FFEBEB">
+                      <p style="font-weight: 600;"><span style="color: red;">レッスン600以上・10コース</span><br>担当講師制でサポートが充実</p>
+                      <div class="star"><img src="./images/star_1.svg" alt="5.0" />5.0</div>
+                    </td>
+                    <td>
+                      <p style="font-weight: 600;"><span style="color: red;">200レッスン・8コース</span><br>月額チャットサポート中心</p>
+                      <div class="star"><img src="./images/star_2.svg" alt="4.5" />4.5</div>
+                    </td>
+                    <td>
+                      <p style="font-weight: 600;"><span style="color: red;">機械学習・生成AIを体系的に学習</span><br>実務向け演習が豊富</p>
+                      <div class="star"><img src="./images/star_3.svg" alt="4.2" />4.3</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="3" style="font-size: 16px;">料金</th>
+                  </tr>
+                  <tr>
+                    <td style="background-color: #FFEBEB">
+                      <span class="eval-inner">
+                        <img src="./images/nizyu-maru.svg" ait="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        <div class="eval-inner-txt">
+                          <span class="txt-marker">178,000円〜</span><br>【1年買い切り】
                         </div>
-                        <p style="font-size:1.2em;color:red;font-weight: bold;">4.0</p>
-                      </div>
-                      <div class="td td2_width d-flex style_maru"><p>あり</p></div>
-                      <div class="td td3_width d-flex style_maru"><p>あり</p></div>
-                      <div class="td td4_width d-flex style_batsu"><p>なし</p></div>
-                      <div class="td td5_width d-flex style_batsu"><p>なし</p></div>
-                      <div class="td td6_width d-flex style_batsu"><p>なし</p></div>
-                      <div class="td td10_width d-flex style_none">
-                      <p>
-                          <span class="center d-block">
-                            <span class="small">受講料</span><br />
-                            330,000円<br />
-                            <span class="small">入学金</span><br />
-                            55,000円<br />
-                            <span class="small">システム利用料</span><br />
-                            5,940円
-                          </span>
-                        </p>
-                      </div>
-                      <div class="td td11_width d-flex style_none"><p>32,600円~</p></div>
-                      <div class="td td12_width d-flex style_none"><p>16レッスン</p></div>
-                    </div>
-
-                    <!-- 5: SHIFT AI -->
-                    <div class="table__item table3__order_5">
-                      <div class="rank_number rank_number5">5</div>
-                      <div class="th">
-                        <ul>
-                          <li>
-                            <a href="https://lp.shift-ai.co.jp/" target="_blank">
-                              <img loading="eager" src="./images/logo-shiftai.webp" width="100%" height="100%" alt="SHIFT AIロゴ" />
-                            </a>
-                          </li>
-                          <li><a href="./shift-ai/" class="btn btn-detail">詳細を見る</a></li>
-                          <li style="margin-top: -10px;"><a href="https://lp.shift-ai.co.jp/" target="_blank" class="btn btn-official">公式サイトへ</a></li>
-                        </ul>
-                        <a href="https://lp.shift-ai.co.jp/" class="rank_thumb">
-                          <img loading="eager" src="./images/shift.webp" alt="SHIFT AI" />
-                        </a>
-                      </div>
-
-                      <div class="td td1_width d-flex style_maru">
-                        <div class="rank_star">
-                          <img style="height:auto;width:120px;" loading="eager" src="./images/star_3.svg" alt="star" />
                         </div>
-                        <p style="font-size:1.3em;color:red;font-weight: bold;">3.8</p>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="eval-inner">
+                        <img src="./images/maru.svg" ait="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        <div class="eval-inner-txt">
+                          月16,280円<br>【入会金162,800円】
                       </div>
-                      <div class="td td2_width d-flex style_maru"><p>あり(掲示板形式)</p></div>
-                      <div class="td td3_width d-flex style_maru"><p>コミュニティ参加</p></div>
-                      <div class="td td4_width d-flex style_batsu"><p>なし</p></div>
-                      <div class="td td5_width d-flex style_maru"><p>あり</p></div>
-                      <div class="td td6_width d-flex style_maru">
-                        <p>
-                          ・教材の無期限視聴(買い切りのみ)<br />
-                          ・コミュニティ参加<br />
-                        </p>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="eval-inner">
+                        <img src="./images/maru.svg" ait="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        <div class="eval-inner-txt">
+                          コースにより変動<br>【給付金対象コースあり】<b></div>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="3" style="font-size: 16px;">学習スタイル／期間</th>
+                  </tr>
+                  <tr>
+                    <td style="background-color: #FFEBEB">
+                      <span class="eval-inner">
+                        <img src="./images/nizyu-maru.svg" ait="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        <div class="eval-inner-txt">
+                          <span class="txt-marker">買い切り（1年）</span>
+                        </div>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="eval-inner">
+                        <img src="./images/maru.svg" ait="fine" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        月額制
+                      </span>
+                    </td>
+                    <td>
+                      <span class="eval-inner">
+                        <img src="./images/maru.svg" ait="fine" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        <div class="eval-inner-txt">
+                          期日制／集中型
+                        </div>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="3" style="font-size: 16px;">サポート体制</th>
+                  </tr>
+                  <tr>
+                    <td style="background-color: #FFEBEB">
+                      <span class="eval-inner">
+                        <img src="./images/nizyu-maru.svg" ait="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        <div class="eval-inner-txt">
+                          <span class="txt-marker">面談あり＋チャット無制限</span>
+                        </div>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="eval-inner">
+                        <img src="./images/maru.svg" ait="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        <div class="eval-inner-txt">
+                          チャット質問（月額）
+                        </div>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="eval-inner">
+                        <img src="./images/maru.svg" ait="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        <div class="eval-inner-txt">
+                          メンタリング／質問対応
+                        </div>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="3" style="font-size: 16px;">身につくスキル</th>
+                  </tr>
+                  <tr>
+                    <td class="skill" style="background-color: #FFEBEB">
+                        <ul>
+                          <li><span>ChatGPT</span></li>
+                          <li><span>Gemini</span></li>
+                          <li><span>Copilot</span></li>
+                          <li><span>画像生成</span></li>
+                          <li><span>NotebookLM</span></li>
+                          <li><span>文章作成</span></li>
+                          <li><span>AI広告動画</span></li>
+                          <li><span>AIエージェント</span></li>
+                          <li><span>業務効率化</span></li>
+                          <li><span>Dify</span></li>
+                          <li><span>AIアプリ</span></li>
+                          <li class="short"><span>マーケティング</span></li>
+                          <li><span>営業企画</span></li>
+                          <li ><span>生成AIパスポート対策</span></li>
+                        </ul>
+                    </td>
+                    <td class="skill">
+                        <ul>
+                          <li><span>ChatGPT</span></li>
+                          <li><span>画像生成</span></li>
+                          <li><span>資料作成</span></li>
+                          <li><span>業務効率化</span></li>
+                          <li><span>プログラミング</span></li>
+                          <li><span>データ分析</span></li>
+                        </ul>
+                    </td>
+                    <td class="skill">
+                        <ul>
+                          <li><span>ChatGPT</span></li>
+                          <li><span>業務効率化</span></li>
+                          <li><span>プログラミング</span></li>
+                          <li><span>データ分析</span></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="3" style="font-size: 16px;">収益化支援・その他</th>
+                  </tr>
+                  <tr>
+                    <td style="background-color: #FFEBEB">
+                      <span class="eval-inner">
+                        <img src="./images/nizyu-maru.svg" ait="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        <div class="eval-inner-txt">
+                          <span class="txt-marker">案件斡旋</span><br><span class="txt-marker">副業サポート</span>
+                        </div>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="eval-inner">
+                        <img src="./images/maru.svg" ait="fine" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        <div class="eval-inner-txt">課題提出／コミュニティ</div>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="eval-inner">
+                        <img src="./images/maru.svg" ait="fine" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                        <div class="eval-inner-txt">
+                          給付金対象コースあり
+                        </div>
+                      </span>
+                    </td>
+                  </tr>
+                  <!-- <tr>
+                    <th colspan="3">詳細</th>
+                  </tr> -->
+                  <tr>
+                    <td style="background-color: #FFEBEB">
+                      <div class="button box-topranking-button">
+                        <div class="link shiny-btn">
+                          <!-- <a
+                            href="https://___#rank-1"
+                            >詳しくは<br class="pc-none" />こちら</a
+                          > -->
+                          <a href="#rank-1" onclick="event.preventDefault(); document.querySelector('#rank-1').scrollIntoView({behavior: 'smooth'});">
+                            詳しくは<br class="pc-none" />こちら
+                          </a>
+                          
+                        </div>
                       </div>
-
-                      <div class="td td10_width d-flex style_none">
-                        <p>
-                          <span class="center d-block">
-                            <span class="small">買い切りプラン</span><br />547,800円<br />
-                          </span>
-                        </p>
+                    </td>
+                    <td>
+                      <div class="button box-topranking-button">
+                        <div class="link shiny-btn">
+                          <!-- <a
+                            href="https://___#rank-1"
+                            >詳しくは<br class="pc-none" />こちら</a
+                          > -->
+                          <a href="#rank-2" onclick="event.preventDefault(); document.querySelector('#rank-2').scrollIntoView({behavior: 'smooth'});">
+                            詳しくは<br class="pc-none" />こちら
+                          </a>
+                          
+                        </div>
                       </div>
-                      <div class="td td11_width d-flex style_none"><p>21,780円</p></div>
-                      <div class="td td12_width d-flex style_none"><p>30コース/600レッスン</p></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                    </td>
+                    <td>
+                      <div class="button box-topranking-button">
+                        <div class="link shiny-btn">
+                          <!-- <a
+                            href="https://___#rank-1"
+                            >詳しくは<br class="pc-none" />こちら</a
+                          > -->
+                          <a href="#rank-3" onclick="event.preventDefault(); document.querySelector('#rank-3').scrollIntoView({behavior: 'smooth'});">
+                            詳しくは<br class="pc-none" />こちら
+                          </a>
+                          
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             

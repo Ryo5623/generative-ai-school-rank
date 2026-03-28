@@ -4,14 +4,12 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <!-- Google Tag Manager -->
   <!-- Google Tag Manager -->
-　<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TX6QKC5W');</script>
-  <!-- End Google Tag Manager -->
   <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,7 +41,79 @@
     <meta name="description" content="ChatGPTなどの生成AI講座のおすすめをランキング形式で紹介するサイトです。生成AIを始めたい方、使い方が知りたい方向けに無料の講座を紹介！" />
     <meta name="keywords" content="AIセミナー,生成AIセミナー,AI講座,生成AI講座" />
     <link rel="stylesheet" id="wp-block-library-css" href="../css/style.min.css" type="text/css" media="all" />
-    <link rel="icon" href="../images/favicon.ico">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <style>
+      .box-topranking {
+        border-collapse: separate !important;
+        border-spacing: 0;
+      }
+      .box-topranking td:first-child {
+        border-left: 3px solid red !important;
+        border-right: 3px solid red !important;
+      }
+      .box-topranking tr:first-child td:first-child {
+        border-top: 3px solid red !important;
+      }
+      .box-topranking tr:last-child td:first-child {
+        border-bottom: 3px solid red !important;
+      }
+      .box-topranking td.skill ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 5px;
+        list-style: none;
+        margin: 0;
+      }
+      .box-topranking td.skill ul li {
+        background: #fff;
+        width: 49%;
+        border-radius: 100px;
+        text-align: center;
+        border: 1px solid #111;
+        padding: 3px 2px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-top: 4px;
+        letter-spacing: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+      }
+      .box-topranking td.skill ul li:nth-child(1),
+      .box-topranking td.skill ul li:nth-child(2) {
+        margin-top: 0;
+      }
+      .box-topranking td.skill ul li.short {
+        letter-spacing: -1px;
+      }
+      .box-topranking td .star {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: red !important;
+        font-size: 1.8rem !important;
+        font-weight: 700;
+      }
+      .box-topranking td .star img {
+        width: 60% !important;
+        margin: 0 auto 4px !important;
+      }
+      @media only screen and (max-width: 768px) {
+        .box-topranking td .star img {
+          width: 80% !important;
+        }
+        .box-topranking td.skill ul {
+          padding: 5px 0;
+        }
+        .box-topranking td.skill ul li {
+          font-size: 1.8vw;
+        }
+      }
+    </style>
     <script src="../images/187026315.js" type="text/javascript" async="" data-ueto="ueto_6d21e01b4c"></script>
     <script type="text/javascript" async="" src="../images/f.txt"></script>
     <script type="text/javascript" async="" src="../images/f(1).txt"></script>
@@ -51,10 +121,10 @@
     <script type="text/javascript" src="../images/f(2).txt"></script>
     <script type="text/javascript" src="../images/f(2).txt"></script>
   </head>
+  <body>
 
-    
     <!-- Google Tag Manager (noscript) -->
-　<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX6QKC5W"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX6QKC5W"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
     
@@ -68,7 +138,7 @@
             href="https://lp4.bytech.jp/ah"
             target="_blank"
           >
-            <img class="banner" src="../images/fv_bytech_sminar.webp" alt="バイテック" />
+            <img class="banner" src="../images/fv_bytech_sminar2.webp" alt="バイテック" />
             <div class="flex">
               <p class="txt">
                 <span class="txt-red">《無料オンラインセミナー参加》</span>で<span class="txt-marker">割引特典と無料15大特典</span>をプレゼント中!!
@@ -86,19 +156,19 @@
         <picture class="fv">
           <!-- PC（769px以上） -->
           <source
-            media="(min-width: 1024px)"
-            srcset="../images/fv-s_2.webp"
+            media="(min-width: 769px)"
+            srcset="../images/fv_seminar_pc.webp"
             type="image/webp"
           />
           <!-- SP（768px以下） -->
           <source
             media="(max-width: 768px)"
-            srcset="../images/fv-s_2.webp"
+            srcset="../images/sv_seminar_sp.webp"
             type="image/webp"
           />
           <!-- フォールバック -->
           <img
-            src="../images/fv-s_2.webp"
+            src="../images/fv_seminar_pc.webp"
             alt="メインビジュアル"
             width="1200"
             height="370"
@@ -160,20 +230,21 @@
             </div>
             <div class="type-list-inner">
               <dt class="type-list-inner-ttl type-list-inner-ttl-w">
-                <div class="type-list-inner-ttl-wrap"><span class="type-list-inner-ttl-big">ChatGPT</span>に特化</div>
+                <div class="type-list-inner-ttl-wrap"><span class="type-list-inner-ttl-big">AI副業</span>に特化</div>
               </dt>
               <dd class="type-list-inner-content type-list-inner-content-w">
                 <span class="type-list-inner-content-wrap">
                   <a
-                    href="https://saipon.jp/h/chatgpt/af_bl_m/"
+                    href="https://ai-skill.jp/"
                     target="_blank"
+                    rel="sponsored"
                   >
-                    <div class="logo"><img src="../images/hisho_logo.png" style="height: 48px;"/></div>
+                    <div class="logo"><img src="../images/ai-skill-ac_logo.webp" style="width: 100%; height: 50px; object-fit: contain;"/></div>
                   </a>
                   <div class="type-list-inner-content-wrap-copy" style="margin-top: 10px;">
                     <span
-                      ><span class="txt-red">魔法の公式を完全公開！</span>今すぐ誰でも簡単に<span class="txt-marker">ChatGPTを使いこなせる！</span
-                      >ChatGPTに特化したオンライン無料セミナー！</span
+                      ><span class="txt-red">15大特典＋期間限定2大特典付き！</span><span class="txt-marker">2時間でAI活用スキルを一気に習得！</span
+                      >副業・業務効率化に活かせる実践型セミナー</span
                     >
                   </div>
                   <span class="type-list-inner-content-wrap-flex">
@@ -183,14 +254,15 @@
                     >
                       <span class="type-list-inner-content-wrap-flex-link-txt">詳細</span>
                     </a> -->
-                    <a class="type-list-inner-content-wrap-flex-link" href="#rank-2" onclick="event.preventDefault(); document.querySelector('#rank-1').scrollIntoView({behavior: 'smooth'});">
+                    <a class="type-list-inner-content-wrap-flex-link" href="#rank-2" onclick="event.preventDefault(); document.querySelector('#rank-2').scrollIntoView({behavior: 'smooth'});">
                       <span class="type-list-inner-content-wrap-flex-link-txt">詳細</span>
                     </a>
                     <div class="button box-topranking-button type-list-inner-content-wrap-flex-cv">
                       <div class="cv shiny-btn type-list-inner-content-wrap-flex-cv-wrapper">
                         <a
-                          href="https://saipon.jp/h/chatgpt/af_bl_m"
+                          href="https://ai-skill.jp/"
                           target="_blank"
+                          rel="sponsored"
                           ><span class="type-list-inner-content-wrap-flex-cv-txt">公式サイト</span></a
                         >
                       </div>
@@ -246,7 +318,7 @@
         </div>
 
         <div style="margin-top: 70px;" class="ttl">
-            <img src="../images/fv_5.svg" alt="生成AI無料オンラインセミナー・講座TOP5" />
+            <img src="../images/fv_under_seminar3.svg" alt="生成AI無料オンラインセミナー・講座TOP5" />
         </div>
         <div class="table-scroll">
           
@@ -258,7 +330,7 @@
                 <a
                   href="https://lp4.bytech.jp/ah"
                   target="_blank"
-                  ><img class="banner" src="../images/fv_bytech_sminar.webp" alt="バイテック無料講座;" />
+                  ><img class="banner" src="../images/fv_bytech_sminar2.webp" alt="バイテック無料講座;" />
                   <p class="title">バイテック</p>
                 </a>
                 <div class="button box-topranking-button">
@@ -266,7 +338,7 @@
                     <a
                       href="https://lp4.bytech.jp/ah"
                       target="_blank"
-                      >公式ページはこちら</a
+                      >公式サイトはこちら</a
                     >
                   </div>
                 </div>
@@ -274,21 +346,17 @@
               <td class="name">
                 <img class="ico-rank" src="../images/icon-crown-2.png" alt="2位" />
                 <a
-                  href="https://saipon.jp/h/chatgpt/af_bl_m/"
+                  href="https://ai-skill.jp/"
                   target="_blank"
-                  ><img
-                    class="banner"
-                    src="../images/hisho.webp"
-                    alt="ChatGPTの学校「飛翔」&lt;br&gt;!--生成AIセミナー--&gt;"
-                  />
-                  <p class="title">ChatGPTの学校「飛翔</p>
+                  ><img class="banner" src="../images/ai-skill-ac.webp" alt="AIスキルアカデミー" />
+                  <p class="title">AIスキルアカデミー</p>
                 </a>
                 <div class="button box-topranking-button">
                   <div class="cv shiny-btn">
                     <a
-                      href="https://saipon.jp/h/chatgpt/af_bl_m/"
+                      href="https://ai-skill.jp/"
                       target="_blank"
-                      >公式ページはこちら</a
+                      >公式サイトはこちら</a
                     >
                   </div>
                 </div>
@@ -298,7 +366,7 @@
                 <a
                   href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000/"
                   target="_blank"
-                  ><img class="banner" src="../images/shift.webp" alt="SHIFT AI&lt;br&gt;プレゼンス&lt;!--AI副業スクール--&gt;" />
+                  ><img class="banner" src="../images/shift.webp" alt="SHIFT AI" />
                   <p class="title">SHIFT AI</p>
                 </a>
                 <div class="button box-topranking-button">
@@ -306,7 +374,7 @@
                     <a
                       href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000/"
                       target="_blank"
-                      >公式ページはこちら</a
+                      >公式サイトはこちら</a
                     >
                   </div>
                 </div>
@@ -314,17 +382,21 @@
               <td class="name">
                 <img class="ico-rank" src="../images/icon-crown-4.png" alt="4位" />
                 <a
-                  href="https://ai-skill.jp/"
+                  href="https://saipon.jp/h/chatgpt/af_bl_m/"
                   target="_blank"
-                  ><img class="banner" src="../images/ai-skill-academy.webp" alt="AIスキルアカデミー" />
-                  <p class="title">AIスキルアカデミー</p>
+                  ><img
+                    class="banner"
+                    src="../images/hisho.webp"
+                    alt="ChatGPTの学校「飛翔」"
+                  />
+                  <p class="title">ChatGPTの学校「飛翔」</p>
                 </a>
                 <div class="button box-topranking-button">
                   <div class="cv shiny-btn">
                     <a
-                      href="https://ai-skill.jp/"
+                      href="https://saipon.jp/h/chatgpt/af_bl_m/"
                       target="_blank"
-                      >公式ページはこちら</a
+                      >公式サイトはこちら</a
                     >
                   </div>
                 </div>
@@ -342,7 +414,7 @@
                     <a
                       href="https://startai.jp/"
                       target="_blank"
-                      >公式ページはこちら</a
+                      >公式サイトはこちら</a
                     >
                   </div>
                 </div>
@@ -354,23 +426,23 @@
             <tr>
               <td style="background-color: #FFEBEB;">
                 <p style="font-weight: 600;"><span style="color: red;">AIコンサルも目指せるセミナー</span><br>収益化率96%</p>
-                <div class="star"><img src="../images/star_1.svg" alt="5.0" />5.0</div>
-              </td>
-              <td>
-                <p style="font-weight: 600;"><span style="color: red;">ChatGPTに特化したセミナー</span><br>毎日開催中！</p>
-                <div class="star"><img src="../images/star_2.svg" alt="4.5" />4.5</div>
-              </td>
-              <td>
-                <p style="font-weight: 600;"><span style="color: red;">AIスキルで副業・転職・独立</span><br>業界の第一人者が登壇！</p>
-                <div class="star"><img src="../images/star_3.svg" alt="4.2" />4.2</div>
+                <div class="star"><img src="../images/4.9.webp" alt="4.9" />4.9</div>
               </td>
               <td>
                 <p style="font-weight: 600;"><span style="color: red;">豪華15大特典付き！</span><br>2時間で一気に習得</p>
-                <div class="star"><img src="../images/star_3.svg" alt="4.0" />4.0</div>
+                <div class="star"><img src="../images/4.5.webp" alt="4.5" />4.5</div>
+              </td>
+              <td>
+                <p style="font-weight: 600;"><span style="color: red;">AIスキルで副業・転職・独立</span><br>業界の第一人者が登壇！</p>
+                <div class="star"><img src="../images/4.2.webp" alt="4.2" />4.2</div>
+              </td>
+              <td>
+                <p style="font-weight: 600;"><span style="color: red;">ChatGPTに特化したセミナー</span><br>毎日開催中！</p>
+                <div class="star"><img src="../images/4.0.webp" alt="4.0" />4.0</div>
               </td>
               <td>
                 <p style="font-weight: 600;"><span style="color: red;">中高年でも簡単に学べる！</span><br>ChatGPTならこれ</p>
-                <div class="star"><img src="../images/star_3.svg" alt="4.0" />4.0</div>
+                <div class="star"><img src="../images/4.0.webp" alt="4.0" />4.0</div>
               </td>
             </tr>
             <tr>
@@ -388,7 +460,9 @@
               <td>
                 <span class="eval-inner">
                   <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 50px; margin: 3px auto;"/>
-                  ほぼ毎日
+                  <div class="eval-inner-txt">
+                    ほぼ毎日
+                  </div>
                 </span>
               </td>
               <td>
@@ -402,9 +476,7 @@
               <td>
                 <span class="eval-inner">
                   <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 50px; margin: 3px auto;"/>
-                  <div class="eval-inner-txt">
-                    ほぼ毎日
-                  </div>
+                  ほぼ毎日
                 </span>
               </td>
               <td>
@@ -432,23 +504,23 @@
                 <span class="eval-inner">
                   <img src="../images/maru.svg" alt="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
                   <div class="eval-inner-txt">
+                    <span>しっかり学べる</span>
+                  </div>
+                </span>
+              </td>
+              <td>
+                <span class="eval-inner">
+                  <img src="../images/maru.svg" alt="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                  <div class="eval-inner-txt">
+                    <span>しっかり学べる</span>
+                  </div>
+                </span>
+              </td>
+              <td>
+                <span class="eval-inner">
+                  <img src="../images/maru.svg" alt="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                  <div class="eval-inner-txt">
                     <span>無料で学べる</span>
-                  </div>
-                </span>
-              </td>
-              <td>
-                <span class="eval-inner">
-                  <img src="../images/maru.svg" alt="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
-                  <div class="eval-inner-txt">
-                    <span>しっかり学べる</span>
-                  </div>
-                </span>
-              </td>
-              <td>
-                <span class="eval-inner">
-                  <img src="../images/maru.svg" alt="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
-                  <div class="eval-inner-txt">
-                    <span>しっかり学べる</span>
                   </div>
                 </span>
               </td>
@@ -473,21 +545,21 @@
               <td>
                 <span class="eval-inner">
                   <div class="eval-inner-txt">
-                    <span>一括：217,800円(税込)<br>サブスク：10,780円/月(税込)</span>
-                  </div>
-                </span>
-              </td>
-              <td>
-                <span class="eval-inner">
-                  <div class="eval-inner-txt">
-                    <span>月額：2万1,780円(税込)<br>※セミナー時に追加でプランの案内がございます。</span>
-                  </div>
-                </span>
-              </td>
-              <td>
-                <span class="eval-inner">
-                  <div class="eval-inner-txt">
                     <span>一括：21万7,800円(税込)<br>分割：9,350円(税抜)/月</span>
+                  </div>
+                </span>
+              </td>
+              <td>
+                <span class="eval-inner">
+                  <div class="eval-inner-txt">
+                    <span>一括：54万7,800円(税込)<br>月額：2万1,780円(税込)</span>
+                  </div>
+                </span>
+              </td>
+              <td>
+                <span class="eval-inner">
+                  <div class="eval-inner-txt">
+                    <span>一括：21万7,800円(税込)<br>サブスク：1万780円/月(税込)</span>
                   </div>
                 </span>
               </td>
@@ -506,8 +578,10 @@
               <td class="skill" style="background-color: #FFEBEB;">
                   <ul>
                     <li><span>ChatGPT</span></li>
+                    <li><span>Claude</span></li>
                     <li><span>Gemini</span></li>
                     <li><span>Copilot</span></li>
+                    <li><span>CopilotStudio</span></li>
                     <li><span>画像生成</span></li>
                     <li><span>NotebookLM</span></li>
                     <li><span>文章作成</span></li>
@@ -523,34 +597,51 @@
               <td class="skill">
                   <ul>
                     <li><span>ChatGPT</span></li>
+                    <li><span>Gemini</span></li>
+                    <li><span>Claude</span></li>
+                    <li><span>Copilot</span></li>
+                    <li><span>NotebookLM</span></li>
+                    <li><span>Dify</span></li>
+                    <li><span>画像生成AI</span></li>
+                    <li><span>AI広告動画</span></li>
+                    <li><span>文章作成</span></li>
+                    <li><span>副業</span></li>
+                    <li><span>マーケティング</span></li>
+                  </ul>
+              </td>
+              <td class="skill">
+                  <ul>
+                    <li><span>ChatGPT</span></li>
+                    <li><span>Claude</span></li>
+                    <li><span>Gemini</span></li>
+                    <li><span>Copilot</span></li>
                     <li><span>画像生成</span></li>
+                    <li><span>動画制作</span></li>
+                    <li><span>AIライティング</span></li>
+                    <li><span>業務効率化</span></li>
+                    <li><span>Dify</span></li>
+                    <li><span>AIエージェント</span></li>
+                    <li><span>データ分析</span></li>
+                  </ul>
+              </td>
+              <td class="skill">
+                  <ul>
+                    <li><span>ChatGPT</span></li>
+                    <li><span>プロンプト設計</span></li>
                     <li><span>資料作成</span></li>
                     <li><span>業務効率化</span></li>
-                    <li><span>プログラミング</span></li>
+                    <li><span>AIライティング</span></li>
                     <li><span>データ分析</span></li>
+                    <li><span>マーケティング</span></li>
                   </ul>
               </td>
               <td class="skill">
                   <ul>
                     <li><span>ChatGPT</span></li>
+                    <li><span>プロンプト設計</span></li>
                     <li><span>業務効率化</span></li>
-                    <li><span>プログラミング</span></li>
-                    <li><span>データ分析</span></li>
-                  </ul>
-              </td>
-              <td class="skill">
-                  <ul>
-                    <li><span>ChatGPT</span></li>
-                    <li><span>業務効率化</span></li>
-                    <li><span>プログラミング</span></li>
-                    <li><span>データ分析</span></li>
-                  </ul>
-              </td>
-              <td class="skill">
-                  <ul>
-                    <li><span>ChatGPT</span></li>
-                    <li><span>業務効率化</span></li>
-                    <li><span>プログラミング</span></li>
+                    <li><span>AIライティング</span></li>
+                    <li><span>議事録自動作成</span></li>
                     <li><span>データ分析</span></li>
                   </ul>
               </td>
@@ -569,6 +660,14 @@
               </td>
               <td>
                 <span class="eval-inner">
+                  <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
+                  <div class="eval-inner-txt">
+                    15大特典<br>＋期間限定2大特典
+                  </div>
+                </span>
+              </td>
+              <td>
+                <span class="eval-inner">
                   <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 50px; margin: 3px auto;"/>
                   <div class="eval-inner-txt">12大特典</div>
                 </span>
@@ -578,14 +677,6 @@
                   <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 50px; margin: 3px auto;"/>
                   <div class="eval-inner-txt">
                     12大特典
-                  </div>
-                </span>
-              </td>
-              <td>
-                <span class="eval-inner">
-                  <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 50px; margin: 3px auto;"/>
-                  <div class="eval-inner-txt">
-                    15大特典
                   </div>
                 </span>
               </td>
@@ -703,7 +794,7 @@
                     <a
                       href="https://lp4.bytech.jp/ah"
                       target="_blank"
-                      ><img src="../images/fv_bytech_sminar.webp" alt="バイテック生成AI"
+                      ><img src="../images/fv_bytech_sminar2.webp" alt="バイテック生成AI"
                     /></a>
                   </div>
                   <div class="point">
@@ -839,7 +930,7 @@
                     <a
                       href="https://lp4.bytech.jp/ah"
                       target="_blank"
-                      >公式ページはこちら</a
+                      >無料セミナーを予約する</a
                     >
                   </div>
                 </div>
@@ -915,7 +1006,7 @@
                     <a
                       href="https://lp4.bytech.jp/ah"
                       target="_blank"
-                      >公式ページはこちら</a
+                      >無料セミナーを予約する</a
                     >
                   </div>
                 </div>
@@ -930,6 +1021,466 @@
             <div class="title">
               <div class="title-inner">
                 <h3 class="icon iconimg-2">
+                  <a
+                    href="https://ai-skill.jp/"
+                    target="_blank"
+                    ><div>AIスキルアカデミー</div></a
+                  >
+                </h3>
+              </div>
+            </div>
+            <div class="box-inner">
+              <!-- <div class="box-inner-icon box-inner-icon-mini">
+                <img src="../images/kyufukin-batch.png" />
+              </div> -->
+              <div class="detail-info">
+                <div class="detail-info-inner">
+                  <div class="banner">
+                    <a
+                      href="https://ai-skill.jp/"
+                      target="_blank"
+                      ><img src="../images/ai-skill-ac.webp" alt="AIスキルアカデミー"
+                    /></a>
+                  </div>
+                  <div class="point">
+                    <h4 class="point-ttl">おすすめポイント</h4>
+                    <ul class="point-inner">
+                      <div class="point-inner-wrap">
+                        <li>
+                          <img src="../images/1.svg" style="width: 25xp; height: 25px;" alt="ナンバー1"/>
+                          <div class="point-inner-txt"><b>ChatGPTを仕事に使えるレベルまで<b class="txt-marker"><span class="txt-red">２時間で習得</b></span></b></span></div>
+                        </li>
+                        <li>
+                          <img src="../images/2.svg" style="width: 25xp; height: 25px;" alt="ナンバー2"/>
+                          <div class="point-inner-txt"><b><span class="txt-red txt-marker">参加費は完全無料</span>なので、まずAIを触ってみたい人におすすめ</span></b></div>
+                        </li>
+                        <li>
+                          <img src="../images/3.svg" style="width: 25xp; height: 25px;" alt="ナンバー3"/>
+                          <div class="point-inner-txt"><b>セミナー参加で<b class="txt-marker"><span class="txt-red">15大特典＋期間限定2大特典</span></b>が受け取れる</b></div>
+                        </li>
+                      </div>
+                    </ul>
+                    <dl class="spec-inner" style="margin-top: 30px;">
+                    <div class="spec-inner-wrapper">
+                      <dt class="spec-inner-wrapper-content">費用</dt>
+                      <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">無料<br>(オンラインセミナー)</dd>
+                    </div>
+                    <div class="spec-inner-wrapper">
+                      <dt class="spec-inner-wrapper-content">開催頻度</dt>
+                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">ほぼ毎日実施</dd>
+                    </div>
+                    <div class="spec-inner-wrapper">
+                      
+                      <dt class="spec-inner-wrapper-content">セミナー内容</dt>
+                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">しっかり学べる</dd>
+                    </div>
+                    <div class="spec-inner-wrapper">
+                      <dt class="spec-inner-wrapper-content">特典</dt>
+                      <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">15大特典<br>＋期間限定2大特典</dd>
+                    </div>
+                  </dl>
+                  </div>
+                  <!--.point-->
+                </div>
+                <!--.detail-info-wrao-->
+
+                <!-- <div class="spec">
+                  <dl class="spec-inner">
+                    <div class="spec-inner-wrapper">
+                      <dt class="spec-inner-wrapper-content">費用</dt>
+                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">無料<br>(オンラインウェビナー)</dd>
+                    </div>
+                    <div class="spec-inner-wrapper">
+                      <dt class="spec-inner-wrapper-content">開催頻度</dt>
+                      <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">毎日実施<br>（集団形式）</dd>
+                    </div>
+                    <div class="spec-inner-wrapper">
+                      
+                      <dt class="spec-inner-wrapper-content">セミナー内容</dt>
+                      <img src="../images/nizyu-maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">2.5時間</dd>
+                    </div>
+                    <div class="spec-inner-wrapper">
+                      <dt class="spec-inner-wrapper-content">特典</dt>
+                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">15大特典</dd>
+                    </div>
+                  </dl>
+                </div> -->
+                <!--参加10大特典-->
+                <div class="simple-campain">
+                  <h4 class="simple-campain-ttl">参加特典</h4>
+                  <div class="simple-campain-wrapper">
+                    <ul class="simple-campain-wrapper-list">
+                      <li class="simple-campain-wrapper-list-item">
+                        <div class="simple-campain-wrapper-list-item-txt"><span class="txt-red">《無料セミナー参加》</span>で<b><span class="txt-marker">15大特典＋期間限定2大特典</span>をプレゼント</b><br>
+                        <ul style="font-weight: 600; margin-top: 10px;">
+                          <ul>
+                            <li>1: noteの有料記事30記事プレゼント</li>
+                            <li>2: 生活が劇的に変わるプロンプト1000選</li>
+                            <li>3: 鈴木式プロンプト職種別活用例50個</li>
+                            <li>4: ウェビナー動画2時間分プレゼント</li>
+                            <li>5: セミナー資料プレゼント</li>
+                            <li>6: ChatGPT活用Kindle本</li>
+                            <li>7: AIコンサルタント完全攻略ロードマップ</li>
+                            <li>8: 生成AI用語ミニ辞典</li>
+                            <li>9: ChatGPTで使える自己分析テンプレート</li>
+                            <li>10: ChatGPTプロンプト41選 完全解説</li>
+                            <li>11: 超厳選！最新AIツール25選</li>
+                            <li>12: 【新】今すぐ使える超厳選GPTs 30選</li>
+                            <li>13: AI時代の最先端をいく業務効率化30選 -質問力と構築力-</li>
+                            <li>14: もう挫折しない！月30万円稼ぐ超具体的なロードマップ</li>
+                            <li>15: 全2万文字！一番わかりやすい究極の案件獲得</li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    <a
+                      class="simple-campain-wrapper-img"
+                      href="https://startai.jp/"
+                      target="_blank"
+                    >
+                      <div>
+                        <img src="../images/aiskill-p.webp" alt="AIスキルアカデミー" />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                
+                <!--simple-campain-->
+
+                <!-- <div class="button button-yss">
+                  <p class="toptxt">\ オンライン<span class="txt-red">無料セミナー</span>実施中！ /</p>
+                  <div class="cv shiny-btn">
+                    <a
+                      href="https://saipon.jp/h/chatgpt/af_bl_mcv"
+                      target="_blank"
+                      >無料セミナーを予約する</a
+                    >
+                  </div>
+                </div> -->
+
+                <!--口コミ-->
+                <!-- <div class="review">
+                  <h4 class="detail-info-ttl">口コミ</h4>
+                  <div class="review-kome">※個人の感想であり結果を約束するものではございません。</div>
+                  <div class="slider slick-initialized slick-slider">
+                    <div class="slick-list draggable">
+                      <div class="slick-track" style="opacity: 1; width: 688px; transform: translate3d(0px, 0px, 0px)">
+                        <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 344px">
+                          <div>
+                            <dd style="width: 100%; display: inline-block">
+                              <div class="flex">
+                                <div class="left">
+                                  <p><img src="../images/woman.png" /></p>
+                                </div>
+                                <div class="right">
+                                  <p class="ttl">ChatGPTが最高のパートナーになると実感</p>
+                                  <div class="name">男性</div>
+                                </div>
+                              </div>
+                              <p class="txt">
+                                プロンプトという言葉を聞いていた程度でしたが、ここまで繊細に柔軟に設定することで、今までの何十倍も仕事をしてもらえるパートナーになると感動しました。形容詞＋名詞＋動詞の設定がポイントで、自分の語彙力も試されると思いましたが、これを使わない未来はないです。<br><br>※公式サイトより抜粋
+                              </p>
+                            </dd>
+                          </div>
+                        </div>
+                        <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 344px">
+                          <div>
+                            <dd style="width: 100%; display: inline-block">
+                              <div class="flex">
+                                <div class="left">
+                                  <p><img src="../images/woman.png" /></p>
+                                </div>
+                                <div class="right">
+                                  <p class="ttl">分からなかったプロンプトの指示の仕方が明確になりました</p>
+                                  <div class="name">女性</div>
+                                </div>
+                              </div>
+                              <p class="txt">
+                                本当に自分で初めから作ると大変な文も分かり易く簡潔に提示してくれるチャットGTPですが、どうお願いするのが、1番欲しい答えがもらえるか？だった所が、凄く分かり易く教えて頂き、気をつける部分がはっきりしました。<br><br>※公式サイトより抜粋
+                              </p>
+                            </dd>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!--オススメテキスト-->
+
+                <!-- <div class="maintext" style="margin-bottom: 1.5rem">
+                  <h4 class="detail-info-ttl">最後にこれだけ見て！オススメの理由</h4>
+                  <p>
+                    ストレイルのTOEIC® L&R TESTコースは、<b class="txt-marker">TOEIC完全対応のオリジナル教材を使用</b>することでスピーディーかつ正確なリーディング力・リスニング力を身につけられる。<br /><br />
+                    <b class="txt-marker"
+                      >言語習得の科学「第二言語習得研究」に基づいた質の高い学習コンサルティング</b
+                    >に定評があるベネッセグループの英語コーチングという点は受講者からも信頼できるポイント!<br /><br />
+                    90日後には<b class="txt-marker">350点で入学した人が平均216点、550点で入学した人が平均158点アップ</b
+                    >している実績も!<br /><br />
+                    <span class="txt-marker">一般教育訓練給付制度</span>も利用可能で<span class="txt-red">受講料の20%(上限あり)</span
+                      >が支給されるので、費用を抑えられるのも魅力。※支給方法について詳しくはサービス提供元へご相談ください。<br /><br />
+                    無料体験実施中！まずは無料で受けてみよう!!
+                  </p>
+                </div> -->
+
+                <div class="button button-yss button-bottom">
+                  <p class="toptxt">\ 今だけ！<span class="txt-red">15大特典＋期間限定2大特典</span>プレゼント中 /</p>
+                  <div class="cv shiny-btn">
+                    <a
+                      href="https://ai-skill.jp/"
+                      target="_blank"
+                      >無料セミナーを予約する</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!--detail-info-->
+            </div>
+            <!-- .box-inner.-->
+          </div>
+          <!--.box-->
+
+          <div class="box" id="rank-3">
+            <div class="title">
+              <div class="title-inner">
+                <h3 class="icon iconimg-3">
+                  <a
+                    href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000"
+                    target="_blank"
+                    ><div>SHIFT AI</div></a
+                  >
+                </h3>
+              </div>
+            </div>
+            <div class="box-inner">
+              <div class="detail-info">
+                <div class="detail-info-inner">
+                  <div class="banner">
+                    <a
+                      href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000"
+                      target="_blank"
+                      ><img src="../images/shift.webp" alt="SHIFT AI&lt;br&gt;シフトエーアイ&lt;!-- AIセミナー --&gt;"
+                    /></a>
+                  </div>
+                  <div class="point">
+                    <h4 class="point-ttl">おすすめポイント</h4>
+                    <ul class="point-inner">
+                      <div class="point-inner-wrap" style="text-align: left;">
+                        <li>
+                          <img src="../images/1.svg" style="width: 25xp; height: 25px;" alt="ナンバー1"/>
+                          <div class="point-inner-txt">
+                            <b>セミナー参加で<span class="txt-marker"><span class="txt-red">豪華12大特典</span></span>をプレゼント</b>
+                          </div>
+                        </li>
+                        <li>
+                          <img src="../images/2.svg" style="width: 25xp; height: 25px;" alt="ナンバー2"/>
+                          <div class="point-inner-txt">
+                            <b><span class="txt-marker"><span class="txt-red">土日にも開催</span>だから受けやすい</span></b>
+                          </div>
+                        </li>
+                        <li>
+                          <img src="../images/3.svg" style="width: 25xp; height: 25px;" alt="ナンバー3"/>
+                          <div class="point-inner-txt">
+                            <b><span class="txt-marker"><span class="txt-red">AI業界で有名</span>な専門家が登壇</span></b>
+                          </div>
+                        </li>
+                      </div>
+                    </ul>
+                    <dl class="spec-inner">
+                      <div class="spec-inner-wrapper">
+                        <dt class="spec-inner-wrapper-content">費用</dt>
+                        <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                        <dd class="spec-inner-wrapper-content">無料<br>(無料セミナー)</dd>
+                      </div>
+                      <div class="spec-inner-wrapper">
+                        <dt class="spec-inner-wrapper-content">開催頻度</dt>
+                        <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                        <dd class="spec-inner-wrapper-content">週に2~3回程度<br>（集団ウェビナー形式）</dd>
+                      </div>
+                      <div class="spec-inner-wrapper">
+                        <dt class="spec-inner-wrapper-content">セミナー内容</dt>
+                        <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                        <dd class="spec-inner-wrapper-content">しっかり学べる</dd>
+                      </div>
+                      <div class="spec-inner-wrapper">
+                        <dt class="spec-inner-wrapper-content">特典</dt>
+                        <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                        <dd class="spec-inner-wrapper-content">12大特典</dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <!--.point-->
+                </div>
+                <!--.detail-info-wrao-->
+
+                <!-- <div class="spec">
+                  <dl class="spec-inner">
+                    <div class="spec-inner-wrapper">
+                      <dt class="spec-inner-wrapper-content">費用</dt>
+                      <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">無料<br>(無料セミナー)</dd>
+                    </div>
+                    <div class="spec-inner-wrapper">
+                      <dt class="spec-inner-wrapper-content">開催頻度</dt>
+                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">週に2~3回程度<br>（集団ウェビナー形式）</dd>
+                    </div>
+                    <div class="spec-inner-wrapper">
+                      
+                      <dt class="spec-inner-wrapper-content">セミナー内容</dt>
+                      <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">しっかり学べる</dd>
+                    </div>
+                    <div class="spec-inner-wrapper">
+                      <dt class="spec-inner-wrapper-content">特典</dt>
+                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
+                      <dd class="spec-inner-wrapper-content">10大特典</dd>
+                    </div>
+                  </dl>
+                </div> -->
+
+                <!--参加10大特典-->
+                <div class="simple-campain">
+                  <h4 class="simple-campain-ttl">参加特典</h4>
+                  <div class="simple-campain-wrapper">
+                    <ul class="simple-campain-wrapper-list">
+                      <li class="simple-campain-wrapper-list-item">
+                        <div class="simple-campain-wrapper-list-item-txt"><span class="txt-red">《オンライン無料セミナー参加》</span>で<b><span class="txt-marker">無料12大特典</span>をプレゼント</b><br>
+                        <ul style="font-weight: 600; margin-top: 10px;">
+                          <li>1: ChatGPT Agentの教科書</li>
+                          <li>2:『実務で役立つ生成AIタイパ術』</li>
+                          <li>3: AI翻訳を活用したキャリアアップ戦略</li>
+                          <li>4: 月5万円稼ぐための完全攻略ロードマップ</li>
+                          <li>5:【最新・2025年版】生成AI基礎大全</li>
+                          <li>6:【最新速報】ChatGPTアップデート完全ガイド</li>
+                          <li>7:【この1冊でGeminiの全てがわかる！】Google Gemini大全</li>
+                          <li>8: いま注目のツール【Grok4 完全ガイド】</li>
+                          <li>9:『ChatGPTの一番優しい教科書』</li>
+                          <li>10:【AI × TikTok】</li>
+                          <li>11: AI×アニメ動画制作の教科書</li>
+                          <li>12: 【極秘】厳選 AI活用の裏技20選</li>
+
+                        </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    <a
+                      class="simple-campain-wrapper-img"
+                      href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000"
+                      target="_blank"
+                    >
+                      <div>
+                        <img src="../images/present_shiftai.webp" alt="SHIFT AI&lt;br&gt;(シフトエーアイ)&lt;!-- AI副業スクール --&gt;" />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+               
+                <!--simple-campain-->
+
+                <div class="button button-yss">
+                  <p class="toptxt">\ オンライン<span class="txt-red">無料セミナー</span>開催中！ /</p>
+                  <div class="cv shiny-btn">
+                    <a
+                      href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000"
+                      target="_blank"
+                      >無料セミナーを予約する</a
+                    >
+                  </div>
+                </div>
+
+                <!--口コミ-->
+                <!-- <div class="review">
+                  <h4 class="detail-info-ttl">口コミ</h4>
+                  <div class="review-kome">※個人の感想であり結果を約束するものではございません。</div>
+                  <div class="slider slick-initialized slick-slider">
+                    <div class="slick-list draggable">
+                      <div class="slick-track" style="opacity: 1; width: 688px; transform: translate3d(0px, 0px, 0px)">
+                        <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 344px">
+                          <div>
+                            <dd style="width: 100%; display: inline-block">
+                              <div class="flex">
+                                <div class="left">
+                                  <p><img src="../images/woman.png" /></p>
+                                </div>
+                                <div class="right">
+                                  <p class="ttl">子育てしながらでも収入を上げる方法がわかった</p>
+                                  <div class="name">女性</div>
+                                </div>
+                              </div>
+                              <p class="txt">
+                                現在育休中で、復帰してからも子育てに時間を割きたいし、でも給料はあげたい！と思って参加しました。セミナーを受けて自分の目標を決められましたし、収入までどう繋げるか明確になりました。<br><br>※公式サイトより抜粋
+                              </p>
+                            </dd>
+                          </div>
+                        </div>
+                        <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 344px">
+                          <div>
+                            <dd style="width: 100%; display: inline-block">
+                              <div class="flex">
+                                <div class="left">
+                                  <p><img src="../images/woman.png" /></p>
+                                </div>
+                                <div class="right">
+                                  <p class="ttl">AI時代に生き抜くヒントが盛りだくさん</p>
+                                  <div class="name">女性</div>
+                                </div>
+                              </div>
+                              <p class="txt">
+                                新しい時代に置いていかれないようにAIを取り入れたいと感じたので参加しました。AI時代に生き抜くヒントが盛りだくさんで、とても勉強になりました。「AIツール3選」で教えていただいたこのツールは早速取り入れてみたいです。<br><br>※公式サイトより抜粋
+                              </p>
+                            </dd>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+
+                <!--オススメテキスト-->
+
+                <div class="maintext" style="margin-bottom: 1.5rem">
+                  <h4 class="detail-info-ttl">最後にこれだけ見て！オススメの理由</h4>
+                  <p>
+                    SHIFT AIは、生成AIを活用したスキルを身につけ、<span class="txt-red">実際の業務や副業にすぐ役立てられる知識を提供</span>しています。<span class="txt-marker">国内のトップAIエキスパートが、具体的な業界事例や実践を解説。</span>また、AIを活用して成功している企業や個人の生のケーススタディを共有することで、リアルな活用イメージがつかめます。<br /><br />
+                    さらに、<span class="txt-red">情報感度の高い仲間と交流できるイベントやコミュニティも充実。</span>初めての方からプロフェッショナルまで、AI時代のキャリアアップや副業に最適な環境を整えています。<br /><br />
+                    今なら無料セミナー参加で、業界最新ツールや限定ノウハウが詰まった<span class="txt-marker">豪華12大特典をプレゼント中</span>です！<br /><br />
+                    オンライン無料セミナー実施中！まずは無料で受けてみよう!!
+                  </p>
+                </div>
+
+                <div class="button button-yss button-bottom">
+                  <p class="toptxt">\ オンライン<span class="txt-red">無料セミナー</span>開催中！/</p>
+                  <div class="cv shiny-btn">
+                    <a
+                      href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000"
+                      target="_blank"
+                      >無料セミナーを予約する</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!--detail-info-->
+            </div>
+            <!-- .box-inner.-->
+          </div>
+          <!--.box-->
+
+          <div class="box" id="rank-4">
+            <div class="title">
+              <div class="title-inner">
+                <h3 class="icon iconimg-4">
                   <a
                     href="https://saipon.jp/h/chatgpt/af_bl_m"
                     target="_blank"
@@ -1098,7 +1649,7 @@
                     <a
                       href="https://saipon.jp/h/chatgpt/af_bl_m"
                       target="_blank"
-                      >公式ページはこちら</a
+                      >無料セミナーを予約する</a
                     >
                   </div>
                 </div>
@@ -1170,467 +1721,7 @@
                     <a
                       href="https://saipon.jp/h/chatgpt/af_bl_m"
                       target="_blank"
-                      >公式ページはこちら</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!--detail-info-->
-            </div>
-            <!-- .box-inner.-->
-          </div>
-          <!--.box-->
-
-          <div class="box" id="rank-3">
-            <div class="title">
-              <div class="title-inner">
-                <h3 class="icon iconimg-3">
-                  <a
-                    href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000"
-                    target="_blank"
-                    ><div>SHIFT AI</div></a
-                  >
-                </h3>
-              </div>
-            </div>
-            <div class="box-inner">
-              <div class="detail-info">
-                <div class="detail-info-inner">
-                  <div class="banner">
-                    <a
-                      href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000"
-                      target="_blank"
-                      ><img src="../images/shift.webp" alt="SHIFT AI&lt;br&gt;シフトエーアイ&lt;!-- AIセミナー --&gt;"
-                    /></a>
-                  </div>
-                  <div class="point">
-                    <h4 class="point-ttl">おすすめポイント</h4>
-                    <ul class="point-inner">
-                      <div class="point-inner-wrap" style="text-align: left;">
-                        <li>
-                          <img src="../images/1.svg" style="width: 25xp; height: 25px;" alt="ナンバー1"/>
-                          <div class="point-inner-txt">
-                            <b>セミナー参加で<span class="txt-marker"><span class="txt-red">豪華12大特典</span></span>をプレゼント</b>
-                          </div>
-                        </li>
-                        <li>
-                          <img src="../images/2.svg" style="width: 25xp; height: 25px;" alt="ナンバー2"/>
-                          <div class="point-inner-txt">
-                            <b><span class="txt-marker"><span class="txt-red">土日にも開催</span>だから受けやすい</span></b>
-                          </div>
-                        </li>
-                        <li>
-                          <img src="../images/3.svg" style="width: 25xp; height: 25px;" alt="ナンバー3"/>
-                          <div class="point-inner-txt">
-                            <b><span class="txt-marker"><span class="txt-red">AI業界で有名</span>な専門家が登壇</span></b>
-                          </div>
-                        </li>
-                      </div>
-                    </ul>
-                    <dl class="spec-inner">
-                      <div class="spec-inner-wrapper">
-                        <dt class="spec-inner-wrapper-content">費用</dt>
-                        <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                        <dd class="spec-inner-wrapper-content">無料<br>(無料セミナー)</dd>
-                      </div>
-                      <div class="spec-inner-wrapper">
-                        <dt class="spec-inner-wrapper-content">開催頻度</dt>
-                        <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                        <dd class="spec-inner-wrapper-content">週に2~3回程度<br>（集団ウェビナー形式）</dd>
-                      </div>
-                      <div class="spec-inner-wrapper">
-                        <dt class="spec-inner-wrapper-content">セミナー内容</dt>
-                        <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                        <dd class="spec-inner-wrapper-content">しっかり学べる</dd>
-                      </div>
-                      <div class="spec-inner-wrapper">
-                        <dt class="spec-inner-wrapper-content">特典</dt>
-                        <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                        <dd class="spec-inner-wrapper-content">12大特典</dd>
-                      </div>
-                    </dl>
-                  </div>
-                  <!--.point-->
-                </div>
-                <!--.detail-info-wrao-->
-
-                <!-- <div class="spec">
-                  <dl class="spec-inner">
-                    <div class="spec-inner-wrapper">
-                      <dt class="spec-inner-wrapper-content">費用</dt>
-                      <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">無料<br>(無料セミナー)</dd>
-                    </div>
-                    <div class="spec-inner-wrapper">
-                      <dt class="spec-inner-wrapper-content">開催頻度</dt>
-                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">週に2~3回程度<br>（集団ウェビナー形式）</dd>
-                    </div>
-                    <div class="spec-inner-wrapper">
-                      
-                      <dt class="spec-inner-wrapper-content">セミナー内容</dt>
-                      <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">しっかり学べる</dd>
-                    </div>
-                    <div class="spec-inner-wrapper">
-                      <dt class="spec-inner-wrapper-content">特典</dt>
-                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">10大特典</dd>
-                    </div>
-                  </dl>
-                </div> -->
-
-                <!--参加10大特典-->
-                <div class="simple-campain">
-                  <h4 class="simple-campain-ttl">参加特典</h4>
-                  <div class="simple-campain-wrapper">
-                    <ul class="simple-campain-wrapper-list">
-                      <li class="simple-campain-wrapper-list-item">
-                        <div class="simple-campain-wrapper-list-item-txt"><span class="txt-red">《オンライン無料セミナー参加》</span>で<b><span class="txt-marker">無料12大特典</span>をプレゼント</b><br>
-                        <ul style="font-weight: 600; margin-top: 10px;">
-                          <li>1: ChatGPT Agentの教科書</li>
-                          <li>2:『実務で役立つ生成AIタイパ術』</li>
-                          <li>3: AI翻訳を活用したキャリアアップ戦略</li>
-                          <li>4: 月5万円稼ぐための完全攻略ロードマップ</li>
-                          <li>5:【最新・2025年版】生成AI基礎大全</li>
-                          <li>6:【最新速報】ChatGPTアップデート完全ガイド</li>
-                          <li>7:【この1冊でGeminiの全てがわかる！】Google Gemini大全</li>
-                          <li>8: いま注目のツール【Grok4 完全ガイド】</li>
-                          <li>9:『ChatGPTの一番優しい教科書』</li>
-                          <li>10:【AI × TikTok】</li>
-                          <li>11: AI×アニメ動画制作の教科書</li>
-                          <li>12: 【極秘】厳選 AI活用の裏技20選</li>
-
-                        </ul>
-                        </div>
-                      </li>
-                    </ul>
-                    <a
-                      class="simple-campain-wrapper-img"
-                      href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000"
-                      target="_blank"
-                    >
-                      <div>
-                        <img src="../images/present_shiftai.webp" alt="SHIFT AI&lt;br&gt;(シフトエーアイ)&lt;!-- AI副業スクール --&gt;" />
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-               
-                <!--simple-campain-->
-
-                <div class="button button-yss">
-                  <p class="toptxt">\ オンライン<span class="txt-red">無料セミナー</span>開催中！ /</p>
-                  <div class="cv shiny-btn">
-                    <a
-                      href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000"
-                      target="_blank"
-                      >公式ページはこちら</a
-                    >
-                  </div>
-                </div>
-
-                <!--口コミ-->
-                <!-- <div class="review">
-                  <h4 class="detail-info-ttl">口コミ</h4>
-                  <div class="review-kome">※個人の感想であり結果を約束するものではございません。</div>
-                  <div class="slider slick-initialized slick-slider">
-                    <div class="slick-list draggable">
-                      <div class="slick-track" style="opacity: 1; width: 688px; transform: translate3d(0px, 0px, 0px)">
-                        <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 344px">
-                          <div>
-                            <dd style="width: 100%; display: inline-block">
-                              <div class="flex">
-                                <div class="left">
-                                  <p><img src="../images/woman.png" /></p>
-                                </div>
-                                <div class="right">
-                                  <p class="ttl">子育てしながらでも収入を上げる方法がわかった</p>
-                                  <div class="name">女性</div>
-                                </div>
-                              </div>
-                              <p class="txt">
-                                現在育休中で、復帰してからも子育てに時間を割きたいし、でも給料はあげたい！と思って参加しました。セミナーを受けて自分の目標を決められましたし、収入までどう繋げるか明確になりました。<br><br>※公式サイトより抜粋
-                              </p>
-                            </dd>
-                          </div>
-                        </div>
-                        <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 344px">
-                          <div>
-                            <dd style="width: 100%; display: inline-block">
-                              <div class="flex">
-                                <div class="left">
-                                  <p><img src="../images/woman.png" /></p>
-                                </div>
-                                <div class="right">
-                                  <p class="ttl">AI時代に生き抜くヒントが盛りだくさん</p>
-                                  <div class="name">女性</div>
-                                </div>
-                              </div>
-                              <p class="txt">
-                                新しい時代に置いていかれないようにAIを取り入れたいと感じたので参加しました。AI時代に生き抜くヒントが盛りだくさんで、とても勉強になりました。「AIツール3選」で教えていただいたこのツールは早速取り入れてみたいです。<br><br>※公式サイトより抜粋
-                              </p>
-                            </dd>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-
-
-                <!--オススメテキスト-->
-
-                <div class="maintext" style="margin-bottom: 1.5rem">
-                  <h4 class="detail-info-ttl">最後にこれだけ見て！オススメの理由</h4>
-                  <p>
-                    SHIFT AIは、生成AIを活用したスキルを身につけ、<span class="txt-red">実際の業務や副業にすぐ役立てられる知識を提供</span>しています。<span class="txt-marker">国内のトップAIエキスパートが、具体的な業界事例や実践を解説。</span>また、AIを活用して成功している企業や個人の生のケーススタディを共有することで、リアルな活用イメージがつかめます。<br /><br />
-                    さらに、<span class="txt-red">情報感度の高い仲間と交流できるイベントやコミュニティも充実。</span>初めての方からプロフェッショナルまで、AI時代のキャリアアップや副業に最適な環境を整えています。<br /><br />
-                    今なら無料セミナー参加で、業界最新ツールや限定ノウハウが詰まった<span class="txt-marker">豪華12大特典をプレゼント中</span>です！<br /><br />
-                    オンライン無料セミナー実施中！まずは無料で受けてみよう!!
-                  </p>
-                </div>
-
-                <div class="button button-yss button-bottom">
-                  <p class="toptxt">\ オンライン<span class="txt-red">無料セミナー</span>開催中！/</p>
-                  <div class="cv shiny-btn">
-                    <a
-                      href="https://shiftai-career.studio.site/ifdkas?free4=ASP_MP_lpCAM01A_0003&_ckey=GF3193&_cid=CTID:147559523&_expire=7776000"
-                      target="_blank"
-                      >公式ページはこちら</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!--detail-info-->
-            </div>
-            <!-- .box-inner.-->
-          </div>
-          <!--.box-->
-
-          <div class="box" id="rank-4">
-            <div class="title">
-              <div class="title-inner">
-                <h3 class="icon iconimg-4">
-                  <a
-                    href="https://ai-skill.jp/"
-                    target="_blank"
-                    ><div>AIスキルアカデミー</div></a
-                  >
-                </h3>
-              </div>
-            </div>
-            <div class="box-inner">
-              <!-- <div class="box-inner-icon box-inner-icon-mini">
-                <img src="../images/kyufukin-batch.png" />
-              </div> -->
-              <div class="detail-info">
-                <div class="detail-info-inner">
-                  <div class="banner">
-                    <a
-                      href="https://ai-skill.jp/"
-                      target="_blank"
-                      ><img src="../images/ai-skill-academy.webp" alt="AIスキルアカデミー"
-                    /></a>
-                  </div>
-                  <div class="point">
-                    <h4 class="point-ttl">おすすめポイント</h4>
-                    <ul class="point-inner">
-                      <div class="point-inner-wrap">
-                        <li>
-                          <img src="../images/1.svg" style="width: 25xp; height: 25px;" alt="ナンバー1"/>
-                          <div class="point-inner-txt"><b>ChatGPTを仕事に使えるレベルまで<b class="txt-marker"><span class="txt-red">２時間で習得</b></span></b></span></div>
-                        </li>
-                        <li>
-                          <img src="../images/2.svg" style="width: 25xp; height: 25px;" alt="ナンバー2"/>
-                          <div class="point-inner-txt"><b><span class="txt-red txt-marker">参加費は完全無料</span>なので、まずAIを触ってみたい人におすすめ</span></b></div>
-                        </li>
-                        <li>
-                          <img src="../images/3.svg" style="width: 25xp; height: 25px;" alt="ナンバー3"/>
-                          <div class="point-inner-txt"><b>セミナー参加で<b class="txt-marker"><span class="txt-red">豪華15特典</span></b>が受け取れる</b></div>
-                        </li>
-                      </div>
-                    </ul>
-                    <dl class="spec-inner" style="margin-top: 30px;">
-                    <div class="spec-inner-wrapper">
-                      <dt class="spec-inner-wrapper-content">費用</dt>
-                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">無料<br>(オンラインセミナー)</dd>
-                    </div>
-                    <div class="spec-inner-wrapper">
-                      <dt class="spec-inner-wrapper-content">開催頻度</dt>
-                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">ほぼ毎日実施</dd>
-                    </div>
-                    <div class="spec-inner-wrapper">
-                      
-                      <dt class="spec-inner-wrapper-content">セミナー内容</dt>
-                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">しっかり学べる</dd>
-                    </div>
-                    <div class="spec-inner-wrapper">
-                      <dt class="spec-inner-wrapper-content">特典</dt>
-                      <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">15大特典</dd>
-                    </div>
-                  </dl>
-                  </div>
-                  <!--.point-->
-                </div>
-                <!--.detail-info-wrao-->
-
-                <!-- <div class="spec">
-                  <dl class="spec-inner">
-                    <div class="spec-inner-wrapper">
-                      <dt class="spec-inner-wrapper-content">費用</dt>
-                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">無料<br>(オンラインウェビナー)</dd>
-                    </div>
-                    <div class="spec-inner-wrapper">
-                      <dt class="spec-inner-wrapper-content">開催頻度</dt>
-                      <img src="../images/nizyu-maru.svg" alt="good" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">毎日実施<br>（集団形式）</dd>
-                    </div>
-                    <div class="spec-inner-wrapper">
-                      
-                      <dt class="spec-inner-wrapper-content">セミナー内容</dt>
-                      <img src="../images/nizyu-maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">2.5時間</dd>
-                    </div>
-                    <div class="spec-inner-wrapper">
-                      <dt class="spec-inner-wrapper-content">特典</dt>
-                      <img src="../images/maru.svg" alt="fine" style="width: 100%; height: 40px; margin: 10px auto;"/>
-                      <dd class="spec-inner-wrapper-content">15大特典</dd>
-                    </div>
-                  </dl>
-                </div> -->
-                <!--参加10大特典-->
-                <div class="simple-campain">
-                  <h4 class="simple-campain-ttl">参加特典</h4>
-                  <div class="simple-campain-wrapper">
-                    <ul class="simple-campain-wrapper-list">
-                      <li class="simple-campain-wrapper-list-item">
-                        <div class="simple-campain-wrapper-list-item-txt"><span class="txt-red">《無料セミナー参加》</span>で<b><span class="txt-marker">無料15大特典</span>をプレゼント</b><br>
-                        <ul style="font-weight: 600; margin-top: 10px;">
-                          <ul>
-                            <li>1: noteの有料記事30記事プレゼント（10,000円分）</li>
-                            <li>2: 生活が劇的に変わるプロンプト1000選</li>
-                            <li>3: 鈴木式プロンプト職種別活用例50個</li>
-                            <li>4: ウェビナー動画2時間分プレゼント</li>
-                            <li>5: セミナー資料プレゼント</li>
-                            <li>6: ChatGPT活用Kindle本</li>
-                            <li>7: AIコンサルタント完全攻略ロードマップ</li>
-                            <li>8: 生成AI用語ミニ辞典</li>
-                            <li>9: ChatGPTで使える自己分析テンプレート</li>
-                            <li>10: ChatGPTプロンプト41選 完全解説</li>
-                            <li>11: 超厳選！最新AIツール25選</li>
-                            <li>12: 【新】今すぐ使える超厳選GPTs 30選</li>
-                            <li>13: AI時代の最先端をいく業務効率化30選 -質問力と構築力-</li>
-                            <li>14: もう挫折しない！月30万円稼ぐ超具体的なロードマップ</li>
-                            <li>15: 全2万文字！一番わかりやすい究極の案件獲得</li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
-                    <a
-                      class="simple-campain-wrapper-img"
-                      href="https://startai.jp/"
-                      target="_blank"
-                    >
-                      <div>
-                        <img src="../images/aiskill-p.webp" alt="AIスキルアカデミー" />
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                
-                <!--simple-campain-->
-
-                <!-- <div class="button button-yss">
-                  <p class="toptxt">\ オンライン<span class="txt-red">無料セミナー</span>実施中！ /</p>
-                  <div class="cv shiny-btn">
-                    <a
-                      href="https://saipon.jp/h/chatgpt/af_bl_mcv"
-                      target="_blank"
-                      >公式ページはこちら</a
-                    >
-                  </div>
-                </div> -->
-
-                <!--口コミ-->
-                <!-- <div class="review">
-                  <h4 class="detail-info-ttl">口コミ</h4>
-                  <div class="review-kome">※個人の感想であり結果を約束するものではございません。</div>
-                  <div class="slider slick-initialized slick-slider">
-                    <div class="slick-list draggable">
-                      <div class="slick-track" style="opacity: 1; width: 688px; transform: translate3d(0px, 0px, 0px)">
-                        <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 344px">
-                          <div>
-                            <dd style="width: 100%; display: inline-block">
-                              <div class="flex">
-                                <div class="left">
-                                  <p><img src="../images/woman.png" /></p>
-                                </div>
-                                <div class="right">
-                                  <p class="ttl">ChatGPTが最高のパートナーになると実感</p>
-                                  <div class="name">男性</div>
-                                </div>
-                              </div>
-                              <p class="txt">
-                                プロンプトという言葉を聞いていた程度でしたが、ここまで繊細に柔軟に設定することで、今までの何十倍も仕事をしてもらえるパートナーになると感動しました。形容詞＋名詞＋動詞の設定がポイントで、自分の語彙力も試されると思いましたが、これを使わない未来はないです。<br><br>※公式サイトより抜粋
-                              </p>
-                            </dd>
-                          </div>
-                        </div>
-                        <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 344px">
-                          <div>
-                            <dd style="width: 100%; display: inline-block">
-                              <div class="flex">
-                                <div class="left">
-                                  <p><img src="../images/woman.png" /></p>
-                                </div>
-                                <div class="right">
-                                  <p class="ttl">分からなかったプロンプトの指示の仕方が明確になりました</p>
-                                  <div class="name">女性</div>
-                                </div>
-                              </div>
-                              <p class="txt">
-                                本当に自分で初めから作ると大変な文も分かり易く簡潔に提示してくれるチャットGTPですが、どうお願いするのが、1番欲しい答えがもらえるか？だった所が、凄く分かり易く教えて頂き、気をつける部分がはっきりしました。<br><br>※公式サイトより抜粋
-                              </p>
-                            </dd>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-
-                <!--オススメテキスト-->
-
-                <!-- <div class="maintext" style="margin-bottom: 1.5rem">
-                  <h4 class="detail-info-ttl">最後にこれだけ見て！オススメの理由</h4>
-                  <p>
-                    ストレイルのTOEIC® L&R TESTコースは、<b class="txt-marker">TOEIC完全対応のオリジナル教材を使用</b>することでスピーディーかつ正確なリーディング力・リスニング力を身につけられる。<br /><br />
-                    <b class="txt-marker"
-                      >言語習得の科学「第二言語習得研究」に基づいた質の高い学習コンサルティング</b
-                    >に定評があるベネッセグループの英語コーチングという点は受講者からも信頼できるポイント!<br /><br />
-                    90日後には<b class="txt-marker">350点で入学した人が平均216点、550点で入学した人が平均158点アップ</b
-                    >している実績も!<br /><br />
-                    <span class="txt-marker">一般教育訓練給付制度</span>も利用可能で<span class="txt-red">受講料の20%(上限あり)</span
-                      >が支給されるので、費用を抑えられるのも魅力。※支給方法について詳しくはサービス提供元へご相談ください。<br /><br />
-                    無料体験実施中！まずは無料で受けてみよう!!
-                  </p>
-                </div> -->
-
-                <div class="button button-yss button-bottom">
-                  <p class="toptxt">\ 無料セミナー参加で<span class="txt-red">15大特典</span>プレゼント！ /</p>
-                  <div class="cv shiny-btn">
-                    <a
-                      href="https://ai-skill.jp/"
-                      target="_blank"
-                      >公式ページはこちら</a
+                      >無料セミナーを予約する</a
                     >
                   </div>
                 </div>
@@ -1785,7 +1876,7 @@
                     <a
                       href="https://startai.jp/"
                       target="_blank"
-                      >公式ページはこちら</a
+                      >無料セミナーを予約する</a
                     >
                   </div>
                 </div>
@@ -1859,7 +1950,7 @@
                     <a
                       href="https://startai.jp/"
                       target="_blank"
-                      >公式ページはこちら</a
+                      >無料セミナーを予約する</a
                     >
                   </div>
                 </div> -->
@@ -1917,7 +2008,7 @@
                 <a
                   href="https://lp4.bytech.jp/ah"
                   target="_blank"
-                  >公式ページはこちら</a
+                  >無料セミナーを予約する</a
                 >
               </div>
             </div> -->

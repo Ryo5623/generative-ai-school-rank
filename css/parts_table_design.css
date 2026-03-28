@@ -276,7 +276,7 @@ table {
     border-spacing: 0;
     width: 100%;
     table-layout: fixed;
-    border-collapse: separate;
+    border-collapse: collapse;
     word-break: break-all;
     word-wrap: break-word;
     border: 0;
