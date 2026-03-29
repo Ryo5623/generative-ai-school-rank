@@ -2600,9 +2600,9 @@ small {
 /* --- スマホ表示用 (768px以下) --- */
 @media (max-width: 768px) {
   
-  /* 全体の余白調整 */
+  /* SP時は固定CTAを非表示 */
   .fixed_cta {
-    padding: 8px 2px; /* 上下左右の余白を少し詰める */
+    display: none !important;
   }
 
   /* リンク全体をFlexコンテナとして折り返しを有効にする */
