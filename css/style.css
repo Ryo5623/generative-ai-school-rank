@@ -510,7 +510,10 @@ table {
   text-align: center;
   text-decoration: none;
   overflow: hidden;
-  transition: 300ms;
+  transition: all .1s;
+  background: linear-gradient(180deg, #e83a6f 0%, #D4215F 50%, #b01a4e 100%);
+  box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2);
+  top: 0;
 }
 .btn-official._shiny::before {
   position: absolute;
@@ -528,8 +531,8 @@ table {
 .btn-official._shiny:hover {
   text-decoration: none;
   color: #fff;
-  box-shadow: none;
-  -webkit-transform: translateY(3px);
+  top: 3px;
+  box-shadow: 0 1px 0 #8c1440, 0 2px 4px rgba(0,0,0,.15);
 }
 
 @-webkit-keyframes shinyshiny {
@@ -733,9 +736,9 @@ table {
 }
 
 .sidebar-contents li .rank_img {
-  width: 60px;
-  height: 60px;
-  padding: 12px;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
 }
 
 .sidebar-contents li span {
@@ -1616,7 +1619,7 @@ footer .copyright {
 }
 
 .siderank li .rank_img {
-  display: none;
+  display: inline-block;
 }
 
 .ranking-box .point.txbox01 .title {
@@ -1684,8 +1687,15 @@ footer .copyright {
   font-weight: bold;
   width: 100%;
   display: block;
-  background-color: #D4215F;
-  /* background-image: -webkit-linear-gradient(45deg, #ffc107 0%, #f76a35 100%); */
+  background: linear-gradient(180deg, #e83a6f 0%, #D4215F 50%, #b01a4e 100%);
+  box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2);
+  position: relative;
+  top: 0;
+  transition: all .1s;
+}
+.rank-cta:hover {
+  top: 3px;
+  box-shadow: 0 1px 0 #8c1440, 0 2px 4px rgba(0,0,0,.15);
 }
 
 .sp_rank {
@@ -2959,8 +2969,16 @@ small {
 }
 
 .box-topranking-button .cv a {
-  background-color: #ff4444;
+  background: linear-gradient(180deg, #e83a6f 0%, #D4215F 50%, #b01a4e 100%);
   color: #fff;
+  box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2);
+  position: relative;
+  top: 0;
+  transition: all .1s;
+}
+.box-topranking-button .cv a:hover {
+  top: 2px;
+  box-shadow: 0 1px 0 #8c1440, 0 2px 4px rgba(0,0,0,.15);
 }
 
 .box-topranking-button .link a {

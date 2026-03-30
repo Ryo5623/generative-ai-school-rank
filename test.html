@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ソート機能サンプル</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; background: #f5f5f5; color: #333; }
+    .container { max-width: 1060px; margin: 30px auto; padding: 0 16px; }
+    h1 { font-size: 22px; text-align: center; margin-bottom: 24px; }
+
+    /* ===== タブ ===== */
+    .tabs { display: flex; gap: 0; margin-bottom: 0; }
+    .tab {
+      flex: 1; padding: 12px 8px; text-align: center; font-size: 14px; font-weight: 700;
+      cursor: pointer; border: 1px solid #ddd; border-bottom: none; border-radius: 8px 8px 0 0;
+      background: #ededed; color: #888; transition: all .2s;
+    }
+    .tab.active { background: #533afc; color: #fff; border-color: #533afc; flex: 1.3; }
+
+    /* ===== PC テーブル ===== */
+    .pc-table {
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      background: #fff; border: 1px solid #ddd; border-radius: 0 0 8px 8px;
+    }
+    .pc-table table { width: 100%; min-width: 750px; border-collapse: collapse; }
+    .pc-table th { background: #ede9fe; font-size: 13px; padding: 10px 8px; border-bottom: 2px solid #533afc; white-space: nowrap; }
+    .pc-table td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 13px; vertical-align: middle; text-align: center; }
+    .pc-table tr.rank-row { transition: background .15s; }
+    .pc-table tr.rank-row:hover { background: #f8faff; }
+    .pc-table tr.rank-highlight { background: #fff5f5; }
+
+    .rank-icon { width: 34px; height: auto; }
+    .school-cell { display: flex; align-items: center; gap: 10px; min-width: 260px; }
+    .school-thumb { width: 90px; min-width: 90px; height: 90px; border-radius: 0; object-fit: cover; }
+    .school-detail { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 140px; }
+    .school-name { font-weight: 700; font-size: 14px; text-align: center; }
+    .school-btns { display: flex; flex-direction: column; gap: 4px; width: 100%; }
+    .btn-s {
+      display: block; width: 100%; padding: 6px 0; border-radius: 20px; color: #fff;
+      font-size: 12px; font-weight: 600; text-decoration: none; text-align: center;
+    }
+    .btn-detail { background: #888; }
+    .btn-detail::after, .btn-official::after { content: " ▶"; font-size: 9px; margin-left: 5px; }
+    .btn-official {
+      background: linear-gradient(180deg, #e83a6f 0%, #D4215F 50%, #b01a4e 100%);
+      box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2);
+      position: relative;
+      top: 0;
+      transition: all .1s;
+    }
+    .btn-official:hover { top: 2px; box-shadow: 0 1px 0 #8c1440, 0 2px 4px rgba(0,0,0,.15); }
+    .star-img { width: 120px; height: auto; }
+    .rating { font-weight: 800; font-size: 18px; color: #e74c3c; }
+    .price { font-weight: 700; color: #1a68d4; }
+    .price-sub { font-size: 11px; color: #888; display: block; }
+
+    /* PC タブ列制御 */
+    .col-overview, .col-support, .col-price { display: none; }
+    .show-overview .col-overview { display: table-cell; }
+    .show-support .col-support { display: table-cell; }
+    .show-price .col-price { display: table-cell; }
+
+    /* ===== SP 縦型テーブル（box-topranking風） ===== */
+    .sp-table { display: none; }
+    .sp-table table {
+      width: 100%; border-collapse: collapse;
+      background: #fff; border: 1px solid #ddd; border-radius: 0 0 8px 8px;
+    }
+    .sp-table td {
+      padding: 10px 6px; text-align: center; vertical-align: top;
+      border: 1px solid #eee; font-size: 12px; font-weight: 600;
+    }
+    .sp-table td.sp-hl { background: #FFEBEB; }
+    .sp-table th {
+      background: linear-gradient(135deg, #533afc, #7c5cfc);
+      color: #fff; font-size: 14px; padding: 10px; text-align: right;
+    }
+    .sp-table .sp-name { vertical-align: middle; padding: 12px 6px; }
+    .sp-table .sp-name .ico-rank { display: block; margin: 0 auto 6px; width: 45px; }
+    .sp-table .sp-name .banner { width: 100%; max-width: 140px; height: auto; display: block; margin: 0 auto 6px; }
+    .sp-table .sp-name .title { font-weight: 700; font-size: 13px; margin-bottom: 8px; }
+    .sp-table .sp-name .cv {
+      display: block; padding: 8px 4px; border-radius: 6px; color: #fff;
+      font-size: 11px; font-weight: 700; text-decoration: none; text-align: center;
+      background: linear-gradient(135deg, #f76a35, #ffc107);
+      box-shadow: 0 2px 4px rgba(0,0,0,.15);
+    }
+    .sp-table .star-cell img { width: 80%; max-width: 100px; height: auto; }
+    .sp-table .star-cell .score { font-size: 1.3em; color: red; font-weight: 800; display: block; margin-top: 4px; }
+    .sp-table .star-cell p { font-size: 12px; font-weight: 600; line-height: 1.5; }
+    .sp-table .star-cell .red { color: red; }
+    .sp-table .eval-icon { width: 50px; height: 50px; margin: 0 auto 4px; display: block; }
+    .sp-table .txt-marker { background: linear-gradient(transparent 60%, #ffef8c 60%); font-weight: 700; }
+
+    /* SP タブ行制御 */
+    .sp-row-overview, .sp-row-support, .sp-row-price { display: none; }
+    .show-overview .sp-row-overview { display: table-row; }
+    .show-support .sp-row-support { display: table-row; }
+    .show-price .sp-row-price { display: table-row; }
+
+    /* ===== レスポンシブ ===== */
+    @media (max-width: 768px) {
+      .tab { font-size: 12px; padding: 10px 4px; }
+      h1 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>おすすめ生成AIスクールTOP5</h1>
+
+  <!-- タブ -->
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('overview', this)">総合</div>
+    <div class="tab" onclick="switchTab('support', this)">サポート</div>
+    <div class="tab" onclick="switchTab('price', this)">料金</div>
+  </div>
+
+  <!-- ===== PC: 横型テーブル ===== -->
+  <div class="pc-table">
+    <table id="rankTable" class="show-overview">
+      <thead>
+        <tr>
+          <th style="width:44px;">順位</th>
+          <th>スクール名</th>
+          <th>総合評価</th>
+          <th class="col-overview">チャットサポート</th>
+          <th class="col-overview">学習サポート</th>
+          <th class="col-overview">目的支援</th>
+          <th class="col-support">案件斡旋サポート</th>
+          <th class="col-support">卒業後のサポート</th>
+          <th class="col-support">カリキュラム数</th>
+          <th class="col-price">受講費(税込)</th>
+          <th class="col-price">月額費用(税込)</th>
+          <th class="col-price">学習スタイル</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="rank-row rank-highlight">
+          <td><img class="rank-icon" src="./images/icon-ranking-1.svg" alt="1位"></td>
+          <td><div class="school-cell"><img class="school-thumb" src="./images/bt_thum.webp" alt="バイテック"><div class="school-detail"><span class="school-name">バイテック</span><div class="school-btns"><a href="./bytech/" class="btn-s btn-detail">詳細を見る</a><a href="https://lp.bytech.jp/" target="_blank" class="btn-s btn-official">公式サイトへ</a></div></div></div></td>
+          <td><img class="star-img" src="./images/4.9.webp" alt="4.9"><div class="rating">4.9</div></td>
+          <td class="col-overview">個別(無制限/1年間)</td>
+          <td class="col-overview" style="text-align:left;font-size:12px;">・個別指導<br>・1対1メンタリング<br>・レッスン外の質問/相談<br>・オリジナル課題<br>・ポートフォリオ課題</td>
+          <td class="col-overview" style="text-align:left;font-size:12px;">・副業支援<br>・独立支援<br>・転職支援</td>
+          <td class="col-support" style="text-align:left;font-size:12px;">・AIライティング案件<br>・AI画像生成案件<br>・AI動画生成案件<br>・プロンプト構築案件<br>・Difyワークフロー作成案件</td>
+          <td class="col-support" style="text-align:left;font-size:12px;">・就業支援<br>・案件獲得サポート<br>・教材の無期限視聴<br>・コミュニティ参加(b-Crew)</td>
+          <td class="col-support">10コース/600本~</td>
+          <td class="col-price"><span class="price">178,000円〜</span><span class="price-sub">LITEプラン(買い切り)</span></td>
+          <td class="col-price">7,420円~</td>
+          <td class="col-price">買い切り型<span class="price-sub">無期限アクセス</span></td>
+        </tr>
+        <tr class="rank-row">
+          <td><img class="rank-icon" src="./images/icon-ranking-2.svg" alt="2位"></td>
+          <td><div class="school-cell"><img class="school-thumb" src="./images/ai-skill-ac.webp" alt="AIスキルアカデミー"><div class="school-detail"><span class="school-name">AIスキルアカデミー</span><div class="school-btns"><a href="./ai-skill-academy/" class="btn-s btn-detail">詳細を見る</a><a href="https://ai-skill.jp/" target="_blank" class="btn-s btn-official">公式サイトへ</a></div></div></div></td>
+          <td><img class="star-img" src="./images/4.5.webp" alt="4.5"><div class="rating">4.5</div></td>
+          <td class="col-overview">あり(LINE/質問し放題)</td>
+          <td class="col-overview" style="text-align:left;font-size:12px;">・LIVEウェビナー(毎週)<br>・生成AIパスポート受験料割引<br>・5名まで視聴共有OK</td>
+          <td class="col-overview">なし</td>
+          <td class="col-support">AI求人紹介</td>
+          <td class="col-support">LINEでのチャットサポート</td>
+          <td class="col-support">4コース</td>
+          <td class="col-price"><span class="price">272,800円</span><span class="price-sub">セミナー参加で217,800円</span></td>
+          <td class="col-price">22,730円~</td>
+          <td class="col-price">買い切り型</td>
+        </tr>
+        <tr class="rank-row">
+          <td><img class="rank-icon" src="./images/icon-ranking-3.svg" alt="3位"></td>
+          <td><div class="school-cell"><img class="school-thumb" src="./images/dezihaku_sp.webp" alt="デジハク"><div class="school-detail"><span class="school-name">デジハク</span><div class="school-btns"><a href="./digital-hacks/" class="btn-s btn-detail">詳細を見る</a><a href="https://ai.digital-hacks.jp/" target="_blank" class="btn-s btn-official">公式サイトへ</a></div></div></div></td>
+          <td><img class="star-img" src="./images/4.2.webp" alt="4.2"><div class="rating">4.2</div></td>
+          <td class="col-overview">あり/6ヶ月(学習質問・添削)</td>
+          <td class="col-overview" style="text-align:left;font-size:12px;">・個別指導<br>・チャットでの質問可</td>
+          <td class="col-overview" style="text-align:left;font-size:12px;">・副業支援<br>・独立支援</td>
+          <td class="col-support">なし</td>
+          <td class="col-support">受講生コミュニティ</td>
+          <td class="col-support">6コース</td>
+          <td class="col-price"><span class="price">148,000円〜</span><span class="price-sub">MINIプラン</span></td>
+          <td class="col-price">7,400円~</td>
+          <td class="col-price">買い切り型</td>
+        </tr>
+        <tr class="rank-row">
+          <td><img class="rank-icon" src="./images/icon-ranking-4.svg" alt="4位"></td>
+          <td><div class="school-cell"><img class="school-thumb" src="./images/horiemon.webp" alt="ホリエモンAI学校"><div class="school-detail"><span class="school-name">ホリエモンAI学校</span><div class="school-btns"><a href="./horiemon/" class="btn-s btn-detail">詳細を見る</a><a href="https://horiemon.ai/" target="_blank" class="btn-s btn-official">公式サイトへ</a></div></div></div></td>
+          <td><img class="star-img" src="./images/4.0.webp" alt="4.0"><div class="rating">4.0</div></td>
+          <td class="col-overview">なし</td>
+          <td class="col-overview">なし</td>
+          <td class="col-overview">なし</td>
+          <td class="col-support">なし</td>
+          <td class="col-support">なし</td>
+          <td class="col-support">8コース/200本</td>
+          <td class="col-price"><span class="price">162,800円</span><span class="price-sub">入会金 + 月額16,280円</span></td>
+          <td class="col-price">13,570円~</td>
+          <td class="col-price">月額制</td>
+        </tr>
+        <tr class="rank-row">
+          <td><img class="rank-icon" src="./images/icon-ranking-5.svg" alt="5位"></td>
+          <td><div class="school-cell"><img class="school-thumb" src="./images/aidemy.webp" alt="Aidemy"><div class="school-detail"><span class="school-name">Aidemy</span><div class="school-btns"><a href="./aidemy/" class="btn-s btn-detail">詳細を見る</a><a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank" class="btn-s btn-official">公式サイトへ</a></div></div></div></td>
+          <td><img class="star-img" src="./images/3.8.webp" alt="3.8"><div class="rating">3.8</div></td>
+          <td class="col-overview">個別(Slackでのサポート)</td>
+          <td class="col-overview" style="text-align:left;font-size:12px;">・個別指導<br>・1対1メンタリング</td>
+          <td class="col-overview">なし</td>
+          <td class="col-support">なし</td>
+          <td class="col-support">なし</td>
+          <td class="col-support">3コース/10レッスン</td>
+          <td class="col-price"><span class="price">272,800円</span><span class="price-sub">12週間プラン</span></td>
+          <td class="col-price">22,700円〜</td>
+          <td class="col-price">期間集中型</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== SP: 縦型テーブル（box-topranking風） ===== -->
+  <div class="sp-table" id="spTable">
+    <table class="show-overview">
+      <!-- スクール名行 -->
+      <tr>
+        <td class="sp-name sp-hl">
+          <img class="ico-rank" src="./images/ico-rank01.png" alt="1位">
+          <a href="https://lp.bytech.jp/" target="_blank"><img class="banner" src="./images/bt_thum.webp" alt="バイテック"><p class="title">バイテック</p></a>
+          <a class="cv" href="https://lp.bytech.jp/" target="_blank">公式ページはこちら</a>
+        </td>
+        <td class="sp-name">
+          <img class="ico-rank" src="./images/ico-rank02.png" alt="2位">
+          <a href="https://ai-skill.jp/" target="_blank"><img class="banner" src="./images/ai-skill-ac.webp" alt="AIスキルアカデミー"><p class="title">AIスキルアカデミー</p></a>
+          <a class="cv" href="https://ai-skill.jp/" target="_blank">公式ページはこちら</a>
+        </td>
+        <td class="sp-name">
+          <img class="ico-rank" src="./images/ico-rank03.png" alt="3位">
+          <a href="https://ai.digital-hacks.jp/" target="_blank"><img class="banner" src="./images/dezihaku_sp.webp" alt="デジハク"><p class="title">デジハク</p></a>
+          <a class="cv" href="https://ai.digital-hacks.jp/" target="_blank">公式ページはこちら</a>
+        </td>
+        <td class="sp-name">
+          <img class="ico-rank" src="./images/rank4-t.png" alt="4位" style="width:40px;margin-bottom:6px;">
+          <a href="https://horiemon.ai/" target="_blank"><img class="banner" src="./images/horiemon.webp" alt="ホリエモンAI学校"><p class="title">ホリエモンAI学校</p></a>
+          <a class="cv" href="https://horiemon.ai/" target="_blank">公式ページはこちら</a>
+        </td>
+        <td class="sp-name">
+          <img class="ico-rank" src="./images/rank5-t.png" alt="5位" style="width:40px;margin-bottom:6px;">
+          <a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank"><img class="banner" src="./images/aidemy.webp" alt="Aidemy"><p class="title">Aidemy</p></a>
+          <a class="cv" href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank">公式ページはこちら</a>
+        </td>
+      </tr>
+      <!-- 総合 -->
+      <tr class="sp-row-overview"><th colspan="5">特徴と評価</th></tr>
+      <tr class="sp-row-overview">
+        <td class="star-cell sp-hl"><p><span class="red">レッスン600以上・10コース</span><br>個別コンサルで成果に直結</p><img src="./images/4.9.webp" alt="4.9"><span class="score">4.9</span></td>
+        <td class="star-cell"><p><span class="red">4コース・LINEで質問し放題</span><br>LIVEウェビナー毎週開催</p><img src="./images/4.5.webp" alt="4.5"><span class="score">4.5</span></td>
+        <td class="star-cell"><p><span class="red">6コース・副業/独立支援</span><br>個別指導＋チャットサポート</p><img src="./images/4.2.webp" alt="4.2"><span class="score">4.2</span></td>
+        <td class="star-cell"><p><span class="red">200レッスン・8コース</span><br>月額制で手軽にスタート</p><img src="./images/4.0.webp" alt="4.0"><span class="score">4.0</span></td>
+        <td class="star-cell"><p><span class="red">個別指導＋1対1メンタリング</span><br>Slackでのサポート充実</p><img src="./images/3.8.webp" alt="3.8"><span class="score">3.8</span></td>
+      </tr>
+      <tr class="sp-row-overview"><th colspan="5">チャットサポート</th></tr>
+      <tr class="sp-row-overview">
+        <td class="sp-hl">個別(無制限/1年間)</td><td>あり(LINE/質問し放題)</td><td>あり/6ヶ月(学習質問・添削)</td><td>なし</td><td>個別(Slackでのサポート)</td>
+      </tr>
+      <tr class="sp-row-overview"><th colspan="5">目的支援</th></tr>
+      <tr class="sp-row-overview">
+        <td class="sp-hl">・副業支援<br>・独立支援<br>・転職支援</td><td>なし</td><td>・副業支援<br>・独立支援</td><td>なし</td><td>なし</td>
+      </tr>
+      <!-- サポート -->
+      <tr class="sp-row-support"><th colspan="5">案件斡旋サポート</th></tr>
+      <tr class="sp-row-support">
+        <td class="sp-hl" style="font-size:11px;">・AIライティング案件<br>・AI画像生成案件<br>・AI動画生成案件<br>・プロンプト構築案件<br>・Difyワークフロー作成案件</td><td>AI求人紹介</td><td>なし</td><td>なし</td><td>なし</td>
+      </tr>
+      <tr class="sp-row-support"><th colspan="5">卒業後のサポート</th></tr>
+      <tr class="sp-row-support">
+        <td class="sp-hl" style="font-size:11px;">・就業支援<br>・案件獲得サポート<br>・教材の無期限視聴<br>・コミュニティ参加(b-Crew)</td><td>LINEでのチャットサポート</td><td>受講生コミュニティ</td><td>なし</td><td>なし</td>
+      </tr>
+      <tr class="sp-row-support"><th colspan="5">カリキュラム数</th></tr>
+      <tr class="sp-row-support">
+        <td class="sp-hl">10コース/600本~</td><td>4コース</td><td>6コース</td><td>8コース/200本</td><td>3コース/10レッスン</td>
+      </tr>
+      <!-- 料金 -->
+      <tr class="sp-row-price"><th colspan="5">料金</th></tr>
+      <tr class="sp-row-price">
+        <td class="sp-hl"><img class="eval-icon" src="./images/nizyu-maru.svg" alt="◎"><span class="txt-marker">178,000円〜</span><br>【1年買い切り】</td>
+        <td><img class="eval-icon" src="./images/maru.svg" alt="○">272,800円(税込)<br>【セミナー参加で217,800円】</td>
+        <td><img class="eval-icon" src="./images/maru.svg" alt="○">148,000円〜<br>【MINIプラン/PROプラン】</td>
+        <td><img class="eval-icon" src="./images/maru.svg" alt="○">月16,280円<br>【入会金162,800円】</td>
+        <td><img class="eval-icon" src="./images/maru.svg" alt="○">272,800円<br>【12週間プラン】</td>
+      </tr>
+      <tr class="sp-row-price"><th colspan="5">学習スタイル／期間</th></tr>
+      <tr class="sp-row-price">
+        <td class="sp-hl"><img class="eval-icon" src="./images/nizyu-maru.svg" alt="◎"><span class="txt-marker">買い切り(無期限)</span></td>
+        <td><img class="eval-icon" src="./images/maru.svg" alt="○">買い切り</td>
+        <td><img class="eval-icon" src="./images/maru.svg" alt="○">買い切り</td>
+        <td><img class="eval-icon" src="./images/maru.svg" alt="○">月額制</td>
+        <td><img class="eval-icon" src="./images/maru.svg" alt="○">期間集中型</td>
+      </tr>
+      <tr class="sp-row-price"><th colspan="5">月額費用(税込)</th></tr>
+      <tr class="sp-row-price">
+        <td class="sp-hl"><span class="txt-marker">7,420円~</span></td><td>22,730円~</td><td>7,400円~</td><td>13,570円~</td><td>22,700円〜</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<script>
+function switchTab(tab, el) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  var pcTable = document.getElementById('rankTable');
+  pcTable.classList.remove('show-overview', 'show-support', 'show-price');
+  pcTable.classList.add('show-' + tab);
+  var spTable = document.querySelector('#spTable table');
+  spTable.classList.remove('show-overview', 'show-support', 'show-price');
+  spTable.classList.add('show-' + tab);
+}
+</script>
+
+</body>
+</html>

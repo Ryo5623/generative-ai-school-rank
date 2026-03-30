@@ -663,26 +663,169 @@
         <div class="sp-display-none">
           <img style="width: 100%;  height: 100px; margin-top: 60px;" src="./images/fv_under_4.svg"/>
           <div id="result" style="margin-top: 30px;">
-              <!-- SimpleBarはこの要素に適用（内部DOMはJSが生成） -->
-              <div class="scroll-contents" data-simplebar data-simplebar-auto-hide="false">
-                <div class="table_horizontal">
-                  <div class="table--wrap">
-                    <!-- ヘッダー -->
-                    <div class="table__item table__head" style="font-weight: bold;">
-                      <div class="rank_number rank_number0"></div>
-                      <div class="th th--head"></div>
+            <style>
+              #newRankArea .new-tabs { display: flex; gap: 0; margin-bottom: 0; }
+              #newRankArea .new-tab {
+                flex: 1; padding: 12px 8px; text-align: center; font-size: 14px; font-weight: 700;
+                cursor: pointer; border: 1px solid #ddd; border-bottom: none; border-radius: 8px 8px 0 0;
+                background: #ededed; color: #888; transition: all .2s;
+              }
+              #newRankArea .new-tab.active { background: #533afc; color: #fff; border-color: #533afc; flex: 1.3; }
+              #newRankArea {
+                padding-left: 3.2%; padding-right: 3.2%;
+                margin-left: -25px; margin-right: -25px;
+              }
+              #newRankArea .new-table-wrap {
+                overflow-x: auto; -webkit-overflow-scrolling: touch;
+                background: #fff; border: 1px solid #ddd; border-radius: 0 0 8px 8px;
+              }
+              #newRankArea .new-table-wrap table { width: 100%; border-collapse: collapse; }
+              #newRankArea .new-table-wrap th { background: #ede9fe; font-size: 13px; padding: 10px 8px; border-bottom: 2px solid #533afc; white-space: nowrap; }
+              #newRankArea .new-table-wrap td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 13px; vertical-align: middle; text-align: center; }
+              #newRankArea .new-table-wrap tr.nt-rank-row { transition: background .15s; }
+              #newRankArea .new-table-wrap tr.nt-rank-row:hover { background: #f8faff; }
+              #newRankArea .new-table-wrap tr.nt-rank-highlight { background: #fff5f5; }
+              #newRankArea .nt-rank-icon { width: 34px; height: auto; }
+              #newRankArea .nt-school-cell { display: flex; align-items: center; gap: 10px; min-width: 260px; }
+              #newRankArea .nt-school-thumb { width: 90px; min-width: 90px; height: 90px; border-radius: 0; object-fit: cover; }
+              #newRankArea .nt-school-detail { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 140px; }
+              #newRankArea .nt-school-name { font-weight: 700; font-size: 14px; text-align: center; }
+              #newRankArea .nt-school-btns { display: flex; flex-direction: column; gap: 4px; width: 100%; }
+              #newRankArea .nt-btn-s {
+                display: block; width: 100%; padding: 6px 0; border-radius: 20px; color: #fff;
+                font-size: 12px; font-weight: 600; text-decoration: none; text-align: center;
+              }
+              #newRankArea .nt-btn-detail { background: #888; }
+              #newRankArea .nt-btn-detail::after, #newRankArea .nt-btn-official::after { content: " ▶"; font-size: 9px; margin-left: 5px; }
+              #newRankArea .nt-btn-official {
+                background: linear-gradient(180deg, #e83a6f 0%, #D4215F 50%, #b01a4e 100%);
+                box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2);
+                position: relative; top: 0; transition: all .1s;
+              }
+              #newRankArea .nt-btn-official:hover { top: 2px; box-shadow: 0 1px 0 #8c1440, 0 2px 4px rgba(0,0,0,.15); }
+              #newRankArea .nt-star-img { width: 120px; height: auto; }
+              #newRankArea .nt-rating { font-weight: 800; font-size: 18px; color: #e74c3c; }
+              #newRankArea .nt-price { font-weight: 700; color: #1a68d4; }
+              #newRankArea .nt-price-sub { font-size: 11px; color: #888; display: block; }
+              #newRankArea .nt-col-overview, #newRankArea .nt-col-support, #newRankArea .nt-col-price { display: none; }
+              #newRankArea table.nt-show-overview .nt-col-overview { display: table-cell; }
+              #newRankArea table.nt-show-support .nt-col-support { display: table-cell; }
+              #newRankArea table.nt-show-price .nt-col-price { display: table-cell; }
+            </style>
 
-                      <div class="td td--head td1_width d-flex"><h3>総合評価</h3></div>
-                      <div class="td td--head td2_width d-flex"><h3>チャットサポート</h3></div>
-                      <div class="td td--head td3_width d-flex"><h3>学習サポート</h3></div>
-                      <div class="td td--head td4_width d-flex"><h3>目的支援</h3></div>
-                      <div class="td td--head td5_width d-flex"><h3>案件斡旋サポート</h3></div>
-                      <div class="td td--head td6_width d-flex"><h3>卒業後のサポート</h3></div>
-                      <div class="td td--head td10_width d-flex"><h3>受講費(税込)</h3></div>
-                      <div class="td td--head td11_width d-flex"><h3>月額費用(税込)</h3></div>
-                      <div class="td td--head td12_width d-flex"><h3>カリキュラム数</h3></div>
-                    </div>
+            <!-- タブ -->
+            <div id="newRankArea">
+            <div class="new-tabs">
+              <div class="new-tab active" onclick="switchNewTab('overview', this)">総合</div>
+              <div class="new-tab" onclick="switchNewTab('support', this)">サポート</div>
+              <div class="new-tab" onclick="switchNewTab('price', this)">料金</div>
+            </div>
 
+            <!-- テーブル -->
+            <div class="new-table-wrap">
+              <table id="newRankTable" class="nt-show-overview">
+                <thead>
+                  <tr>
+                    <th style="width:44px;">順位</th>
+                    <th>スクール名</th>
+                    <th>総合評価</th>
+                    <th class="nt-col-overview">チャットサポート</th>
+                    <th class="nt-col-overview">学習サポート</th>
+                    <th class="nt-col-overview">目的支援</th>
+                    <th class="nt-col-support">案件斡旋サポート</th>
+                    <th class="nt-col-support">卒業後のサポート</th>
+                    <th class="nt-col-support">カリキュラム数</th>
+                    <th class="nt-col-price">受講費(税込)</th>
+                    <th class="nt-col-price">月額費用(税込)</th>
+                    <th class="nt-col-price">学習スタイル</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="nt-rank-row nt-rank-highlight">
+                    <td><img class="nt-rank-icon" src="./images/icon-ranking-1.svg" alt="1位"></td>
+                    <td><div class="nt-school-cell"><img class="nt-school-thumb" src="./images/bt_thum.webp" alt="バイテック"><div class="nt-school-detail"><span class="nt-school-name">バイテック</span><div class="nt-school-btns"><a href="./bytech/" class="nt-btn-s nt-btn-detail">詳細を見る</a><a href="https://lp.bytech.jp/" target="_blank" class="nt-btn-s nt-btn-official">公式サイトへ</a></div></div></div></td>
+                    <td><img class="nt-star-img" src="./images/4.9.webp" alt="4.9"><div class="nt-rating">4.9</div></td>
+                    <td class="nt-col-overview">個別(無制限/1年間)</td>
+                    <td class="nt-col-overview" style="text-align:left;font-size:12px;">・個別指導<br>・1対1メンタリング<br>・レッスン外の質問/相談<br>・オリジナル課題<br>・ポートフォリオ課題</td>
+                    <td class="nt-col-overview" style="text-align:left;font-size:12px;">・副業支援<br>・独立支援<br>・転職支援</td>
+                    <td class="nt-col-support" style="text-align:left;font-size:12px;">・AIライティング案件<br>・AI画像生成案件<br>・AI動画生成案件<br>・プロンプト構築案件<br>・Difyワークフロー作成案件</td>
+                    <td class="nt-col-support" style="text-align:left;font-size:12px;">・就業支援<br>・案件獲得サポート<br>・教材の無期限視聴<br>・コミュニティ参加(b-Crew)</td>
+                    <td class="nt-col-support">10コース/600本~</td>
+                    <td class="nt-col-price"><span class="nt-price">178,000円〜</span><span class="nt-price-sub">LITEプラン(買い切り)</span></td>
+                    <td class="nt-col-price">7,420円~</td>
+                    <td class="nt-col-price">買い切り型<span class="nt-price-sub">無期限アクセス</span></td>
+                  </tr>
+                  <tr class="nt-rank-row">
+                    <td><img class="nt-rank-icon" src="./images/icon-ranking-2.svg" alt="2位"></td>
+                    <td><div class="nt-school-cell"><img class="nt-school-thumb" src="./images/ai-skill-ac.webp" alt="AIスキルアカデミー"><div class="nt-school-detail"><span class="nt-school-name">AIスキルアカデミー</span><div class="nt-school-btns"><a href="./ai-skill-academy/" class="nt-btn-s nt-btn-detail">詳細を見る</a><a href="https://ai-skill.jp/" target="_blank" class="nt-btn-s nt-btn-official">公式サイトへ</a></div></div></div></td>
+                    <td><img class="nt-star-img" src="./images/4.5.webp" alt="4.5"><div class="nt-rating">4.5</div></td>
+                    <td class="nt-col-overview">あり(LINE/質問し放題)</td>
+                    <td class="nt-col-overview" style="text-align:left;font-size:12px;">・LIVEウェビナー(毎週)<br>・生成AIパスポート受験料割引<br>・5名まで視聴共有OK</td>
+                    <td class="nt-col-overview">なし</td>
+                    <td class="nt-col-support">AI求人紹介</td>
+                    <td class="nt-col-support">LINEでのチャットサポート</td>
+                    <td class="nt-col-support">4コース</td>
+                    <td class="nt-col-price"><span class="nt-price">272,800円</span><span class="nt-price-sub">セミナー参加で217,800円</span></td>
+                    <td class="nt-col-price">22,730円~</td>
+                    <td class="nt-col-price">買い切り型</td>
+                  </tr>
+                  <tr class="nt-rank-row">
+                    <td><img class="nt-rank-icon" src="./images/icon-ranking-3.svg" alt="3位"></td>
+                    <td><div class="nt-school-cell"><img class="nt-school-thumb" src="./images/dezihaku_sp.webp" alt="デジハク"><div class="nt-school-detail"><span class="nt-school-name">デジハク</span><div class="nt-school-btns"><a href="./digital-hacks/" class="nt-btn-s nt-btn-detail">詳細を見る</a><a href="https://ai.digital-hacks.jp/" target="_blank" class="nt-btn-s nt-btn-official">公式サイトへ</a></div></div></div></td>
+                    <td><img class="nt-star-img" src="./images/4.2.webp" alt="4.2"><div class="nt-rating">4.2</div></td>
+                    <td class="nt-col-overview">あり/6ヶ月(学習質問・添削)</td>
+                    <td class="nt-col-overview" style="text-align:left;font-size:12px;">・個別指導<br>・チャットでの質問可</td>
+                    <td class="nt-col-overview" style="text-align:left;font-size:12px;">・副業支援<br>・独立支援</td>
+                    <td class="nt-col-support">なし</td>
+                    <td class="nt-col-support">受講生コミュニティ</td>
+                    <td class="nt-col-support">6コース</td>
+                    <td class="nt-col-price"><span class="nt-price">148,000円〜</span><span class="nt-price-sub">MINIプラン</span></td>
+                    <td class="nt-col-price">7,400円~</td>
+                    <td class="nt-col-price">買い切り型</td>
+                  </tr>
+                  <tr class="nt-rank-row">
+                    <td><img class="nt-rank-icon" src="./images/icon-ranking-4.svg" alt="4位"></td>
+                    <td><div class="nt-school-cell"><img class="nt-school-thumb" src="./images/horiemon.webp" alt="ホリエモンAI学校"><div class="nt-school-detail"><span class="nt-school-name">ホリエモンAI学校</span><div class="nt-school-btns"><a href="./horiemon/" class="nt-btn-s nt-btn-detail">詳細を見る</a><a href="https://horiemon.ai/" target="_blank" class="nt-btn-s nt-btn-official">公式サイトへ</a></div></div></div></td>
+                    <td><img class="nt-star-img" src="./images/4.0.webp" alt="4.0"><div class="nt-rating">4.0</div></td>
+                    <td class="nt-col-overview">なし</td>
+                    <td class="nt-col-overview">なし</td>
+                    <td class="nt-col-overview">なし</td>
+                    <td class="nt-col-support">なし</td>
+                    <td class="nt-col-support">なし</td>
+                    <td class="nt-col-support">8コース/200本</td>
+                    <td class="nt-col-price"><span class="nt-price">162,800円</span><span class="nt-price-sub">入会金 + 月額16,280円</span></td>
+                    <td class="nt-col-price">13,570円~</td>
+                    <td class="nt-col-price">月額制</td>
+                  </tr>
+                  <tr class="nt-rank-row">
+                    <td><img class="nt-rank-icon" src="./images/icon-ranking-5.svg" alt="5位"></td>
+                    <td><div class="nt-school-cell"><img class="nt-school-thumb" src="./images/aidemy.webp" alt="Aidemy"><div class="nt-school-detail"><span class="nt-school-name">Aidemy</span><div class="nt-school-btns"><a href="./aidemy/" class="nt-btn-s nt-btn-detail">詳細を見る</a><a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank" class="nt-btn-s nt-btn-official">公式サイトへ</a></div></div></div></td>
+                    <td><img class="nt-star-img" src="./images/3.8.webp" alt="3.8"><div class="nt-rating">3.8</div></td>
+                    <td class="nt-col-overview">個別(Slackでのサポート)</td>
+                    <td class="nt-col-overview" style="text-align:left;font-size:12px;">・個別指導<br>・1対1メンタリング</td>
+                    <td class="nt-col-overview">なし</td>
+                    <td class="nt-col-support">なし</td>
+                    <td class="nt-col-support">なし</td>
+                    <td class="nt-col-support">3コース/10レッスン</td>
+                    <td class="nt-col-price"><span class="nt-price">272,800円</span><span class="nt-price-sub">12週間プラン</span></td>
+                    <td class="nt-col-price">22,700円〜</td>
+                    <td class="nt-col-price">期間集中型</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <script>
+            function switchNewTab(tab, el) {
+              document.querySelectorAll('.new-tab').forEach(function(t) { t.classList.remove('active'); });
+              el.classList.add('active');
+              var table = document.getElementById('newRankTable');
+              table.classList.remove('nt-show-overview', 'nt-show-support', 'nt-show-price');
+              table.classList.add('nt-show-' + tab);
+            }
+            </script>
+            </div><!-- /newRankArea -->
+          <!-- 旧テーブル完全削除 -->
+          <div style="display:none;">
                     <!-- 1: バイテック -->
                     <div class="table__item table3__order_1" style="border: 3px solid red; padding-top: 0; padding-bottom: 0;">
                       <div class="rank_number rank_number1" style="padding: 0px 4px;">
@@ -949,11 +1092,10 @@
                       <div class="td td11_width d-flex style_none"><p>22,700円〜</p></div>
                       <div class="td td12_width d-flex style_none"><p>3コース/10レッスン</p></div>
                     </div>
-                  </div>
-                </div>
               </div>
-          </div>
-        </div>
+          </div><!-- 旧テーブル非表示ここまで -->
+          </div><!-- /result -->
+        </div><!-- /sp-display-none -->
 
         <div id="contents">
           <div class="pc-display-none">
@@ -992,7 +1134,7 @@
                     href="https://www.generative-ai-school-rank.com/bytech"
                     class="btn btn-official _shiny"
                     style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                    >バイテックの詳細を見る
+                    >バイテックの詳細を見る ▶
                   </a>
                   </div>
                 </div>
@@ -1021,7 +1163,7 @@
                       href="https://www.generative-ai-school-rank.com/ai-skill-academy/"
                       class="btn btn-official _shiny"
                       style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                      >AIスキルアカデミーの詳細を見る
+                      >AIスキルアカデミーの詳細を見る ▶
                     </a>
                   </div>
                 </div>
@@ -1046,7 +1188,7 @@
                       href="https://www.generative-ai-school-rank.com/digital-hacks/"
                       class="btn btn-official _shiny"
                       style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                      >デジハクの詳細を見る
+                      >デジハクの詳細を見る ▶
                     </a>
                   </div>
                 </div>
@@ -1071,7 +1213,7 @@
                       href="https://www.generative-ai-school-rank.com/horiemon/"
                       class="btn btn-official _shiny"
                       style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                      >ホリエモンAI学校の詳細を見る
+                      >ホリエモンAI学校の詳細を見る ▶
                     </a>
                   </div>
                 </div>
@@ -1096,7 +1238,7 @@
                       href="https://www.generative-ai-school-rank.com/aidemy/"
                       class="btn btn-official _shiny"
                       style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                      >Aidemyの詳細を見る
+                      >Aidemyの詳細を見る ▶
                     </a>
                   </div>
                 </div>
@@ -1115,7 +1257,7 @@
                         <p class="title">バイテック</p>
                       </a>
                       <div class="button box-topranking-button">
-                        <div class="cv shiny-btn"><a href="https://lp.bytech.jp/" target="_blank">公式ページはこちら</a></div>
+                        <div class="cv shiny-btn"><a href="https://lp.bytech.jp/" target="_blank">公式ページは<br>こちら ▶</a></div>
                       </div>
                     </td>
                     <td class="name">
@@ -1125,7 +1267,7 @@
                         <p class="title">AIスキルアカデミー</p>
                       </a>
                       <div class="button box-topranking-button">
-                        <div class="cv shiny-btn"><a href="https://ai-skill.jp/" target="_blank">公式ページはこちら</a></div>
+                        <div class="cv shiny-btn"><a href="https://ai-skill.jp/" target="_blank">公式ページは<br>こちら ▶</a></div>
                       </div>
                     </td>
                     <td class="name">
@@ -1135,7 +1277,7 @@
                         <p class="title">デジハク</p>
                       </a>
                       <div class="button box-topranking-button">
-                        <div class="cv shiny-btn"><a href="https://ai.digital-hacks.jp/" target="_blank">公式ページはこちら</a></div>
+                        <div class="cv shiny-btn"><a href="https://ai.digital-hacks.jp/" target="_blank">公式ページは<br>こちら ▶</a></div>
                       </div>
                     </td>
                     <td class="name">
@@ -1145,7 +1287,7 @@
                         <p class="title">ホリエモンAI学校</p>
                       </a>
                       <div class="button box-topranking-button">
-                        <div class="cv shiny-btn"><a href="https://horiemon.ai/" target="_blank">公式ページはこちら</a></div>
+                        <div class="cv shiny-btn"><a href="https://horiemon.ai/" target="_blank">公式ページは<br>こちら ▶</a></div>
                       </div>
                     </td>
                     <td class="name">
@@ -1155,7 +1297,7 @@
                         <p class="title">Aidemy</p>
                       </a>
                       <div class="button box-topranking-button">
-                        <div class="cv shiny-btn"><a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank">公式ページはこちら</a></div>
+                        <div class="cv shiny-btn"><a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank">公式ページは<br>こちら ▶</a></div>
                       </div>
                     </td>
                   </tr>
@@ -4500,6 +4642,11 @@
           <!-- search_start -->
           <!-- search_end -->
           <div class="sp-display-none">
+            <div id="sidebar" style="margin-bottom: 20px;">
+              <a href="https://lp.bytech.jp/" target="_blank">
+                <img loading="lazy" src="./images/ah_sb.webp" alt="バイテック" style="width: 100%;" />
+              </a>
+            </div>
             <div id="sidebar">
               <div class="title">
                 <h3><span>おすすめ生成AIスクール16選</span></h3>
@@ -4736,7 +4883,7 @@
                               target="_blank"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >バイテック公式サイトを見る
+                              >バイテック公式サイトを見る ▶
                               </a>
                         </li>
                       </ul>
@@ -4971,7 +5118,7 @@
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
                             >
-                            バイテック公式サイトを見る 
+                            バイテック公式サイトを見る ▶
                           </a>
                         </li>
                       </ul>
@@ -5046,7 +5193,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >AIスキルアカデミー公式サイトを見る
+                            >AIスキルアカデミー公式サイトを見る ▶
                             </a
                           >
                         </li>
@@ -5218,7 +5365,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >公式サイトを見る
+                            >公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -5293,7 +5440,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >デジハク公式サイトを見る
+                            >デジハク公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -5510,7 +5657,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >デジハク公式サイトを見る
+                            >デジハク公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -5583,7 +5730,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >ホリエモンAI学校公式サイトを見る
+                            >ホリエモンAI学校公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -5764,7 +5911,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >ホリエモンAI学校公式サイトを見る
+                            >ホリエモンAI学校公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -5827,7 +5974,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >Aidemy公式サイトを見る
+                            >Aidemy公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -6009,7 +6156,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >Aidemy公式サイトを見る
+                            >Aidemy公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -6077,7 +6224,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >ヒューマンアカデミー公式サイトを見る
+                              >ヒューマンアカデミー公式サイトを見る ▶
                               </a
                             >
                           </li>
@@ -6250,7 +6397,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >ヒューマンアカデミー公式サイトを見る
+                              >ヒューマンアカデミー公式サイトを見る ▶
                               </a
                             >
                           </li>
@@ -6323,7 +6470,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >公式サイトを見る
+                              >公式サイトを見る ▶
                               </a
                             >
                           </li>
@@ -6516,7 +6663,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >公式サイトを見る
+                              >公式サイトを見る ▶
                               </a
                             >
                           </li>
@@ -6582,7 +6729,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >TECH CAMP公式サイトを見る
+                              >TECH CAMP公式サイトを見る ▶
                               </a
                             >
                           </li>
@@ -6776,7 +6923,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >TECH CAMP公式サイトを見る
+                              >TECH CAMP公式サイトを見る ▶
                               </a>
                           </li>
                         </ul>
@@ -6845,7 +6992,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >TechAcademy公式サイトを見る
+                            >TechAcademy公式サイトを見る ▶
                           </a>
                         </li>
                       </ul>
@@ -7021,7 +7168,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >TechAcademy公式サイトを見る
+                            >TechAcademy公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -7088,7 +7235,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >RAXUS AIスクール公式サイトを見る
+                            >RAXUS AIスクール公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -7272,7 +7419,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >RAXUS AIスクール公式サイトを見る
+                            >RAXUS AIスクール公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -7349,7 +7496,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >RUNTEQ公式サイトを見る
+                            >RUNTEQ公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -7556,7 +7703,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >RUNTEQ公式サイトを見る
+                            >RUNTEQ公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -7616,7 +7763,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >飛翔公式サイトを見る
+                            >飛翔公式サイトを見る ▶
                             </a
                           >
                         </li>
@@ -7789,7 +7936,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >飛翔公式サイトを見る
+                            >飛翔公式サイトを見る ▶
                             </a
                           >
                         </li>
@@ -7861,7 +8008,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >キカガク公式サイトを見る
+                            >キカガク公式サイトを見る ▶
                             </a
                           >
                         </li>
@@ -8054,7 +8201,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >キカガク公式サイトを見る
+                            >キカガク公式サイトを見る ▶
                             </a
                           >
                         </li>
@@ -8126,7 +8273,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >SAMURAI ENGENER公式サイトを見る
+                              >SAMURAI ENGENER公式サイトを見る ▶
                               </a
                             >
                           </li>
@@ -8306,7 +8453,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >SAMURAI ENGENER公式サイトを見る
+                              >SAMURAI ENGENER公式サイトを見る ▶
                               </a
                             >
                           </li>
@@ -8374,7 +8521,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >.Pro公式サイトを見る
+                            >.Pro公式サイトを見る ▶
                             </a
                           >
                         </li>
@@ -8560,7 +8707,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >.Pro公式サイトを見る
+                            >.Pro公式サイトを見る ▶
                             </a
                           >
                         </li>
@@ -8622,7 +8769,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >mikimiki webスクール公式サイトを見る
+                            >mikimiki webスクール公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
@@ -8783,7 +8930,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >mikimiki webスクール公式サイトを見る
+                            >mikimiki webスクール公式サイトを見る ▶
                             </a>
                         </li>
                       </ul>
