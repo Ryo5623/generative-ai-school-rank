@@ -681,11 +681,15 @@
               }
               #newRankArea .new-table-wrap table { table-layout: auto; }
               #newRankArea .new-table-wrap table { width: 100%; border-collapse: collapse; }
-              #newRankArea .new-table-wrap th { background: #ede9fe; font-size: 13px; padding: 10px 8px; border-bottom: 2px solid #533afc; white-space: nowrap; }
-              #newRankArea .new-table-wrap td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 13px; vertical-align: middle; text-align: center; }
+              #newRankArea .new-table-wrap th {
+                background: #ede9fe; font-size: 13px; font-weight: 700;
+                padding: 12px 10px; border-bottom: 2px solid #533afc; white-space: nowrap;
+                text-align: center;
+              }
+              #newRankArea .new-table-wrap td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 13px; font-weight: 600; vertical-align: middle; text-align: center; }
               #newRankArea .new-table-wrap tr.nt-rank-row { transition: background .15s; }
               #newRankArea .new-table-wrap tr.nt-rank-row:hover { background: #f8faff; }
-              #newRankArea .new-table-wrap tr.nt-rank-highlight { background: #fff5f5; }
+              #newRankArea .new-table-wrap tr.nt-rank-highlight { background: #fff5f5; outline: 3px solid red; outline-offset: -3px; }
               #newRankArea .nt-rank-icon { width: 34px; height: auto; }
               #newRankArea .nt-school-cell { display: flex; align-items: center; gap: 10px; min-width: 260px; }
               #newRankArea .nt-school-thumb { width: 90px; min-width: 90px; height: 90px; border-radius: 0; object-fit: cover; }
@@ -726,7 +730,7 @@
               <table id="newRankTable" class="nt-show-overview">
                 <thead>
                   <tr>
-                    <th style="width:44px;">順位</th>
+                    <th>順位</th>
                     <th>スクール名</th>
                     <th>総合評価</th>
                     <th class="nt-col-overview">チャットサポート</th>
