@@ -1569,6 +1569,9 @@ footer .copyright {
   .pc-display-none {
     display: none;
   }
+  .promo-notice {
+    margin-top: 25px !important;
+  }
 }
 
 @media screen and (max-width: 991px) {
