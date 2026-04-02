@@ -510,7 +510,7 @@
               </li>
 
               <li>
-                <a href="https://horiemon.ai/" rel="sponsored noopener noreferrer" target="_blank">
+                <a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" rel="sponsored noopener noreferrer" target="_blank">
                   <div class="rank_sidrbartitle">ホリエモンAI学校</div>
                 </a>
               </li>
@@ -552,7 +552,7 @@
               </li>
 
               <li>
-                <a href="https://ai-skill.jp/" rel="sponsored noopener noreferrer" target="_blank">
+                <a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" rel="sponsored noopener noreferrer" target="_blank">
                   <div class="rank_sidrbartitle">AIスキルアカデミー</div>
                 </a>
               </li>
@@ -701,13 +701,23 @@
                 font-size: 12px; font-weight: 600; text-decoration: none; text-align: center;
               }
               #newRankArea .nt-btn-detail { background: #888; }
-              #newRankArea .nt-btn-detail::after, #newRankArea .nt-btn-official::after { content: " ▶"; font-size: 9px; margin-left: 5px; }
+              #newRankArea .nt-btn-detail::after { content: " ▼"; font-size: 9px; margin-left: 5px; }
+              #newRankArea .nt-btn-official::after { content: ""; display: inline-block; width: 11px; height: 11px; margin-left: 5px; vertical-align: middle; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E") no-repeat center / contain; }
               #newRankArea .nt-btn-official {
                 background: linear-gradient(180deg, #e83a6f 0%, #D4215F 50%, #b01a4e 100%);
                 box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2);
-                position: relative; top: 0; transition: all .1s;
+                position: relative;
+                animation: nt-btn-press 3s linear infinite;
               }
-              #newRankArea .nt-btn-official:hover { top: 2px; box-shadow: 0 1px 0 #8c1440, 0 2px 4px rgba(0,0,0,.15); }
+              #newRankArea .nt-btn-official:hover { animation: none; transform: translateY(2px); box-shadow: 0 1px 0 #8c1440, 0 2px 4px rgba(0,0,0,.15); }
+              @keyframes nt-btn-press {
+                0%   { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
+                60%  { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
+                65%  { filter: brightness(1.3); }
+                70%  { box-shadow: none; transform: translateY(3px); filter: brightness(1.3); }
+                80%  { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
+                100% { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
+              }
               #newRankArea .nt-star-img { width: 120px; height: auto; }
               #newRankArea .nt-rating { font-weight: 800; font-size: 18px; color: #e74c3c; }
               #newRankArea .nt-price { font-weight: 700; color: #1a68d4; }
@@ -761,7 +771,7 @@
                   </tr>
                   <tr class="nt-rank-row">
                     <td><img class="nt-rank-icon" src="./images/icon-ranking-2.svg" alt="2位"></td>
-                    <td><div class="nt-school-cell"><img class="nt-school-thumb" src="./images/ai-skill-ac.webp" alt="AIスキルアカデミー"><div class="nt-school-detail"><span class="nt-school-name">AIスキルアカデミー</span><div class="nt-school-btns"><a href="./ai-skill-academy/" class="nt-btn-s nt-btn-detail">詳細を見る</a><a href="https://ai-skill.jp/" target="_blank" class="nt-btn-s nt-btn-official">公式サイトへ</a></div></div></div></td>
+                    <td><div class="nt-school-cell"><img class="nt-school-thumb" src="./images/ai-skill-ac.webp" alt="AIスキルアカデミー"><div class="nt-school-detail"><span class="nt-school-name">AIスキルアカデミー</span><div class="nt-school-btns"><a href="./ai-skill-academy/" class="nt-btn-s nt-btn-detail">詳細を見る</a><a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank" class="nt-btn-s nt-btn-official">公式サイトへ</a></div></div></div></td>
                     <td><img class="nt-star-img" src="./images/4.5.webp" alt="4.5"><div class="nt-rating">4.5</div></td>
                     <td class="nt-col-overview">あり(LINE/質問し放題)</td>
                     <td class="nt-col-overview" style="text-align:left;font-size:12px;">・LIVEウェビナー(毎週)<br>・生成AIパスポート受験料割引<br>・5名まで視聴共有OK</td>
@@ -789,7 +799,7 @@
                   </tr>
                   <tr class="nt-rank-row">
                     <td><img class="nt-rank-icon" src="./images/icon-ranking-4.svg" alt="4位"></td>
-                    <td><div class="nt-school-cell"><img class="nt-school-thumb" src="./images/horiemon.webp" alt="ホリエモンAI学校"><div class="nt-school-detail"><span class="nt-school-name">ホリエモンAI学校</span><div class="nt-school-btns"><a href="./horiemon/" class="nt-btn-s nt-btn-detail">詳細を見る</a><a href="https://horiemon.ai/" target="_blank" class="nt-btn-s nt-btn-official">公式サイトへ</a></div></div></div></td>
+                    <td><div class="nt-school-cell"><img class="nt-school-thumb" src="./images/horiemon.webp" alt="ホリエモンAI学校"><div class="nt-school-detail"><span class="nt-school-name">ホリエモンAI学校</span><div class="nt-school-btns"><a href="./horiemon/" class="nt-btn-s nt-btn-detail">詳細を見る</a><a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank" class="nt-btn-s nt-btn-official">公式サイトへ</a></div></div></div></td>
                     <td><img class="nt-star-img" src="./images/4.0.webp" alt="4.0"><div class="nt-rating">4.0</div></td>
                     <td class="nt-col-overview">なし</td>
                     <td class="nt-col-overview">なし</td>
@@ -912,14 +922,14 @@
                       <div class="th">
                         <ul>
                           <li>
-                            <a href="https://ai-skill.jp/" target="_blank" rel="sponsored">
+                            <a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank" rel="sponsored">
                               <img loading="eager" src="./images/ai-skill-ac_logo.webp" style="width: 100%; height: 35px; object-fit: contain;" alt="AIスキルアカデミーロゴ" />
                             </a>
                           </li>
                           <li><a href="./ai-skill-academy/" class="btn btn-detail">詳細を見る</a></li>
-                          <li style="margin-top: -4px;"><a href="https://ai-skill.jp/" target="_blank" rel="sponsored" class="btn btn-official">公式サイトへ</a></li>
+                          <li style="margin-top: -4px;"><a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank" rel="sponsored" class="btn btn-official">公式サイトへ</a></li>
                         </ul>
-                        <a href="https://ai-skill.jp/" target="_blank" rel="sponsored" class="rank_thumb">
+                        <a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank" rel="sponsored" class="rank_thumb">
                           <img loading="eager" src="./images/ai-skill-ac.webp" alt="AIスキルアカデミー" />
                         </a>
                       </div>
@@ -1016,14 +1026,14 @@
                       <div class="th">
                         <ul>
                           <li>
-                            <a href="https://horiemon.ai/" target="_blank">
+                            <a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank">
                               <img loading="eager" src="./images/horiemon_logo.png" width="100%" height="35px" alt="ホリエモンAI学校ロゴ" />
                             </a>
                           </li>
                           <li><a href="./horiemon/" class="btn btn-detail">詳細を見る</a></li>
-                          <li style="margin-top: -4px;"><a href="https://horiemon.ai/" target="_blank" class="btn btn-official">公式サイトへ</a></li>
+                          <li style="margin-top: -4px;"><a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank" class="btn btn-official">公式サイトへ</a></li>
                         </ul>
-                        <a href="https://horiemon.ai/" target="_blank" class="rank_thumb">
+                        <a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank" class="rank_thumb">
                           <img loading="eager" src="./images/horiemon.webp" alt="ホリエモンAI学校" />
                         </a>
                       </div>
@@ -1129,15 +1139,16 @@
                       <img loading="lazy" src="./images/bt_thum.webp" class="school-logo" alt="バイテックロゴ" />
                       <div class="sp_rank">
                         <a href="https://www.generative-ai-school-rank.com/bytech" style="text-decoration: underline; font-size: 1.1em; color: #533AFC;">バイテック</a>
-                        <p style="font-weight: 400; padding-top: 5px; font-size: 0.8em;">ChatGPT/Midjourneyなど業務から副業でのAI活用まで学べるので副業したい人にもおすすめのスクール！</p>
+                        <p style="font-weight: 400; padding-top: 5px; font-size: 0.8em;">キャリアアップ・収益化をサポートする超実践型のAIスクール。個別コンサルだから最短で成果を出せる！</p>
                       </div>
                   </li>
                   <div class="rank-cta">
                   <a
-                    href="https://www.generative-ai-school-rank.com/bytech"
+                    href="https://lp.bytech.jp/"
+                    target="_blank"
                     class="btn btn-official _shiny"
                     style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                    >バイテックの詳細を見る ▶
+                    >バイテックの公式サイトへ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                   </a>
                   </div>
                 </div>
@@ -1163,10 +1174,11 @@
                   </li>
                   <div class="rank-cta">
                     <a
-                      href="https://www.generative-ai-school-rank.com/ai-skill-academy/"
+                      href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2"
+                      target="_blank"
                       class="btn btn-official _shiny"
                       style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                      >AIスキルアカデミーの詳細を見る ▶
+                      >AIスキルアカデミーの公式サイトへ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </a>
                   </div>
                 </div>
@@ -1188,10 +1200,11 @@
                   </li>
                   <div class="rank-cta">
                     <a
-                      href="https://www.generative-ai-school-rank.com/digital-hacks/"
+                      href="https://ai.digital-hacks.jp/"
+                      target="_blank"
                       class="btn btn-official _shiny"
                       style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                      >デジハクの詳細を見る ▶
+                      >デジハクの公式サイトへ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </a>
                   </div>
                 </div>
@@ -1213,10 +1226,11 @@
                   </li>
                   <div class="rank-cta">
                     <a
-                      href="https://www.generative-ai-school-rank.com/horiemon/"
+                      href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
+                      target="_blank"
                       class="btn btn-official _shiny"
                       style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                      >ホリエモンAI学校の詳細を見る ▶
+                      >ホリエモンAI学校の公式サイトへ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </a>
                   </div>
                 </div>
@@ -1238,10 +1252,11 @@
                   </li>
                   <div class="rank-cta">
                     <a
-                      href="https://www.generative-ai-school-rank.com/aidemy/"
+                      href="https://premium-biz.aidemy.net/courses/genai-adv"
+                      target="_blank"
                       class="btn btn-official _shiny"
                       style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                      >Aidemyの詳細を見る ▶
+                      >Aidemyの公式サイトへ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </a>
                   </div>
                 </div>
@@ -1260,17 +1275,17 @@
                         <p class="title">バイテック</p>
                       </a>
                       <div class="button box-topranking-button">
-                        <div class="cv shiny-btn"><a href="https://lp.bytech.jp/" target="_blank">公式ページは<br>こちら ▶</a></div>
+                        <div class="cv shiny-btn"><a href="https://lp.bytech.jp/" target="_blank">公式サイトへ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;min-width:12px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
                       </div>
                     </td>
                     <td class="name">
                       <img class="ico-rank" src="./images/ico-rank02.png" alt="2位" />
-                      <a href="https://ai-skill.jp/" target="_blank">
+                      <a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank">
                         <img class="banner" src="./images/ai-skill-ac.webp" alt="AIスキルアカデミー" />
                         <p class="title">AIスキルアカデミー</p>
                       </a>
                       <div class="button box-topranking-button">
-                        <div class="cv shiny-btn"><a href="https://ai-skill.jp/" target="_blank">公式ページは<br>こちら ▶</a></div>
+                        <div class="cv shiny-btn"><a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank">公式サイトへ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;min-width:12px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
                       </div>
                     </td>
                     <td class="name">
@@ -1280,17 +1295,17 @@
                         <p class="title">デジハク</p>
                       </a>
                       <div class="button box-topranking-button">
-                        <div class="cv shiny-btn"><a href="https://ai.digital-hacks.jp/" target="_blank">公式ページは<br>こちら ▶</a></div>
+                        <div class="cv shiny-btn"><a href="https://ai.digital-hacks.jp/" target="_blank">公式サイトへ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;min-width:12px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
                       </div>
                     </td>
                     <td class="name">
                       <img class="ico-rank" src="./images/rank4-tv.png" alt="4位" style="width: 40px; margin-bottom: 6px;" />
-                      <a href="https://horiemon.ai/" target="_blank">
+                      <a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank">
                         <img class="banner" src="./images/horiemon.webp" alt="ホリエモンAI学校" />
                         <p class="title">ホリエモンAI学校</p>
                       </a>
                       <div class="button box-topranking-button">
-                        <div class="cv shiny-btn"><a href="https://horiemon.ai/" target="_blank">公式ページは<br>こちら ▶</a></div>
+                        <div class="cv shiny-btn"><a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank">公式サイトへ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;min-width:12px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
                       </div>
                     </td>
                     <td class="name">
@@ -1300,7 +1315,7 @@
                         <p class="title">Aidemy</p>
                       </a>
                       <div class="button box-topranking-button">
-                        <div class="cv shiny-btn"><a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank">公式ページは<br>こちら ▶</a></div>
+                        <div class="cv shiny-btn"><a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank">公式サイトへ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;min-width:12px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
                       </div>
                     </td>
                   </tr>
@@ -1544,35 +1559,35 @@
                     <td style="background-color: #FFEBEB">
                       <div class="button box-topranking-button">
                         <div class="link shiny-btn">
-                          <a href="#rank-1" onclick="event.preventDefault(); document.querySelector('#rank-1').scrollIntoView({behavior: 'smooth'});">詳しくは<br class="pc-none" />こちら</a>
+                          <a href="#rank-1" onclick="event.preventDefault(); document.querySelector('#rank-1').scrollIntoView({behavior: 'smooth'});">詳細へ ▼</a>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div class="button box-topranking-button">
                         <div class="link shiny-btn">
-                          <a href="#rank-2" onclick="event.preventDefault(); document.querySelector('#rank-2').scrollIntoView({behavior: 'smooth'});">詳しくは<br class="pc-none" />こちら</a>
+                          <a href="#rank-2" onclick="event.preventDefault(); document.querySelector('#rank-2').scrollIntoView({behavior: 'smooth'});">詳細へ ▼</a>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div class="button box-topranking-button">
                         <div class="link shiny-btn">
-                          <a href="#rank-3" onclick="event.preventDefault(); document.querySelector('#rank-3').scrollIntoView({behavior: 'smooth'});">詳しくは<br class="pc-none" />こちら</a>
+                          <a href="#rank-3" onclick="event.preventDefault(); document.querySelector('#rank-3').scrollIntoView({behavior: 'smooth'});">詳細へ ▼</a>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div class="button box-topranking-button">
                         <div class="link shiny-btn">
-                          <a href="#rank-4" onclick="event.preventDefault(); document.querySelector('#rank-4').scrollIntoView({behavior: 'smooth'});">詳しくは<br class="pc-none" />こちら</a>
+                          <a href="#rank-4" onclick="event.preventDefault(); document.querySelector('#rank-4').scrollIntoView({behavior: 'smooth'});">詳細へ ▼</a>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div class="button box-topranking-button">
                         <div class="link shiny-btn">
-                          <a href="#rank-5" onclick="event.preventDefault(); document.querySelector('#rank-5').scrollIntoView({behavior: 'smooth'});">詳しくは<br class="pc-none" />こちら</a>
+                          <a href="#rank-5" onclick="event.preventDefault(); document.querySelector('#rank-5').scrollIntoView({behavior: 'smooth'});">詳細へ ▼</a>
                         </div>
                       </div>
                     </td>
@@ -1674,7 +1689,7 @@
                                         </a>
                                       </td>
                                       <td class="table3__order_2">
-                                        <a href="https://ai-skill.jp/" target="_blank">
+                                        <a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank">
                                           <div><img loading="eager" src="./images/ai-skill-ac.webp" alt="AIスキルアカデミー" /></div>
                                         </a>
                                       </td>
@@ -1684,7 +1699,7 @@
                                         </a>
                                       </td>
                                       <td class="table3__order_4">
-                                        <a href="https://horiemon.ai/" target="_blank">
+                                        <a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank">
                                           <div><img loading="eager" src="./images/horiemon.webp" alt="ホリエモンAI学校" /></div>
                                         </a>
                                       </td>
@@ -1739,7 +1754,7 @@
                                       <td class="table_action table3__order_2">
                                         <ul>
                                           <li><a href="./ai-skill-academy/" class="btn btn-detail">詳細を見る</a></li>
-                                          <li><a href="https://ai-skill.jp/" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a></li>
+                                          <li><a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a></li>
                                         </ul>
                                       </td>
                                       <td class="table_action table3__order_3">
@@ -1751,7 +1766,7 @@
                                       <td class="table_action table3__order_4">
                                         <ul>
                                           <li><a href="./horiemon/" class="btn btn-detail">詳細を見る</a></li>
-                                          <li><a href="https://horiemon.ai/" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a></li>
+                                          <li><a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a></li>
                                         </ul>
                                       </td>
                                       <td class="table_action table3__order_5">
@@ -1972,7 +1987,7 @@
                                           </li>
                                           <li>
                                             <a
-                                              href="https://horiemon.ai/"
+                                              href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                                               target="_blank"
                                               class="btn btn-official"
                                               style="display: flex; gap: 7px; align-items: center; justify-content: center;"
@@ -2194,7 +2209,7 @@
                                       </td>
                                       <td class="table3__order_2">
                                         <a
-                                          href="https://horiemon.ai/"
+                                          href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                                         >
                                           <div><img loading="eager" src="./images/horiemon.webp" alt="ホリエモンAI学校" /></div>
                                         </a>
@@ -2276,7 +2291,7 @@
                                           </li>
                                           <li>
                                             <a
-                                              href="https://horiemon.ai/"
+                                              href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                                               rel="sponsored noopener noreferrer" 
                                               target="_blank"
                                               class="btn btn-official"
@@ -2755,7 +2770,7 @@
                                         </li>
                                         <li>
                                           <a
-                                            href="https://horiemon.ai/"
+                                            href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                                             target="_blank"
                                             class="btn btn-official"
                                             style="display: flex; gap: 7px; align-items: center; justify-content: center;"
@@ -2905,16 +2920,7 @@
                                   target="_blank"
                                   class="btn btn-official"
                                   style="display: flex; gap: 7px; align-items: center; justify-content: center;"
-                                  >公式サイトへ
-                                  <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 10px; height: 10px; opacity: 1;" xml:space="preserve">
-                                    <style type="text/css">
-                                      .st0{fill:#FFFFFF;}
-                                    </style>
-                                    <g transform="rotate(-90 256 256)">
-                                      <polygon class="st0" points="440.189,92.085 256.019,276.255 71.83,92.085 0,163.915 256.019,419.915 512,163.915 	" style="fill: #FFFFFF;"></polygon>
-                                    </g>
-                                    </svg>
-                                  </a
+                                  >公式サイトへ</a
                                 >
                               </li>
                             </ul>
@@ -2950,13 +2956,13 @@
                           <div class="th">
                             <ul>
                               <li>
-                                <a href="https://ai-skill.jp/" target="_blank">
+                                <a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank">
                                   <img loading="eager" src="./images/ai-skill-ac_logo.webp" style="width: 100%; height: 35px; object-fit: contain;" alt="AIスキルアカデミー" />
                                 </a>
                               </li>
                               <li><a href="./ai-skill-academy/" class="btn btn-detail">詳細へ</a></li>
                               <li>
-                                <a href="https://ai-skill.jp/" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ ＞</a>
+                                <a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a>
                               </li>
                             </ul>
                           </div>
@@ -2987,7 +2993,7 @@
                               </li>
                               <li><a href="./digital-hacks/" class="btn btn-detail">詳細へ</a></li>
                               <li>
-                                <a href="https://ai.digital-hacks.jp/" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ ＞</a>
+                                <a href="https://ai.digital-hacks.jp/" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a>
                               </li>
                             </ul>
                           </div>
@@ -3012,13 +3018,13 @@
                           <div class="th">
                             <ul>
                               <li>
-                                <a href="https://horiemon.ai/" target="_blank">
+                                <a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank">
                                   <img loading="eager" src="./images/horiemon_logo.png" width="100%" height="35px" alt="ホリエモンAI学校" />
                                 </a>
                               </li>
                               <li><a href="./horiemon/" class="btn btn-detail">詳細へ</a></li>
                               <li>
-                                <a href="https://horiemon.ai/" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ ＞</a>
+                                <a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a>
                               </li>
                             </ul>
                           </div>
@@ -3050,7 +3056,7 @@
                               </li>
                               <li><a href="./aidemy/" class="btn btn-detail">詳細へ</a></li>
                               <li>
-                                <a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ ＞</a>
+                                <a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a>
                               </li>
                             </ul>
                           </div>
@@ -3129,16 +3135,7 @@
                                   target="_blank"
                                   class="btn btn-official"
                                   style="display: flex; gap: 7px; align-items: center; justify-content: center;"
-                                  >公式サイトへ
-                                  <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 10px; height: 10px; opacity: 1;" xml:space="preserve">
-                                    <style type="text/css">
-                                      .st0{fill:#FFFFFF;}
-                                    </style>
-                                    <g transform="rotate(-90 256 256)">
-                                      <polygon class="st0" points="440.189,92.085 256.019,276.255 71.83,92.085 0,163.915 256.019,419.915 512,163.915 	" style="fill: #FFFFFF;"></polygon>
-                                    </g>
-                                    </svg>
-                                  </a
+                                  >公式サイトへ</a
                                 >
                               </li>
                             </ul>
@@ -3172,12 +3169,12 @@
                           <div class="th">
                             <ul>
                               <li>
-                                <a href="https://ai-skill.jp/" target="_blank">
+                                <a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank">
                                   <img loading="eager" src="./images/ai-skill-ac_logo.webp" style="width: 100%; height: 35px; object-fit: contain;" alt="AIスキルアカデミー" />
                                 </a>
                               </li>
                               <li><a href="./ai-skill-academy/" class="btn btn-detail">詳細へ</a></li>
-                              <li><a href="https://ai-skill.jp/" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ ＞</a></li>
+                              <li><a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a></li>
                             </ul>
                           </div>
                           <div class="td td8_width d-flex">
@@ -3205,7 +3202,7 @@
                                 </a>
                               </li>
                               <li><a href="./digital-hacks/" class="btn btn-detail">詳細へ</a></li>
-                              <li><a href="https://ai.digital-hacks.jp/" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ ＞</a></li>
+                              <li><a href="https://ai.digital-hacks.jp/" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a></li>
                             </ul>
                           </div>
                           <div class="td td8_width d-flex">
@@ -3230,12 +3227,12 @@
                           <div class="th">
                             <ul>
                               <li>
-                                <a href="https://horiemon.ai/" target="_blank">
+                                <a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank">
                                   <img loading="eager" src="./images/horiemon_logo.png" width="100%" height="35px" alt="ホリエモンAI学校" />
                                 </a>
                               </li>
                               <li><a href="./horiemon/" class="btn btn-detail">詳細へ</a></li>
-                              <li><a href="https://horiemon.ai/" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ ＞</a></li>
+                              <li><a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a></li>
                             </ul>
                           </div>
                           <div class="td td8_width d-flex">
@@ -3259,7 +3256,7 @@
                                 </a>
                               </li>
                               <li><a href="./aidemy/" class="btn btn-detail">詳細へ</a></li>
-                              <li><a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ ＞</a></li>
+                              <li><a href="https://premium-biz.aidemy.net/courses/genai-adv" target="_blank" class="btn btn-official" style="display: flex; gap: 7px; align-items: center; justify-content: center;">公式サイトへ</a></li>
                             </ul>
                           </div>
                           <div class="td td8_width d-flex">
@@ -3353,7 +3350,7 @@
                                       </td>
                                       <td class="table3__order_3">
                                         <a
-                                          href="https://horiemon.ai/"
+                                          href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                                         >
                                           <div><img loading="eager" src="./images/horiemon.webp" alt="ホリエモンAI学校" /></div>
                                         </a>
@@ -3442,7 +3439,7 @@
                                           </li>
                                           <li>
                                             <a
-                                              href="https://horiemon.ai/"
+                                              href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                                               rel="sponsored noopener noreferrer" 
                                               target="_blank"
                                               class="btn btn-official"
@@ -3839,7 +3836,7 @@
                                           </li>
                                           <li>
                                             <a
-                                              href="https://horiemon.ai/"
+                                              href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                                               target="_blank"
                                               class="btn btn-official"
                                               style="display: flex; gap: 7px; align-items: center; justify-content: center;"
@@ -3996,7 +3993,7 @@
                         <td class="table3__order_2">
                            <img style="width: 40px; margin-bottom: 10px;" loading="lazy" src="./images/icon-crown-2.png" class="rank_img" alt="2位" />
                           <a
-                            href="https://ai-skill.jp/"
+                            href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2"
                           >
                             <div><img loading="eager" src="./images/ai-skill-ac.webp" alt="AIスキルアカデミー" /></div>
                           </a>
@@ -4012,7 +4009,7 @@
                         <td class="table3__order_4">
                            <img style="width: 40px; margin-bottom: 10px;" loading="lazy" src="./images/icon-crown-4.png" class="rank_img" alt="4位" />
                           <a
-                            href="https://horiemon.ai/"
+                            href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                           >
                             <div><img loading="eager" src="./images/horiemon.webp" alt="ホリエモンAI学校" /></div>
                           </a>
@@ -4066,7 +4063,7 @@
                             </li>
                             <li>
                               <a
-                                href="https://ai-skill.jp/"
+                                href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2"
                                 target="_blank"
                                 rel="sponsored"
                                 class="btn btn-official"
@@ -4104,7 +4101,7 @@
                             </li>
                             <li>
                               <a
-                                href="https://horiemon.ai/"
+                                href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                                 target="_blank"
                                 class="btn btn-official"
                                 style="display: flex; gap: 7px; align-items: center; justify-content: center;"
@@ -4525,7 +4522,7 @@
                             </li>
                             <li>
                               <a
-                                href="https://ai-skill.jp/"
+                                href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2"
                                 target="_blank"
                                 rel="sponsored"
                                 class="btn btn-official"
@@ -4571,7 +4568,7 @@
                             </li>
                             <li>
                               <a
-                                href="https://horiemon.ai/"
+                                href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                                 target="_blank"
                                 class="btn btn-official"
                                 style="display: flex; gap: 7px; align-items: center; justify-content: center;"
@@ -4663,7 +4660,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="https://ai-skill.jp/" style="display: flex; align-items: center;">
+                    <a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" style="display: flex; align-items: center;">
                       <img src="./images/rank-c_2.svg" style="width: 22px; margin-left: 8px; margin-right: 6px;" alt="2位" />
                       <div class="rank_sidrbartitle">AIスキルアカデミー</div>
                     </a>
@@ -4675,7 +4672,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="https://horiemon.ai/" style="display: flex; align-items: center;">
+                    <a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" style="display: flex; align-items: center;">
                       <img src="./images/rank-c_4.svg" style="width: 22px; margin-left: 8px; margin-right: 6px;" alt="4位" />
                       <div class="rank_sidrbartitle">ホリエモンAI学校</div>
                     </a>
@@ -4872,7 +4869,7 @@
                           <a
                             href="./bytech/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
@@ -4886,7 +4883,7 @@
                               target="_blank"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >バイテック公式サイトを見る ▶
+                              >バイテック公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                               </a>
                         </li>
                       </ul>
@@ -5121,7 +5118,7 @@
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
                             >
-                            バイテック公式サイトを見る ▶
+                            バイテック公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                           </a>
                         </li>
                       </ul>
@@ -5138,7 +5135,7 @@
                 <img style="width: 50px;" loading="lazy" src="./images/rank-c_2.svg" alt="生成AIスクール比較ランキング2位">
                 <div>
                   <a
-                    href="https://ai-skill.jp/"
+                    href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2"
                     target="_blank"
                     rel="sponsored"
                     >AIスキルアカデミー</a
@@ -5151,7 +5148,7 @@
                 <div class="caption">
                   <div class="image">
                     <a
-                      href="https://ai-skill.jp/"
+                      href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2"
                       target="_blank"
                       rel="sponsored"
                       ><img loading="lazy" src="./images/ai-skill-academy.webp" alt="AIスキルアカデミー"
@@ -5186,17 +5183,17 @@
                           <a
                             href="./ai-skill-academy/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
                           <a
-                            href="https://ai-skill.jp/"
+                            href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2"
                             target="_blank"
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >AIスキルアカデミー公式サイトを見る ▶
+                            >AIスキルアカデミー公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a
                           >
                         </li>
@@ -5251,7 +5248,7 @@
                               <img src="./images/icon-star-4.svg" alt="">                          <span>4.0</span>
                             </div>
                             <p>AIってどこか自分には関係ない世界だと思っていました。でも、実際に触ってみると驚くほど身近で、むしろ今の働き方にこそ必要だと感じました。苦手意識があった私でも、自然と前向きになれるセミナーでした。(※無料セミナーのレビュー)</p>
-                            <small>引用：<span><a style="text-decoration: underline; color: #0000EE;" href="https://ai-skill-academy.com/" target="_blank" rel="nofollow">AIスキルアカデミー公式サイトより</a></span></small>
+                            <small>引用：<span><a style="text-decoration: underline; color: #0000EE;" href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank" rel="nofollow">AIスキルアカデミー公式サイトより</a></span></small>
                           </div>
                         </li>
                         <li class="p-ranking-voice-item">
@@ -5264,7 +5261,7 @@
                               <img src="./images/icon-star-4.svg" alt="">                          <span>4.0</span>
                             </div>
                             <p>ふわっとした内容かと思いきや、日々の業務にすぐ活かせる具体的な話ばかり。思わずその場で使ってみたくなるツールや考え方がたくさん出てきて、2時間があっという間でした。(※無料セミナーのレビュー)</p>
-                            <small>引用：<span><a style="text-decoration: underline; color: #0000EE;" href="https://ai-skill-academy.com/" target="_blank" rel="nofollow">AIスキルアカデミー公式サイトより</a></span></small>
+                            <small>引用：<span><a style="text-decoration: underline; color: #0000EE;" href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank" rel="nofollow">AIスキルアカデミー公式サイトより</a></span></small>
                           </div>
                         </li>
                         <li class="p-ranking-voice-item">
@@ -5277,7 +5274,7 @@
                               <img src="./images/icon-star-35.svg" alt="">                          <span>3.5</span>
                             </div>
                             <p>子育てが落ち着いてきたので、再就職を考えていたところに参加しました。AIのスキルはまだまだ特別感があって、「これを強みにできたら面白いかも」と思えるきっかけになりました。前向きな気持ちになれて嬉しいです。(※無料セミナーのレビュー)</p>
-                            <small>引用：<span><a style="text-decoration: underline; color: #0000EE;" href="https://ai-skill-academy.com/" target="_blank" rel="nofollow">AIスキルアカデミー公式サイトより</a></span></small>
+                            <small>引用：<span><a style="text-decoration: underline; color: #0000EE;" href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank" rel="nofollow">AIスキルアカデミー公式サイトより</a></span></small>
                           </div>
                         </li>
                     </ul>
@@ -5363,12 +5360,12 @@
                         </li> -->
                         <li>
                           <a
-                            href="https://ai-skill.jp/"
+                            href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2"
                             target="_blank"
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >公式サイトを見る ▶
+                            >AIスキルアカデミー公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -5433,7 +5430,7 @@
                           <a
                             href="./digital-hacks/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
@@ -5443,7 +5440,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >デジハク公式サイトを見る ▶
+                            >デジハク公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -5660,7 +5657,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >デジハク公式サイトを見る ▶
+                            >デジハク公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -5677,7 +5674,7 @@
                 <img style="width: 50px;" loading="lazy" src="./images/rank-c_4.svg" alt="生成AIスクール比較ランキング4位">
                 <div>
                   <a
-                    href="https://horiemon.ai/"
+                    href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                     target="_blank"
                     rel="sponsored"
                     >ホリエモンAI学校</a
@@ -5691,7 +5688,7 @@
                 <div class="caption">
                   <div class="image">
                     <a
-                      href="https://horiemon.ai/"
+                      href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                       target="_blank"
                       rel="sponsored"
                       ><img loading="lazy" src="./images/horiemon.webp" alt="ホリエモンAI学校"
@@ -5723,17 +5720,17 @@
                           <a
                             href="./horiemon/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
                           <a
-                            href="https://horiemon.ai/"
+                            href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                             target="_blank"
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >ホリエモンAI学校公式サイトを見る ▶
+                            >ホリエモンAI学校公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -5787,7 +5784,7 @@
                               <img src="./images/icon-star-45.svg" alt="星">                          <span>4.5</span>
                             </div>
                             <p>お試しで入らせてもらい講義を受けましたがとてもわかりやすく、初心者の私でもできそうだと思ったため。あと、facebookなどの、広告で得体の知れないようなスクールがたくさんありますが、ホリエモンAI学校は圧倒的に安心感、信頼感がありました。</p>
-                            <small>引用：<span href="https://horiemon.ai/">ホリエモンAI学校公式サイトより</span></small>
+                            <small>引用：<span href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3">ホリエモンAI学校公式サイトより</span></small>
                           </div>
                         </li>
                                           <li class="p-ranking-voice-item">
@@ -5801,7 +5798,7 @@
                             </div>
                             <p>受講スケジュールを打ち合わせの上で決めることができたから、オンラインなので移動の手間もなかった。
                             全くの未経験ながらも自身の学習ペースに合わせて作ってもらえました。</p>
-                            <small>引用：<span href="https://horiemon.ai/">ホリエモンAI学校公式サイトより</span></small>
+                            <small>引用：<span href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3">ホリエモンAI学校公式サイトより</span></small>
                           </div>
                         </li>
                                           <li class="p-ranking-voice-item">
@@ -5814,7 +5811,7 @@
                               <img src="./images/icon-star-35.svg" alt="星">                          <span>3.5</span>
                             </div>
                             <p>世間的に漸く使われ始めたChatGPTや動画生成についての試験を設定してくれるので、自分なりに目標を決めて勉強ができる。また、年４回なので自分の都合に合わせて予定を変えることができ、試験（勉強）をあきらめずにリトライしやすい。</p>
-                            <small>引用：<span href="https://horiemon.ai/">ホリエモンAI学校公式サイトより</span></small>
+                            <small>引用：<span href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3">ホリエモンAI学校公式サイトより</span></small>
                           </div>
                         </li>
                       </ul>
@@ -5909,12 +5906,12 @@
                         </li> -->
                         <li>
                           <a
-                            href="https://horiemon.ai/"
+                            href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3"
                             target="_blank"
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >ホリエモンAI学校公式サイトを見る ▶
+                            >ホリエモンAI学校公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -5967,7 +5964,7 @@
                           <a
                             href="./aidemy/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
@@ -5977,7 +5974,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >Aidemy公式サイトを見る ▶
+                            >Aidemy公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -6159,7 +6156,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >Aidemy公式サイトを見る ▶
+                            >Aidemy公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -6217,7 +6214,7 @@
                             <a
                               href="./human-academy/"
                               class="btn btn-detail"
-                              >詳細を見る</a
+                              >詳細ページへ</a
                             >
                           </li>
                           <li>
@@ -6227,7 +6224,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >ヒューマンアカデミー公式サイトを見る ▶
+                              >ヒューマンアカデミー公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                               </a
                             >
                           </li>
@@ -6400,7 +6397,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >ヒューマンアカデミー公式サイトを見る ▶
+                              >ヒューマンアカデミー公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                               </a
                             >
                           </li>
@@ -6463,7 +6460,7 @@
                             <a
                               href="./shift-ai/"
                               class="btn btn-detail"
-                              >詳細を見る</a
+                              >詳細ページへ</a
                             >
                           </li>
                           <li>
@@ -6473,7 +6470,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >公式サイトを見る ▶
+                              >SHIFT AI公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                               </a
                             >
                           </li>
@@ -6666,7 +6663,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >公式サイトを見る ▶
+                              >SHIFT AI公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                               </a
                             >
                           </li>
@@ -6722,7 +6719,7 @@
                             <a
                               href="./tech-camp/"
                               class="btn btn-detail"
-                              >詳細を見る</a
+                              >詳細ページへ</a
                             >
                           </li>
                           <li>
@@ -6732,7 +6729,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >TECH CAMP公式サイトを見る ▶
+                              >TECH CAMP公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                               </a
                             >
                           </li>
@@ -6926,7 +6923,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >TECH CAMP公式サイトを見る ▶
+                              >TECH CAMP公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                               </a>
                           </li>
                         </ul>
@@ -6985,7 +6982,7 @@
                           <a
                             href="./tech-academy/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
@@ -6995,7 +6992,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >TechAcademy公式サイトを見る ▶
+                            >TechAcademy公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                           </a>
                         </li>
                       </ul>
@@ -7171,7 +7168,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >TechAcademy公式サイトを見る ▶
+                            >TechAcademy公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -7228,7 +7225,7 @@
                           <a
                             href="./raxus-ai-school/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
@@ -7238,7 +7235,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >RAXUS AIスクール公式サイトを見る ▶
+                            >RAXUS AIスクール公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -7422,7 +7419,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >RAXUS AIスクール公式サイトを見る ▶
+                            >RAXUS AIスクール公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -7489,7 +7486,7 @@
                           <a
                             href="./runteq/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
@@ -7499,7 +7496,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >RUNTEQ公式サイトを見る ▶
+                            >RUNTEQ公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -7706,7 +7703,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >RUNTEQ公式サイトを見る ▶
+                            >RUNTEQ公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -7756,7 +7753,7 @@
                           <a
                             href="./hisho/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
@@ -7766,7 +7763,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >飛翔公式サイトを見る ▶
+                            >飛翔公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a
                           >
                         </li>
@@ -7939,7 +7936,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >飛翔公式サイトを見る ▶
+                            >飛翔公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a
                           >
                         </li>
@@ -8001,7 +7998,7 @@
                           <a
                             href="./kikagaku/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
@@ -8011,7 +8008,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >キカガク公式サイトを見る ▶
+                            >キカガク公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a
                           >
                         </li>
@@ -8204,7 +8201,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >キカガク公式サイトを見る ▶
+                            >キカガク公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a
                           >
                         </li>
@@ -8266,7 +8263,7 @@
                             <a
                               href="./samurai-engineer/"
                               class="btn btn-detail"
-                              >詳細を見る</a
+                              >詳細ページへ</a
                             >
                           </li>
                           <li>
@@ -8276,7 +8273,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >SAMURAI ENGENER公式サイトを見る ▶
+                              >SAMURAI ENGENER公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                               </a
                             >
                           </li>
@@ -8456,7 +8453,7 @@
                               rel="sponsored"
                               class="btn btn-official _shiny"
                               style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                              >SAMURAI ENGENER公式サイトを見る ▶
+                              >SAMURAI ENGENER公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                               </a
                             >
                           </li>
@@ -8514,7 +8511,7 @@
                           <a
                             href="./dot-pro/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
@@ -8524,7 +8521,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >.Pro公式サイトを見る ▶
+                            >.Pro公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a
                           >
                         </li>
@@ -8710,7 +8707,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >.Pro公式サイトを見る ▶
+                            >.Pro公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a
                           >
                         </li>
@@ -8762,7 +8759,7 @@
                           <a
                             href="./mikimiki-web-school/"
                             class="btn btn-detail"
-                            >詳細を見る</a
+                            >詳細ページへ</a
                           >
                         </li>
                         <li>
@@ -8772,7 +8769,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >mikimiki webスクール公式サイトを見る ▶
+                            >mikimiki webスクール公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -8933,7 +8930,7 @@
                             rel="sponsored"
                             class="btn btn-official _shiny"
                             style="display: flex; gap: 20px; align-items: center; justify-content: center;"
-                            >mikimiki webスクール公式サイトを見る ▶
+                            >mikimiki webスクール公式サイトを見る <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;min-width:18px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </li>
                       </ul>
@@ -9056,7 +9053,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://horiemon.ai/" target="_blank" rel="sponsored">
+                  <a href="https://tr.slvrbullet.com/cl/w0000653657/46377/35066/3" target="_blank" rel="sponsored">
                     <div class="rank_sidrbartitle">ホリエモンAI学校</div>
                   </a>
                 </li>
@@ -9091,7 +9088,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://ai-skill.jp/" target="_blank" rel="sponsored">
+                  <a href="https://tr.slvrbullet.com/cl/w0000672030/46435/37357/2" target="_blank" rel="sponsored">
                     <div class="rank_sidrbartitle">AIスキルアカデミー</div>
                   </a>
                 </li>
