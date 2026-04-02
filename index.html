@@ -707,16 +707,33 @@
                 background: linear-gradient(180deg, #e83a6f 0%, #D4215F 50%, #b01a4e 100%);
                 box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2);
                 position: relative;
-                animation: nt-btn-press 3s linear infinite;
+                overflow: hidden;
+                animation: nt-btn-press 3.5s linear infinite;
+              }
+              #newRankArea .nt-btn-official::before {
+                content: "";
+                position: absolute;
+                top: 0; left: -100%;
+                width: 60%; height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+                transform: skewX(-20deg);
+                animation: nt-btn-shine 3.5s infinite;
+              }
+              @keyframes nt-btn-shine {
+                0%   { left: -100%; opacity: 0; }
+                59%  { left: -100%; opacity: 0; }
+                60%  { left: -100%; opacity: 1; }
+                78%  { left: 150%; opacity: 1; }
+                79%  { left: 150%; opacity: 0; }
+                100% { left: 150%; opacity: 0; }
               }
               #newRankArea .nt-btn-official:hover { animation: none; transform: translateY(2px); box-shadow: 0 1px 0 #8c1440, 0 2px 4px rgba(0,0,0,.15); }
               @keyframes nt-btn-press {
-                0%   { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
-                60%  { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
-                65%  { filter: brightness(1.3); }
-                70%  { box-shadow: none; transform: translateY(3px); filter: brightness(1.3); }
-                80%  { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
-                100% { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
+                0%   { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
+                60%  { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
+                70%  { box-shadow: none; transform: translateY(3px); }
+                80%  { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
+                100% { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
               }
               #newRankArea .nt-star-img { width: 120px; height: auto; }
               #newRankArea .nt-rating { font-weight: 800; font-size: 18px; color: #e74c3c; }
@@ -1558,35 +1575,35 @@
                   <tr>
                     <td style="background-color: #FFEBEB">
                       <div class="button box-topranking-button">
-                        <div class="link shiny-btn">
+                        <div class="link">
                           <a href="#rank-1" onclick="event.preventDefault(); document.querySelector('#rank-1').scrollIntoView({behavior: 'smooth'});">詳細へ ▼</a>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div class="button box-topranking-button">
-                        <div class="link shiny-btn">
+                        <div class="link">
                           <a href="#rank-2" onclick="event.preventDefault(); document.querySelector('#rank-2').scrollIntoView({behavior: 'smooth'});">詳細へ ▼</a>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div class="button box-topranking-button">
-                        <div class="link shiny-btn">
+                        <div class="link">
                           <a href="#rank-3" onclick="event.preventDefault(); document.querySelector('#rank-3').scrollIntoView({behavior: 'smooth'});">詳細へ ▼</a>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div class="button box-topranking-button">
-                        <div class="link shiny-btn">
+                        <div class="link">
                           <a href="#rank-4" onclick="event.preventDefault(); document.querySelector('#rank-4').scrollIntoView({behavior: 'smooth'});">詳細へ ▼</a>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div class="button box-topranking-button">
-                        <div class="link shiny-btn">
+                        <div class="link">
                           <a href="#rank-5" onclick="event.preventDefault(); document.querySelector('#rank-5').scrollIntoView({behavior: 'smooth'});">詳細へ ▼</a>
                         </div>
                       </div>

@@ -512,19 +512,18 @@ table {
   overflow: hidden;
   background: linear-gradient(180deg, #e83a6f 0%, #D4215F 50%, #b01a4e 100%);
   box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2);
-  animation: btn-press 3s linear infinite;
+  animation: btn-press 3.5s linear infinite;
 }
 .btn-official._shiny::before {
-  position: absolute;
   content: "";
-  display: inline-block;
-  top: -180px;
-  left: 0;
-  width: 30px;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
   height: 100%;
-  background-color: #ffffff;
-  transition: 300ms;
-  animation: shinyshiny 4s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-20deg);
+  animation: btn-shine 3.5s infinite;
 }
 
 .btn-official._shiny:hover {
@@ -583,7 +582,7 @@ table {
   background: linear-gradient(180deg, #e83a6f 0%, #D4215F 50%, #b01a4e 100%);
   box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2);
   position: relative;
-  animation: btn-press 3s linear infinite;
+  animation: btn-press 3.5s linear infinite;
 }
 
 .ranking-box .action .btn-official:hover {
@@ -597,7 +596,7 @@ table {
   box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2);
   position: relative;
   font-weight: bold;
-  animation: btn-press 3s linear infinite;
+  animation: btn-press 3.5s linear infinite;
 }
 
 .btn-official:not(._shiny):hover {
@@ -607,12 +606,36 @@ table {
 }
 
 @keyframes btn-press {
-  0%   { box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
-  60%  { box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
-  65%  { filter: brightness(1.3); }
-  70%  { box-shadow: none; transform: translateY(4px); filter: brightness(1.3); }
-  80%  { box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
-  100% { box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2); transform: translateY(0); filter: brightness(1); }
+  0%   { box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2); transform: translateY(0); }
+  60%  { box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2); transform: translateY(0); }
+  70%  { box-shadow: none; transform: translateY(4px); }
+  80%  { box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2); transform: translateY(0); }
+  100% { box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2); transform: translateY(0); }
+}
+
+.btn-official:not(._shiny) {
+  overflow: hidden;
+}
+
+.btn-official:not(._shiny)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-20deg);
+  animation: btn-shine 3.5s infinite;
+}
+
+@keyframes btn-shine {
+  0%   { left: -100%; opacity: 0; }
+  59%  { left: -100%; opacity: 0; }
+  60%  { left: -100%; opacity: 1; }
+  78%  { left: 150%; opacity: 1; }
+  79%  { left: 150%; opacity: 0; }
+  100% { left: 150%; opacity: 0; }
 }
 
 .btn-detail::after {
@@ -632,6 +655,17 @@ table {
 }
 
 .btn-official._shiny::after {
+  display: none;
+}
+
+.rank-cta .btn-official._shiny {
+  animation: none;
+  box-shadow: none;
+  background: transparent;
+  overflow: visible;
+}
+
+.rank-cta .btn-official._shiny::before {
   display: none;
 }
 
@@ -1746,11 +1780,23 @@ footer .copyright {
   background: linear-gradient(180deg, #e83a6f 0%, #D4215F 50%, #b01a4e 100%);
   box-shadow: 0 4px 0 #8c1440, 0 5px 10px rgba(0,0,0,.2);
   position: relative;
-  top: 0;
-  transition: all .1s;
+  overflow: hidden;
+  animation: btn-press 3.5s linear infinite;
+}
+.rank-cta::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-20deg);
+  animation: btn-shine 3.5s infinite;
+  z-index: 1;
+  pointer-events: none;
 }
 .rank-cta:hover {
-  top: 3px;
+  animation: none;
+  transform: translateY(3px);
   box-shadow: 0 1px 0 #8c1440, 0 2px 4px rgba(0,0,0,.15);
 }
 
@@ -3032,12 +3078,30 @@ small {
   color: #fff;
   box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2);
   position: relative;
-  top: 0;
-  transition: all .1s;
+  overflow: hidden;
+  animation: btn-press-sm 3.5s linear infinite;
+}
+.box-topranking-button .cv a::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-20deg);
+  animation: btn-shine 3.5s infinite;
 }
 .box-topranking-button .cv a:hover {
-  top: 2px;
+  animation: none;
+  transform: translateY(2px);
   box-shadow: 0 1px 0 #8c1440, 0 2px 4px rgba(0,0,0,.15);
+}
+
+@keyframes btn-press-sm {
+  0%   { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
+  60%  { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
+  70%  { box-shadow: none; transform: translateY(3px); }
+  80%  { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
+  100% { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
 }
 
 .box-topranking-button .link a {
@@ -3050,6 +3114,10 @@ small {
 .shiny-btn a {
   position: relative;
   overflow: hidden;
+}
+
+.box-topranking-button .cv.shiny-btn a::after {
+  display: none;
 }
 
 .shiny-btn a::after {
