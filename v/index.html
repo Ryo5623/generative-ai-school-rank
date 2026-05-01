@@ -50,7 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <style>
 
     :root {
-      --fv-height: 400px;
+      --fv-height: 340px;
     }
 
     /* ===== Hero / First View ===== */
@@ -59,7 +59,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       height: var(--fv-height);
       border: 0.5px solid #E0E0E0;
       display: grid;
-      grid-template-columns: 240px minmax(0, 12fr) 240px;
+      grid-template-columns: clamp(140px, 16vw, 220px) minmax(0, 1fr) clamp(140px, 16vw, 220px);
       align-items: stretch;
       overflow: clip;
     }
@@ -108,10 +108,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* スマホ：左右動画を隠し、中央のみ全幅で表示 */
     @media (max-width: 1024px) {
           :root{
-            --fv-height: 220px;
-            --sp-side: clamp(48px, 25vw, 200px); /* 左右動画の太さ */
-            --sp-center-min: 120px;              /* 中央の最小幅（読みやすさの下限）*/
-            --sp-center-max: 180px;              /* 中央の上限幅 ← ここで“細さ”を決める */
+            --fv-height: 200px;
+            --sp-side: clamp(48px, 18vw, 160px); /* 左右動画の太さ */
+            --sp-center-min: 180px;              /* 中央の最小幅（読みやすさの下限）*/
+            --sp-center-max: 480px;              /* 中央の上限幅 ← ここで“細さ”を決める */
           }
 
           .fv{
