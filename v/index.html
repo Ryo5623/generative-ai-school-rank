@@ -49,6 +49,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="../images/f(2).txt"></script>
     <style>
 
+    :root {
+      --fv-height: 400px;
+    }
 
     /* ===== Hero / First View ===== */
     .fv {
@@ -105,6 +108,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* スマホ：左右動画を隠し、中央のみ全幅で表示 */
     @media (max-width: 1024px) {
           :root{
+            --fv-height: 220px;
             --sp-side: clamp(48px, 25vw, 200px); /* 左右動画の太さ */
             --sp-center-min: 120px;              /* 中央の最小幅（読みやすさの下限）*/
             --sp-center-max: 180px;              /* 中央の上限幅 ← ここで“細さ”を決める */
